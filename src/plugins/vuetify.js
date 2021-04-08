@@ -8,10 +8,11 @@ export default new Vuetify({
     theme: {
       themes: {
         light: {
-          color1: '#43b883',
-          color2:'#33495e',
-          color3: colors.red.lighten4, // #FFCDD2
-          accent: colors.indigo.base, // #3F51B5
+          color1:'#43b883',
+          color1os:'#33495e',
+          color2:'#4943B8',
+          color3:'#B84378',
+          color4:'#B3B843',
         },
       },
     },

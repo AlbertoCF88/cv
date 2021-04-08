@@ -9,7 +9,7 @@
         <v-slide-item>
           <v-btn :to="{ path: '/'}">
             <span class="font-weight-bold">Inicio</span>
-            <v-icon color="#2A7352"> mdi-account</v-icon>
+            <v-icon color="#2A7352">mdi-account</v-icon>
           </v-btn>
         </v-slide-item>
 
@@ -64,9 +64,9 @@ export default {
       color () {
         switch (this.value) {
           case 0: return 'color1'
-          case 1: return '#4943B8'
-          case 2: return '#B84378'
-          case 3: return '#B3B843'
+          case 1: return 'color2'
+          case 2: return 'color3'
+          case 3: return 'color4'
           default: return 'color1'
         }
       },
