@@ -1,6 +1,6 @@
 <template>
 <div>
-<v-container mt-5 class="posicion">
+<v-container mt-5 class="posicion d-flex ancho">
   <v-card class="mx-auto Zcard" max-width="300" hover 
   @mouseover="hover=true; hover2=true"
   @mouseleave="hover=false; hover2=false">
@@ -74,12 +74,12 @@
     </v-progress-linear> 
   </v-card>
 
-  <v-container fluid 
+  <v-container 
   :class="{'marcoColor2Entrada':hover2,'marcoColor2Salida':!hover2}"
   class="color1"> 
   </v-container>
    
-  <v-container fluid 
+  <v-container 
   :class="{'marcoColor1Entrada':hover,'marcoColor1Salida':!hover}"
   class="color1os"> 
   </v-container>
@@ -123,10 +123,6 @@
 .v-btn--absolute.v-btn--right, .v-btn--fixed.v-btn--right {
   right: -12px;
 }
-.v-btn--fab.v-size--x-small {
-  height: 25px;
-  width: 25px;
-}
 .v-btn--fab.v-size--x-small.v-btn--absolute.v-btn--bottom {
   bottom: -9px;
 }
@@ -138,6 +134,9 @@
   width: 100%;
 }
 /*marcos card */
+.ancho{
+  max-width: 300px;
+}
   /*marco 1 verde oscuro*/
   .marcoColor1Entrada{
     z-index: 0;

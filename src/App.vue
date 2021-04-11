@@ -39,25 +39,40 @@
   </v-app-bar>
 
     <v-main>
-      <v-container mb-16>
+      <v-container fluid mb-16>
         <router-view> </router-view>
       </v-container>
     </v-main>
+<comGracias></comGracias>
+
+  <comFooter
+    :color="color"
+    :value="value"
+  ></comFooter>
 
   </v-app>
 </template>
 
-<style scoped>
+<style>
 .v-item-group.v-bottom-navigation--shift .v-btn--active .v-btn__content > *:not(.v-icon) {
     top:100% !important;
 }
+@media (max-width:959px) { 
+  .v-footer--fixed {
+    position: absolute;
+}
+}/*fin media*/
 </style>
 
 
 <script>
+import comFooter from '@/components/ComFooter.vue';
+import comGracias from '@/components/ComGracias.vue';
 export default {
   name: 'App',
-
+  components: {
+   comFooter,comGracias
+  },
     data: () => ({ value: 1 }),
 
     computed: {

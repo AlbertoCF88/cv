@@ -25,7 +25,6 @@ const routes = [
     name: 'Post-it',
     component: () => import('../views/Post-it.vue')
   },
- 
 ]
 
 const router = new VueRouter({
