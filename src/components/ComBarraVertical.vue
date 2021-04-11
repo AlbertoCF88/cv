@@ -1,9 +1,8 @@
 <template>
 <div>
+<v-container ma-2 ma-md-5 class="d-flex justify-center">
 
-
-    <v-card class="mx-auto"
-    max-width="375">
+    <v-card width="380">
     <v-list two-line>
         <v-list-item >
             <v-list-item-icon>
@@ -75,7 +74,7 @@
     </v-list>
   </v-card>
 
-
+</v-container>
 </div>
 </template>
 

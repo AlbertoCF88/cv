@@ -5,30 +5,30 @@
     v-model="value"
     :background-color="color"
     dark shift app>
-      <v-slide-group multiple show-arrows>
-        <v-slide-item>
-          <v-btn :to="{ path: '/'}">
+      <v-slide-group  show-arrows  center-active>
+        <v-slide-item  v-slot="{toggle}">
+          <v-btn :to="{ path: '/'}" @click="toggle">
             <span class="font-weight-bold">Inicio</span>
             <v-icon color="#2A7352">mdi-account</v-icon>
           </v-btn>
         </v-slide-item>
 
-        <v-slide-item>
-          <v-btn :to="{name: 'Arte'}">
+        <v-slide-item  v-slot="{toggle}">
+          <v-btn :to="{name: 'Arte'}" @click="toggle">
             <span class="font-weight-bold">Arte</span>
             <v-icon color="#2E2A73">mdi-lead-pencil</v-icon>
           </v-btn>
         </v-slide-item>
 
-        <v-slide-item>
-          <v-btn :to="{name: 'Webs'}">
+        <v-slide-item  v-slot="{toggle}">
+          <v-btn :to="{name: 'Webs'}" @click="toggle">
             <span class="font-weight-bold">Otras Webs</span>
             <v-icon color="#732A4B" >mdi-remote-desktop</v-icon>
           </v-btn>
         </v-slide-item>
 
-        <v-slide-item>
-          <v-btn :to="{name: 'Post-it'}">
+        <v-slide-item  v-slot="{toggle}">
+          <v-btn :to="{name: 'Post-it'}" @click="toggle">
             <span class="font-weight-bold">Post-it</span>
             <v-icon color="#70732A">mdi-note-text</v-icon>
           </v-btn>

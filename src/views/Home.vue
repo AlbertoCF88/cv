@@ -2,14 +2,14 @@
 <div>
 <v-container fluid>
 <v-row  class="d-flex justify-center">
-  <v-col  >
+  <v-col> 
     <comBarraV></comBarraV>
   </v-col>
-  <v-col >
+  <v-col  >
     <comTarjeta ></comTarjeta> 
   </v-col>
   <v-col >
-    <comTitulo ></comTitulo> 
+    <comTitulo  ></comTitulo> 
   </v-col>
 </v-row>
 </v-container>

@@ -1,7 +1,7 @@
 <template>
 <div>
-<v-container mt-5 class="posicion d-flex ancho">
-  <v-card class="mx-auto Zcard" max-width="300" hover 
+<v-container ma-2 ma-md-5 class="posicion d-flex ancho justify-center" max-width="300">
+  <v-card class="mx-auto Zcard"  hover 
   @mouseover="hover=true; hover2=true"
   @mouseleave="hover=false; hover2=false">
 
@@ -74,14 +74,14 @@
     </v-progress-linear> 
   </v-card>
 
-  <v-container 
-  :class="{'marcoColor2Entrada':hover2,'marcoColor2Salida':!hover2}"
-  class="color1"> 
+  <v-container max-width="300"
+  :class="{'marcoColor2Entrada':hover2,'marcoColor2Salida':!hover2} "
+  class="color1 desborde"> 
   </v-container>
    
-  <v-container 
+  <v-container max-width="300"
   :class="{'marcoColor1Entrada':hover,'marcoColor1Salida':!hover}"
-  class="color1os"> 
+  class="color1os desborde"> 
   </v-container>
 
 </v-container>
@@ -89,12 +89,15 @@
 </template>
 
 <style scoped>
+.desborde{
+    overflow: hidden;
+}
 .posicion{
   position: relative;
 }
 .Zcard{
   z-index: 1;
-  position: absolute;
+  position: relative;
 }
 /*triangulos avatar */
 .trianguloIz {
@@ -153,7 +156,7 @@
         top: 0px;
       }  
     100%{
-        left: -4px;
+        left: -12px;
         top: -4px;
         opacity:1;
       }
@@ -169,12 +172,12 @@
   @keyframes marcoAnimaSalida {
     0%{            
         opacity: 1;
-        left: -4px;
+        left: -12px;
         top: -4px;
       }  
     100%{
-          left: 12px;
-          top: 12px;
+          left: 15px;
+          top: 15px;
           opacity:0;
       }
   } 
@@ -194,9 +197,9 @@
         top: 0px;
       }  
     100%{
-          left: -16px;
-          top: -16px;
           opacity:1;
+          left: -23px;
+          top: -16px;
       }
   } 
   .marcoColor2Salida{
@@ -210,13 +213,13 @@
   @keyframes marcoAnimaSalida2 {
     0%{            
         opacity: 1;
-        left: -4px;
-        top: -4px;
+        left: -23px;
+        top: -16px;
       }  
     100%{
-          left: 12px;
-          top: 12px;
           opacity:0;
+          left: 20px;
+          top: 20px;
       }
   } 
 /*fin marcos card */
