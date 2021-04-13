@@ -1,14 +1,22 @@
 <template>
 <div>
-<v-container fluid>
+<v-container mt-4>
 <v-row  class="d-flex justify-center">
-  <v-col> 
-    <comBarraV></comBarraV>
+  <v-col  cols="12"
+      
+        md="6"
+       > 
+    <comBarraV @loading="loading =$event"></comBarraV>
   </v-col>
-  <v-col  >
-    <comTarjeta class="d-flex justify-center"></comTarjeta> 
+  <v-col   cols="12"
+     
+        md="6"
+         >
+    <comTarjeta @loading="loading =$event"  class="d-flex justify-start" ></comTarjeta> 
   </v-col>
-  <v-col >
+  <v-col  cols="12"
+   
+      >
     <comTitulo  ></comTitulo> 
   </v-col>
 </v-row>
@@ -28,18 +36,11 @@ export default {
   components: {
    comTarjeta, comBarraV, comTitulo
   },
-//   data: () => ({
-//     loading: false,
-// Texto:'hola,'
-//   }),
-
-//   watch: {
-//     loading (val) {
-//       if (!val) return
-
-//       setTimeout(() => (this.loading = false), 3000)
-//     },
-//   },
+    data:() => ({
+          loading: true,
+        }),
+        
+       
 }
 
 </script>

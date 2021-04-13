@@ -1,6 +1,6 @@
 <template>
 <div>
-<v-container class="posicion  d-flex ancho justify-center">
+<v-container class="posicion ancho d-flex justify-center">
   <v-card class="mx-auto Zcard"  hover 
   @mouseover="hover=true; hover2=true"
   @mouseleave="hover=false; hover2=false">
@@ -61,7 +61,7 @@
       <template v-slot:activator="{ on, attrs }" >
         <v-btn v-bind="attrs" v-on="on" color="color3"
         fab dark x-small absolute bottom  right elevation="0"
-        @click="loading = !loading">
+         @click.prevent="loading = !loading">
           <v-icon> mdi-alert-octagon-outline </v-icon>
         </v-btn>
       </template>
@@ -84,6 +84,8 @@
   class="color1os anchoHover "> 
   </v-container>
 
+
+
 </v-container>
 </div>
 </template>
@@ -94,6 +96,7 @@
 .ancho{
   max-width: 340px;
   min-width: 250px;
+  margin-left: 0;
 }
 .posicion{
   position: relative;
@@ -127,10 +130,10 @@
 /*Fin triangulos avatar */
 /*boton stop */
 .v-btn--absolute.v-btn--right, .v-btn--fixed.v-btn--right {
-  right: -12px;
+  right: -16px;
 }
 .v-btn--fab.v-size--x-small.v-btn--absolute.v-btn--bottom {
-  bottom: -9px;
+  bottom: -13px;
 }
 /*fin boton stop */
 .v-card--reveal {
@@ -223,7 +226,7 @@
   } 
 /*fin marcos card */
 /*------------------------------@media (max-width:380px) ------------------------------------------------------ */
-@media (max-width:815px) { 
+@media (max-width:1468px) { 
   .anchoHover{
     height: 102%;
 }
@@ -307,17 +310,22 @@
 <script>
   export default {
     name: 'comTarjeta',
+    props:[
+    'loading'
+    ],
     data:() => ({
-      loading: true,
+    
       revelar:false,
-      active: false,
       hover: false,
       hover2: false,
     }),
-    methods: {
-      clickFuera () {
+     methods: {
+       clickFuera () {
         this. revelar = false
-      },
+       },
+     },
+      mounted(){
+        this.$emit('loading',this.loading)
     },
 
   }//export default
