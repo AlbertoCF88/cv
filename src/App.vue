@@ -54,6 +54,9 @@
 </template>
 
 <style>
+.v-btn:before {
+  background-color: none;
+}
 .desborde{
     overflow: hidden;
 } 

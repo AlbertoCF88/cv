@@ -61,7 +61,7 @@
       <template v-slot:activator="{ on, attrs }" >
         <v-btn v-bind="attrs" v-on="on" color="color3"
         fab dark x-small absolute bottom  right elevation="0"
-         @click.prevent="loading = !loading">
+        @click="CambioLoading()">
           <v-icon> mdi-alert-octagon-outline </v-icon>
         </v-btn>
       </template>
@@ -84,19 +84,15 @@
   class="color1os anchoHover "> 
   </v-container>
 
-
-
 </v-container>
 </div>
 </template>
-
-
 
 <style scoped>
 .ancho{
   max-width: 340px;
   min-width: 250px;
-  margin-left: 0;
+  /* margin-left: 0; */
 }
 .posicion{
   position: relative;
@@ -180,9 +176,9 @@
         top: -4px;
       }  
     100%{
-         left: 25px;
-          top: 50px;
-          opacity:0;
+        left: 25px;
+        top: 50px;
+        opacity:0;
       }
   } 
   /*marco 2 verde claro*/
@@ -262,9 +258,9 @@
         height: 102%;
       }  
     100%{
-          opacity:0;
-     height: 0%;
-      top: 0px;
+        opacity:0;
+        height: 0%;
+        top: 0px;
       }
   } 
   /*marco 2 verde claro*/
@@ -308,27 +304,23 @@
 </style>
 
 <script>
-  export default {
-    name: 'comTarjeta',
-    props:[
-    'loading'
-    ],
-    data:() => ({
-    
-      revelar:false,
-      hover: false,
-      hover2: false,
-    }),
-     methods: {
-       clickFuera () {
-        this. revelar = false
-       },
-     },
-      mounted(){
-        this.$emit('loading',this.loading)
+import {mapState, mapMutations} from "vuex";
+export default {
+  name: 'comTarjeta',
+  props:[],
+  data:() => ({
+    revelar:false,
+    hover: false,
+    hover2: false,
+  }),
+  computed:{
+    ...mapState(['loading'])
+  },
+    methods: {
+       ...mapMutations(['CambioLoading']),
+      clickFuera () {
+      this. revelar = false
+      },
     },
-
-  }//export default
- 
-
+}//export default
 </script>
