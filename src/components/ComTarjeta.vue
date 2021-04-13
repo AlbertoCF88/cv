@@ -1,6 +1,6 @@
 <template>
 <div>
-<v-container ma-2 ma-md-5 class="posicion d-flex ancho justify-center" max-width="300">
+<v-container class="posicion  d-flex ancho justify-center">
   <v-card class="mx-auto Zcard"  hover 
   @mouseover="hover=true; hover2=true"
   @mouseleave="hover=false; hover2=false">
@@ -74,23 +74,26 @@
     </v-progress-linear> 
   </v-card>
 
-  <v-container max-width="300"
-  :class="{'marcoColor2Entrada':hover2,'marcoColor2Salida':!hover2} "
-  class="color1 desborde"> 
+  <v-container 
+  :class="{'marcoColor2Entrada':hover2,'marcoColor2Salida':!hover2}"
+  class="color1 anchoHover"> 
   </v-container>
    
-  <v-container max-width="300"
+  <v-container 
   :class="{'marcoColor1Entrada':hover,'marcoColor1Salida':!hover}"
-  class="color1os desborde"> 
+  class="color1os anchoHover "> 
   </v-container>
 
 </v-container>
 </div>
 </template>
 
+
+
 <style scoped>
-.desborde{
-    overflow: hidden;
+.ancho{
+  max-width: 340px;
+  min-width: 250px;
 }
 .posicion{
   position: relative;
@@ -137,8 +140,8 @@
   width: 100%;
 }
 /*marcos card */
-.ancho{
-  max-width: 300px;
+.anchoHover{
+  max-width: 315px;
 }
   /*marco 1 verde oscuro*/
   .marcoColor1Entrada{
@@ -146,7 +149,6 @@
     display: flex;
     height: 449px;
     position: absolute;
-    width: 300px;
     animation: marcoAnimaEntrada 0.5s ease 0.3s forwards; 
   }
   @keyframes marcoAnimaEntrada { 
@@ -156,7 +158,7 @@
         top: 0px;
       }  
     100%{
-        left: -12px;
+        left: -7px;
         top: -4px;
         opacity:1;
       }
@@ -166,8 +168,7 @@
     display: flex;
     height: 449px;
     position: absolute;
-    width: 300px;
-    animation:  marcoAnimaSalida 1s ease forwards; 
+    animation:  marcoAnimaSalida 1.5s ease forwards; 
   }
   @keyframes marcoAnimaSalida {
     0%{            
@@ -176,8 +177,8 @@
         top: -4px;
       }  
     100%{
-          left: 15px;
-          top: 15px;
+         left: 25px;
+          top: 50px;
           opacity:0;
       }
   } 
@@ -187,8 +188,7 @@
     display: flex;
     height: 449px;
     position: absolute;
-    width: 300px;
-    animation: marcoAnimaEntrada2 0.5s ease 0.8s   forwards; 
+    animation: marcoAnimaEntrada2 0.5s ease 0.8s forwards; 
   }
   @keyframes marcoAnimaEntrada2 { 
     0%{            
@@ -207,8 +207,7 @@
     display: flex;
     height: 449px;
     position: absolute;
-    width: 300px;
-    animation:  marcoAnimaSalida2 2s ease  forwards; 
+    animation:  marcoAnimaSalida2 1.5s ease  forwards; 
   }
   @keyframes marcoAnimaSalida2 {
     0%{            
@@ -218,11 +217,91 @@
       }  
     100%{
           opacity:0;
-          left: 20px;
-          top: 20px;
+          left: 35px;
+          top: 50px;
       }
   } 
 /*fin marcos card */
+/*------------------------------@media (max-width:380px) ------------------------------------------------------ */
+@media (max-width:815px) { 
+  .anchoHover{
+    height: 102%;
+}
+ .marcoColor1Entrada{
+  width: 50%;
+  z-index: 0;
+  display: flex;
+  position: absolute;
+  animation: marcoAnimaEntrada 0.5s ease  forwards; 
+}
+
+@keyframes marcoAnimaEntrada { 
+    0%{            
+        opacity: 0;
+        top: 0px;
+      }  
+    100%{
+        top: -4px;
+        opacity:1;
+      }
+  } 
+  .marcoColor1Salida{
+    z-index: 0;
+    display: flex;
+    width: 50%;
+    top: -4px;
+    position: absolute;
+    animation:  marcoAnimaSalida 0.5s ease 1s forwards; 
+  }
+  @keyframes marcoAnimaSalida {
+     0%{            
+        opacity: 1;
+        height: 102%;
+      }  
+    100%{
+          opacity:0;
+     height: 0%;
+      top: 0px;
+      }
+  } 
+  /*marco 2 verde claro*/
+  .marcoColor2Entrada{
+    width: 50%;
+    z-index: 0;
+    display: flex;
+    position: absolute;
+    top: -4px;
+    animation: marcoAnimaEntrada2 0.5s ease 0.8s   forwards; 
+  }
+  @keyframes marcoAnimaEntrada2 { 
+    0%{            
+        opacity: 0;
+      }  
+    100%{
+        width: 100%;
+        top: -4px;
+        opacity:1;
+      }
+  } 
+  .marcoColor2Salida{
+    z-index: 0;
+    display: flex;
+    top: -4px;
+    position: absolute;
+    animation:  marcoAnimaSalida2 2s ease  forwards; 
+  }
+  @keyframes marcoAnimaSalida2 {
+    0%{            
+        opacity: 1;
+        width: 100%;
+      }  
+    100%{
+          opacity:0;
+          width:0%;
+      }
+  } 
+
+  }
 </style>
 
 <script>

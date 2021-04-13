@@ -39,7 +39,7 @@
   </v-app-bar>
 
     <v-main>
-      <v-container fluid mb-16>
+      <v-container fluid mb-16 class="desborde">
         <router-view> </router-view>
       </v-container>
     </v-main>
@@ -54,6 +54,9 @@
 </template>
 
 <style>
+.desborde{
+    overflow: hidden;
+} 
 .v-item-group.v-bottom-navigation--shift .v-btn--active .v-btn__content > *:not(.v-icon) {
     top:100% !important;
 }

@@ -6,7 +6,7 @@
     <comBarraV></comBarraV>
   </v-col>
   <v-col  >
-    <comTarjeta ></comTarjeta> 
+    <comTarjeta class="d-flex justify-center"></comTarjeta> 
   </v-col>
   <v-col >
     <comTitulo  ></comTitulo> 

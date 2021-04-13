@@ -1,6 +1,6 @@
 <template>
 <div>
-<v-container ma-2 ma-md-5 class="d-flex justify-center">
+<v-container  class="d-flex justify-center">
 
     <v-card width="380">
     <v-list two-line>
