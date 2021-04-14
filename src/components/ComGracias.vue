@@ -33,7 +33,7 @@
     data: () => ({
       snackbar: true,
       text: `¡ Gracias por visitar mi WEB`,
-      timeout: 3000,
+      timeout: 4000,
     }),
   }
 </script>

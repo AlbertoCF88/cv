@@ -2,6 +2,7 @@
 <div>
 <v-container>
 <v-row align="center">
+  <v-card>
     <v-item-group
       v-model="window"
       class="shrink mr-6"
@@ -35,6 +36,11 @@
           :key="n"
         >
           <v-card flat>
+
+
+
+
+            
             <v-card-text>
               <v-row
                 class="mb-4"
@@ -67,7 +73,9 @@
         </v-window-item>
       </v-window>
     </v-col>
+    </v-card>
   </v-row>
+
 </v-container>
 </div>
 </template>

@@ -34,7 +34,7 @@
 
           <v-slide-item v-slot="{toggle}"> 
         <v-btn link class="mx-4" icon color="blue lighten-1"
-        role=link href="mailto: albertocarrascofernandez@hotmail.com" target="_blank" @click="toggle">
+        role=link href="mailto: alcafefront@gmail.com" target="_blank" @click="toggle">
           <v-icon size="24px">
             mdi-at
           </v-icon>

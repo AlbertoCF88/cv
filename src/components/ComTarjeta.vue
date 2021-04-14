@@ -1,89 +1,100 @@
 <template>
 <div>
-<v-container class="posicion ancho d-flex justify-center">
-  <v-card class="mx-auto Zcard"  hover 
-  @mouseover="hover=true; hover2=true"
-  @mouseleave="hover=false; hover2=false">
+<v-container >
+  <v-row  no-gutters class="d-flex justify-center"> 
+    <v-col order-md="2"  order="1">
+      <v-container mb-2 class="posicion ancho d-flex justify-center">
+        <!--Carta Foto-->
+        <v-card class="Zcard"  hover 
+        @mouseover="hover=true; hover2=true"
+        @mouseleave="hover=false; hover2=false">
 
-    <v-avatar class="d-flex justify-center"
-    height="auto" width="auto" tile>
-      <v-img src="@/assets/albertoPng.png"></v-img>
-    </v-avatar>
+          <v-avatar class="d-flex justify-center"
+          height="auto" width="auto" tile>
+            <v-img src="@/assets/albertoPng.png"></v-img>
+          </v-avatar>
     
-    <div class="d-flex justify-space-between altura">
-      <div  id="trianguloIz" class="trianguloIz"></div>
-      <div id="trianguloDe" class="trianguloDe"></div>
-    </div>
+          <div class="d-flex justify-space-between altura">
+            <div  id="trianguloIz" class="trianguloIz"></div>
+            <div id="trianguloDe" class="trianguloDe"></div>
+          </div>
 
-    <v-card-title class="d-flex justify-center font-weight-black
-      text-sm-h6 text-subtitle-1">
-      Alberto Carrasco Fernández
-    </v-card-title>
+          <v-card-title class="d-flex justify-center font-weight-black
+            text-sm-h6 text-subtitle-1">
+            <p>Alberto Carrasco Fernández</p> 
+          </v-card-title>
 
-    <v-card-subtitle class="d-flex justify-center color1--text 
-    font-weight-black text-sm-subtitle-1 text-subtitle-2 ">
-      Front-End Developer 
-    </v-card-subtitle>
+          <v-card-subtitle class="d-flex justify-center color1--text 
+          font-weight-black text-sm-subtitle-1 text-subtitle-2 ">
+            Front-End Developer 
+          </v-card-subtitle>
 
-    <v-card-actions>
-      <v-btn @click="revelar = true"
-      color="orange lighten-2" text>
-        Saber mas
-      </v-btn>
-    </v-card-actions>
+          <v-card-actions>
+            <v-btn @click="revelar = true"
+            color="orange lighten-2" text>
+              Saber mas
+            </v-btn>
+          </v-card-actions>
 
-    <v-expand-transition>
-      <v-card
-      v-click-outside="clickFuera"
-      @click="revelar=false"
-      v-if="revelar"
-      class="transition-fast-in-fast-out v-card--reveal"
-      style="height: 100%;">
+          <v-expand-transition>
+            <v-card
+            v-click-outside="clickFuera"
+            @click="revelar=false"
+            v-if="revelar"
+            class="transition-fast-in-fast-out v-card--reveal"
+            style="height: 100%;">
 
-        <v-card-text class="pb-0">
-          <p class="display-1 text--primary">
-              Origin
-          </p>
-            <p>late 16th century (as a noun denoting a place where alms were distributed): from medieval Latin eleemosynarius, from late Latin eleemosyna ‘alms’, from Greek eleēmosunē ‘compassion’ </p>
-        </v-card-text>
-        <v-card-actions class="pt-0">
-          <v-btn
-              text
-              color="teal accent-4"
-              @click="revelar = false">
-              Close
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-expand-transition>
+              <v-card-text class="pb-0">
+                <p class="display-1 text--primary">
+                    Origin
+                </p>
+                  <p>late 16th century (as a noun denoting a place where alms were distributed): from medieval Latin eleemosynarius, from late Latin eleemosyna ‘alms’, from Greek eleēmosunē ‘compassion’ </p>
+              </v-card-text>
+              <v-card-actions class="pt-0">
+                <v-btn
+                    text
+                    color="teal accent-4"
+                    @click="revelar = false">
+                    Close
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-expand-transition>
 
-    <v-tooltip bottom >
-      <template v-slot:activator="{ on, attrs }" >
-        <v-btn v-bind="attrs" v-on="on" color="color3"
-        fab dark x-small absolute bottom  right elevation="0"
-        @click="CambioLoading()">
-          <v-icon> mdi-alert-octagon-outline </v-icon>
-        </v-btn>
-      </template>
-      <span>¿Te moleta la barra?</span>
-    </v-tooltip>
+          <v-tooltip bottom >
+            <template v-slot:activator="{ on, attrs }" >
+              <v-btn v-bind="attrs" v-on="on" color="color3"
+              fab dark x-small absolute bottom  right elevation="0"
+              @click="CambioLoading()">
+                <v-icon> mdi-alert-octagon-outline </v-icon>
+              </v-btn>
+            </template>
+            <span>¿Te moleta la barra?</span>
+          </v-tooltip>
 
-    <v-progress-linear
-    :indeterminate="loading"
-    bottom color="color1">
-    </v-progress-linear> 
-  </v-card>
+          <v-progress-linear
+          :indeterminate="loading"
+          bottom color="color1">
+          </v-progress-linear> 
+        </v-card>
 
-  <v-container 
-  :class="{'marcoColor2Entrada':hover2,'marcoColor2Salida':!hover2}"
-  class="color1 anchoHover"> 
-  </v-container>
-   
-  <v-container 
-  :class="{'marcoColor1Entrada':hover,'marcoColor1Salida':!hover}"
-  class="color1os anchoHover "> 
-  </v-container>
+        <v-container 
+        :class="{'marcoColor2Entrada':hover2,'marcoColor2Salida':!hover2}"
+        class="color1 anchoHover"> 
+        </v-container>
+    
+        <v-container 
+        :class="{'marcoColor1Entrada':hover,'marcoColor1Salida':!hover}"
+        class="color1os anchoHover "> 
+        </v-container>
 
+      </v-container>
+    </v-col>
+
+    <v-col order-md="1" order="2"> 
+      <comBarraV ></comBarraV>
+    </v-col>
+  </v-row>
 </v-container>
 </div>
 </template>
@@ -91,8 +102,6 @@
 <style scoped>
 .ancho{
   max-width: 340px;
-  min-width: 250px;
-  /* margin-left: 0; */
 }
 .posicion{
   position: relative;
@@ -221,20 +230,49 @@
       }
   } 
 /*fin marcos card */
-/*------------------------------@media (max-width:380px) ------------------------------------------------------ */
-@media (max-width:1468px) { 
+/*------------------------------@media ------------------------------------------------------ */
+@media (max-width:240px) {
+  /*triangulos*/
+  .trianguloIz {
+    border-bottom: 100px solid rgba(255, 255, 255, 0);  
+  }
+  .trianguloDe {
+    border-bottom: 100px solid rgba(255, 255, 255, 0);
+  }
+  /*Fin triangulos*/
+ }
+@media (max-width:336px) { 
+   /*texto */
+  .v-application .text-subtitle-2 {
+    font-size: 0.8rem !important;
+  }
+ /*Fin texto */
+  .v-application .text-subtitle-1 {
+    font-size: 4vw !important;
+  }
+    /*triangulos*/
+  .trianguloIz {
+    border-right: 65px solid transparent;  
+  }
+  .trianguloDe {
+    border-left: 65px solid transparent;
+  }
+  /*Fin triangulos*/
+} /*fin media 295px */
+/*------------------------------@media (max-width:961px) ------------------------------------------------------ */
+@media (max-width:959px) { 
   .anchoHover{
     height: 102%;
-}
+  }
+  /*marcos card */
  .marcoColor1Entrada{
   width: 50%;
   z-index: 0;
   display: flex;
   position: absolute;
   animation: marcoAnimaEntrada 0.5s ease  forwards; 
-}
-
-@keyframes marcoAnimaEntrada { 
+  }
+  @keyframes marcoAnimaEntrada { 
     0%{            
         opacity: 0;
         top: 0px;
@@ -299,14 +337,17 @@
           width:0%;
       }
   } 
-
-  }
+}/* Fin max-width:959px */
 </style>
 
 <script>
 import {mapState, mapMutations} from "vuex";
+import comBarraV from '@/components/ComBarraVertical.vue';
 export default {
   name: 'comTarjeta',
+  components: {
+    comBarraV,
+  },
   props:[],
   data:() => ({
     revelar:false,
