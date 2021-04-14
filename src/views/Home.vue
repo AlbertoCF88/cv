@@ -1,26 +1,38 @@
 <template>
 <div>
   <v-row no-gutters class="d-flex justify-center mt-5">
-    <div id="altura">
+    <v-container class="contenedor">
       <v-row>
-    <v-col order-md="2" order="1">
-      <comTarjeta></comTarjeta> 
-    </v-col>
-     <v-col order-md="1" order="2"> 
-      <comBarraV></comBarraV> 
-    </v-col>
-
+        <v-col order-md="2" order="1" class="d-flex justify-center">
+          <v-container class="padding">
+            <comTarjeta></comTarjeta> 
+          </v-container>
+        </v-col>
+        <v-col order-md="1" order="2" class="d-flex justify-center"> 
+          <v-container class="padding">
+            <comBarraV></comBarraV> 
+          </v-container>
+        </v-col>
       </v-row>
-    </div>
+    </v-container>
+  
+    
+      <comTitulo></comTitulo> 
+
   </v-row>
-
-  <v-container >
-    <comTitulo></comTitulo> 
-  </v-container>
-
-
 </div>
 </template>
+
+<style scoped>
+.padding{
+  padding: 0px;
+}
+  .contenedor{
+    max-width: 900px;
+  }
+</style>
+
+
 
 <script>
 import comBarraV from '@/components/ComBarraVertical.vue';

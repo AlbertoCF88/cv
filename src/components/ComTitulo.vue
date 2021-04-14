@@ -1,46 +1,41 @@
 <template>
 <div>
-<v-container>
-<v-row align="center">
-  <v-card>
-    <v-item-group
-      v-model="window"
-      class="shrink mr-6"
-      mandatory
-    >
-      <v-item
-        v-for="n in length"
-        :key="n"
-        v-slot="{ active, toggle }"
-      >
-        <div>
-          <v-btn
-            :input-value="active"
-            icon
-            @click="toggle"
-          >
-            <v-icon>mdi-record</v-icon>
-          </v-btn>
-        </div>
-      </v-item>
-    </v-item-group>
+ 
 
-    <v-col>
+<v-row align="center">
+    <v-col cols ="12" >
+   <v-item-group  class="d-flex justify-center shrink mr-6"
+      v-model="ventana"
+      mandatory
+        >
+          <v-item
+            v-for="pagina in paginas"
+            :key="pagina"
+            v-slot="{ active, toggle }"
+          >
+            <v-btn
+              :input-value="active"
+              icon
+              @click="toggle"
+            >
+              <v-icon>mdi-record</v-icon>
+            </v-btn>
+          </v-item>
+      </v-item-group>
+
+    </v-col>
+    
+    <v-col cols="12">
       <v-window
-        v-model="window"
+        v-model="ventana"
         class="elevation-1"
         vertical
       >
         <v-window-item
-          v-for="n in length"
-          :key="n"
+          v-for="pagina in paginas"
+          :key="pagina"
         >
           <v-card flat>
-
-
-
-
-            
             <v-card-text>
               <v-row
                 class="mb-4"
@@ -50,7 +45,7 @@
                   color="grey"
                   class="mr-4"
                 ></v-avatar>
-                <strong class="title">Title {{ n }}</strong>
+                <strong class="title">Title {{ pagina }}</strong>
                 <v-spacer></v-spacer>
                 <v-btn icon>
                   <v-icon>mdi-account</v-icon>
@@ -73,10 +68,29 @@
         </v-window-item>
       </v-window>
     </v-col>
-    </v-card>
-  </v-row>
 
-</v-container>
+      <v-col cols ="12" >
+   <v-item-group  class="d-flex justify-center shrink mr-6"
+          v-model="ventana"
+      mandatory
+        >
+          <v-item
+            v-for="pagina in paginas"
+            :key="pagina"
+            v-slot="{ active, toggle }"
+          >
+            <v-btn
+              :input-value="active"
+              icon
+              @click="toggle"
+            >
+              <v-icon>mdi-record</v-icon>
+            </v-btn>
+          </v-item>
+      </v-item-group>
+
+    </v-col>
+  </v-row>
 </div>
 </template>
 
@@ -90,8 +104,8 @@ export default {
     name: 'comTitulo',
 
     data: () => ({
-      length: 3,
-      window: 0,
+      paginas: 3,
+      ventana: 0,
     }),
 
 }

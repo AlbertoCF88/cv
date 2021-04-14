@@ -149,7 +149,6 @@
         :indeterminate="loading"
         bottom color="color1">
         </v-progress-linear> 
-    
   </v-card>
 
 </v-container>

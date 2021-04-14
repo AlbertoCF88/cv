@@ -12,7 +12,7 @@
     </v-avatar>
     
     <div class="d-flex justify-space-between altura">
-      <div  id="trianguloIz" class="trianguloIz"></div>
+      <div id="trianguloIz" class="trianguloIz"></div>
       <div id="trianguloDe" class="trianguloDe"></div>
     </div>
 
@@ -28,32 +28,49 @@
 
     <v-card-actions>
       <v-btn @click="revelar = true"
-      color="orange lighten-2" text>
+      color="color4" text block >
         Saber mas
       </v-btn>
     </v-card-actions>
 
     <v-expand-transition>
-      <v-card
+      <v-card color="color1os"
       v-click-outside="clickFuera"
       @click="revelar=false"
       v-if="revelar"
-      class="transition-fast-in-fast-out v-card--reveal"
+      class="transition-fast-in-fast-out v-card--reveal overflow-y-auto"
       style="height: 100%;">
 
         <v-card-text class="pb-0">
-          <p class="display-1 text--primary">
-            Origin
+          <p class="display-1 biografia">
+             Biografía
           </p>
-          <p>late 16th century (as a noun denoting a place where alms were distributed): from medieval Latin eleemosynarius, from late Latin eleemosyna ‘alms’, from Greek eleēmosunē ‘compassion’ </p>
+          <p class="texto">
+            Hola,
+            <br>
+            Soy una persona tranquila, paciente, amable e imaginativo.
+            <br>
+            En los tiempos que vivimos me ha hecho retomar el mundo de la porgramación al que me gustaba por su creatividad.
+            <br>
+            Si te interesa contrartar a una persona creativa, responsable, madura y nueva en esto pero con muchas ganas de trabajar no dude en contacar conmigo: 
+            <a href="mailto: alcafefront@gmail.com" target="_blank">alcafefront@gmail.com</a>
+             <br>
+             <br>
+             <br>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure placeat magni at eius incidunt voluptatibus, maiores libero quibusdam odio totam adipisci cupiditate.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptas maiores nulla quidem! Ex maxime molestiae ratione veritatis id rem amet reprehenderit.
+          </p>
         </v-card-text>
 
-        <v-card-actions class="pt-0">
-          <v-btn text color="teal accent-4"
+        <v-card-actions>
+
+          <v-btn text block color="color4" 
           @click="revelar = false">
-            Close
+            Cerrar
           </v-btn>
+          
         </v-card-actions>
+  
       </v-card>
     </v-expand-transition>
 
@@ -89,6 +106,15 @@
 </template>
 
 <style scoped>
+.biografia{
+  color:#43b883;
+}
+.texto{
+  color:#d9d9d9;
+}
+.v-sheet.v-card {
+  border-radius: 0px; 
+}
 .ancho{
   max-width: 340px;
 }
@@ -326,7 +352,26 @@
           width:0%;
       }
   } 
-}/* Fin max-width:959px */
+}/* Fin max-width:959px---------------------------- */
+/*barra cerrar */
+::-webkit-scrollbar {
+ width: 8px;
+ height: 8px;
+}
+::-webkit-scrollbar-thumb {
+ background: #43b883;
+ border-radius: 10px;
+ box-shadow: inset 0px 7px 11px #e8e8e8;
+}
+::-webkit-scrollbar-thumb:hover{
+ background: #228759;
+}
+::-webkit-scrollbar-track{
+ background: #787878;
+ border-radius: 6px;
+ box-shadow: inset 7px 10px 12px #f0f0f0;
+}
+/*Fin barra cerrar */
 </style>
 
 <script>
