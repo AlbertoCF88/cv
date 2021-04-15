@@ -50,13 +50,10 @@
     :value="value"
   ></comFooter>
 
-  </v-app>
+</v-app>
 </template>
 
 <style>
-.desborde{
-    overflow: hidden;
-} 
 .v-item-group.v-bottom-navigation--shift .v-btn--active .v-btn__content > *:not(.v-icon) {
     top:100% !important;
 }

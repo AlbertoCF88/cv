@@ -77,12 +77,8 @@
         loading: false,
       }
     },
-       methods:{ 
-  openInNewTab:function(url){
-  var win = window.open(url, '_blank');
-  win.focus();
-  }
-  },
+     
+  
      watch: {
       loader () {
         const l = this.loader
