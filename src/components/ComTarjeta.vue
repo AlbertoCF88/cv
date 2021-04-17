@@ -196,12 +196,12 @@
   @keyframes marcoAnimaSalida {
     0%{            
         opacity: 1;
-        left: -12px;
+        left:  -7px;
         top: -4px;
       }  
     100%{
         left: 25px;
-        top: 50px;
+        top: 40px;
         opacity:0;
       }
   } 

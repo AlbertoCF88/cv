@@ -1,6 +1,6 @@
 <template>
 <div>
-<v-container  class="d-flex justify-center">
+<v-container>
 
     <v-card  width="380">
         <v-list two-line class="alto">

@@ -7,7 +7,6 @@ export default new Vuex.Store({
   state: {
      //componentes tarjeta y barraVertical
     loading: true,
-    snackbar:false,
   },
   mutations: {
     //componentes tarjeta y barraVertical

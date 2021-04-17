@@ -1,11 +1,12 @@
 <template>
 <div>
-<v-row align="center">
-   <v-col cols ="12" >
-    <v-item-group  class="d-flex justify-center shrink mr-6"
+  
+<v-row >
+   <v-col cols ="12"  v-for="item in items" :key="item.id">
+    <v-item-group  class="d-flex justify-center"
     v-model="ventana"
       mandatory>
-        <v-item v-for="item in items" :key="item.id"
+        <v-item 
         v-slot="{ active, toggle }">
           <v-btn text color="color1os"
             :input-value="active"
@@ -43,6 +44,7 @@
 
                                   <v-img
                                   height="50"
+                                  contain
                                   src="@/assets/pixel.png"
                                 ></v-img>
                                   <v-card-title>{{titulo}}</v-card-title>

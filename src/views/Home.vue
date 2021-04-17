@@ -1,23 +1,26 @@
 <template>
 <div>
   <v-row no-gutters class="d-flex justify-center mt-5">
-    <v-container class="contenedor">
-      <v-row>
-        <v-col order-md="2" order="1" class="d-flex justify-center">
-          <v-container class="padding">
+
+    
+        <v-col order-md="2" order="1"  cols="12" md="6" >
+         <v-container  class=" d-flex justify-center  justify-md-start">
             <comTarjeta></comTarjeta> 
-          </v-container>
+        </v-container>
         </v-col>
-        <v-col order-md="1" order="2" class="d-flex justify-center"> 
-          <v-container class="padding">
+        <v-col order-md="1" order="2" cols="12" md="6"   > 
+          <v-container class=" d-flex justify-center  justify-md-end">
             <comBarraV></comBarraV> 
-          </v-container>
+      </v-container>
         </v-col>
-      </v-row>
-    </v-container>
+
+    <v-col cols="12" order="3">
+      <comTitulo></comTitulo> 
+
+    </v-col>
+  
   
     
-      <comTitulo></comTitulo> 
 
   </v-row>
 </div>
