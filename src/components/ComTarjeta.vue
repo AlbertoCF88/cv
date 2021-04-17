@@ -1,5 +1,4 @@
 <template>
-<div>
 <v-container mb-2 class="posicion ancho d-flex justify-center">
 
   <v-card class="Zcard"  hover 
@@ -102,7 +101,6 @@
         </v-container>
         
 </v-container>
-</div>
 </template>
 
 <style scoped>

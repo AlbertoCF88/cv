@@ -1,8 +1,7 @@
 <template>
-<div>
 <v-container>
 
-    <v-card  width="380">
+    <v-card  width="380" >
         <v-list two-line class="alto">
             <v-list-item >
                 <v-row>
@@ -152,7 +151,6 @@
   </v-card>
 
 </v-container>
-</div>
 </template>
 
 <style scoped>

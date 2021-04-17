@@ -1,5 +1,5 @@
 <template>
-<div>
+
 <v-container mt-8>
     <v-row class="mb-7">
         <!--Creador de tareas-->
@@ -134,7 +134,7 @@
     <!--Fin mensaje temporal--->
 
 </v-container>
-</div>
+
 </template>
 
 <style scoped>

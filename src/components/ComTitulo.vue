@@ -2,7 +2,7 @@
 <div>
   
 <v-row >
-   <v-col cols ="12"  v-for="item in items" :key="item.id">
+   <v-col   v-for="item in items" :key="item.id">
     <v-item-group  class="d-flex justify-center"
     v-model="ventana"
       mandatory>
