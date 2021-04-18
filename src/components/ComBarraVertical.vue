@@ -1,7 +1,7 @@
 <template>
 <v-container>
 
-    <v-card  width="380" >
+    <v-card  width="380">
         <v-list two-line class="alto">
             <v-list-item >
                 <v-row>
@@ -138,7 +138,8 @@
             <template v-slot:activator="{ on, attrs }" >
                 <v-btn v-bind="attrs" v-on="on" color="color3"
                 fab dark x-small absolute bottom  right elevation="0"
-                @click="CambioLoading()">
+                @click="CambioLoading()"
+                class="botonLoad">
                     <v-icon> mdi-alert-octagon-outline </v-icon>
                 </v-btn>
             </template>
@@ -154,6 +155,9 @@
 </template>
 
 <style scoped>
+.botonLoad:before{
+  background-color: transparent !important;
+}
 .mdi-calendar-month::before {
     padding-top: 9px;
     padding-left: 8px;

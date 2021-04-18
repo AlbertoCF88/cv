@@ -1,72 +1,98 @@
 <template>
-<div>
-  
+<v-container>
+
 <v-row >
-   <v-col   v-for="item in items" :key="item.id">
-    <v-item-group  class="d-flex justify-center"
+  <v-col >
+    <v-item-group  
     v-model="ventana"
-      mandatory>
-        <v-item 
-        v-slot="{ active, toggle }">
-          <v-btn text color="color1os"
+    mandatory>
+      <v-row >
+        <v-col  class="d-flex justify-center" v-for="item in items" :key="item.id">
+          <v-item v-slot="{ active, toggle }">
+            <v-btn color="color1os" text
             :input-value="active"
             @click="toggle">
-              <v-icon>{{item.titulo}}</v-icon>
-          </v-btn>
-        </v-item>
-      </v-item-group>
-    </v-col>
+              {{item.titulo}}
+            </v-btn>
+          </v-item>
+        </v-col>
+      </v-row>
+    </v-item-group>
+  </v-col>
 
-    <v-col cols="12">
-      <v-window v-model="ventana"
-      class="elevation-1" vertical>
-        <v-window-item v-for="item in items" :key="item.id">
-          <v-card flat>
-            <v-card-text>
-              <v-row
-                class="mb-4"
-                align="center"
-              >
-                <v-avatar
-                  color="grey"
-                  class="mr-4"
-                ></v-avatar>
-                <strong class="title">Title {{item.titulo}}</strong>
-                <v-spacer></v-spacer>
-              </v-row>
-                      <v-row class="d-flex justify-center">
-                        <v-col cols="12"  >
-                              <v-card class="mx-auto mt-2"
-                              v-for="(titulo, index) in item.cert" :key="index"
-                                      
-                                      
-                                        >
+  <v-col cols="12">
+    <v-window v-model="ventana"
+    class="elevation-1" vertical>
+      <v-window-item v-for="item in items" :key="item.id">
+        <v-card flat>
+          <v-card-text>
+            <v-container class="titulo title" :class="item.color"> 
+              {{item.titulo}}
+            </v-container>
+            <v-avatar :class="item.color" class="avatarTamaño">
+            <v-icon dark size="40"> {{item.icono}} </v-icon>
+            </v-avatar>
 
-                                  <v-img
-                                  height="50"
-                                  contain
-                                  src="@/assets/pixel.png"
-                                ></v-img>
-                                  <v-card-title>{{titulo}}</v-card-title>
-                                                          
-                                        
-                              </v-card>
-                        </v-col>
-                      </v-row>
-                      
-            </v-card-text>
-          </v-card>
-        </v-window-item>
-      </v-window>
-    </v-col>
+            <v-row class="d-flex justify-center">
+              <v-col cols="12"  >
+                <v-card class="mx-auto mt-2"
+                v-for="(titulo, index) in item.cert" :key="index.titulo">
+              
+                  <v-img height="50" contain
+                   v-for="(imge, index) in item.img" :key="index"
+                  :src="index.imge" >
+                  <span v-if="item.id">{{item.id}}</span>
+                  </v-img>
+             
+                  <v-card-title > {{titulo}} </v-card-title> 
+                  <span    v-for="(des, index) in item.des" :key="index">{{des.length}} </span>     
+                </v-card>
+              </v-col>
+            </v-row>          
+          </v-card-text>
+        </v-card>
+      </v-window-item>
+    </v-window>
+  </v-col>
 
+  <v-col >
+    <v-item-group  
+    v-model="ventana"
+    mandatory>
+      <v-row >
+        <v-col  class="d-flex justify-center" v-for="item in items" :key="item.id">
+          <v-item v-slot="{ active, toggle }">
+            <v-btn color="color1os" icon 
+            :input-value="active"
+            @click="toggle">
+              <v-icon>mdi-record</v-icon>
+            </v-btn>
+          </v-item>
+        </v-col>
+      </v-row>
+    </v-item-group>
+  </v-col>
+</v-row>
 
-  </v-row>
-</div>
+</v-container>
 </template>
 
 <style scoped>
-
+.v-avatar {
+  display: block;
+  bottom: 60px;
+  right: 13px;
+}
+.avatarTamaño{
+  height: 75px !important;
+  min-width: 75px !important;
+  width: 75px !important;
+}
+.titulo{
+  padding-left: 4rem;
+  height: 3rem;
+  color: white;
+}
 </style>
 
 
@@ -79,25 +105,65 @@ export default {
       ventana: 0,
       items: [
         { titulo: 'Certificados' ,
-          cert:['front','Curso CSS3'],
-          des:['(400h), acreditado por Pixelpro (año 2020). Estudiando actualmente',
-          '(20h), acreditado por Microsoft (año 2020).'],
-          
-        
+          icono: 'mdi-file-certificate-outline',
+          color:'color1os',
+          /* para extraer una imagen desde una array */
+          img: [
+            require('@/assets/pixel.png'),
+            require('@/assets/pixel.png'),
+            require('@/assets/ford.png'),
+            require('@/assets/cisco.png'),
+            ],
+          cert:[
+            'Front End Developer',
+            'Curso CSS3',
+            'Curso KRC4 programación (Robot KUKA)',
+            'Curso CCNA 1 Networking basiscs'
+            ],
+          des:[
+            'HTML5, CSS3, Javascript avanzado, ECMAScript, Angular, React, Vue, Angular con NodeJS, (Siguen agregando más material)',
+            'Principios fundamentales de uso y aplicación de CSS3',
+            'Programación con Robots Kuka',
+            'Construir redes LAN simples, realizar configuraciones básicas para routers y switches e implementar esquemas de direccionamiento IP.'
+            ],
+          duracion:[
+             'Más de 120h',
+             '20h',
+             '40h',
+             '70h',
+          ],
+          acre:[
+            'Pixelpro y Microsfot',
+            'Pixelpro y Microsfot',
+            'Ford Motor Company',
+            'CISCO y La Salle'
+          ],
+          año:[
+            '2021',
+            '2020',
+            '2014',
+            '2009',
+          ],
         },
+        /*Titulaciones------------ */
         { 
           titulo: 'Titulaciones' ,
+          icono: 'mdi-certificate-outline',
+          color:'color2',
           cert:['a','b'],
           des:['desc a',
           'desc b'],
         },
+        /*Experiencia------------ */
         { 
-          titulo: 'Click Me3'
+          titulo: 'Experiencia' ,
+          icono: 'mdi-ballot-outline ',
+          color:'color4',
+          cert:['a','b'],
+          des:['desc a',
+          'desc b'],
         },
-        { 
-          titulo: 'Click Me 2'
-
-        },
+       
       ],
 
     }),
