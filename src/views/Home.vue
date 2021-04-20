@@ -12,15 +12,9 @@
     </v-row>
   </v-col>
 
-  <v-col cols="12">
-  
-    <comTitulo></comTitulo>
- 
+  <v-col cols="12" class="pa-0 mt-12">
+    <comCv></comCv>
   </v-col>
-  
-  
-    
-
 </v-row>
 </v-container>
 </template>
@@ -28,14 +22,9 @@
 <style scoped>
 @media (min-width:959px) {
   .encuadre{
-     margin-left: 2.3%;
-  }
-}
-/* @media (min-width:1911px) {
-  .encuadre{
     margin-left: 2%;
   }
-} */
+}
 @media (min-width:1912px) {
   .encuadre{
     margin-left: 20%;
@@ -51,12 +40,12 @@
 <script>
 import comBarraV from '@/components/ComBarraVertical.vue';
 import comTarjeta from '@/components/ComTarjeta.vue';
-import comTitulo from '@/components/ComTitulo.vue';
+import comCv from '@/components/ComCv.vue';
 
 export default {
   name: 'Home',
   components: {
-   comBarraV,comTarjeta, comTitulo
+   comBarraV,comTarjeta, comCv
   },
     data:() => ({
         

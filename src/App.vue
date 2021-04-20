@@ -39,7 +39,7 @@
   </v-app-bar>
 
     <v-main>
-      <v-container fluid mb-16>
+      <v-container fluid>
         <router-view> </router-view>
       </v-container>
     </v-main>

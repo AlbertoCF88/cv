@@ -143,10 +143,6 @@
   position: sticky;
   top: 70px;
 }
-.desbordar {
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
 .input{
     padding-top: 1.9rem !important;
 }
