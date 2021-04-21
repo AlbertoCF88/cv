@@ -1,5 +1,5 @@
 <template>
-<v-container>
+<v-container fliud>
 <v-row no-gutters class="d-flex justify-center mt-5">
   <v-col>
     <v-row class="encuadre">
@@ -20,6 +20,11 @@
 </template>
 
 <style scoped>
+.ojo{
+  background: url(../assets/Rect.svg) fixed;
+  background-size: cover;      
+}
+
 @media (min-width:959px) {
   .encuadre{
     margin-left: 2%;
@@ -31,8 +36,6 @@
     margin-right: 18.2%;
   }
 }
-
- 
 </style>
 
 

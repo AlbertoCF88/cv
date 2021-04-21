@@ -6,33 +6,17 @@
         src="@/assets/rey2.png">
         </v-img>
         <v-card-text class="pt-1 borde ">
-            <v-row >
-                <v-col cols="12" sm="8" class="pb-0">
-                    <v-card-title class="pt-1 pl-1">
-                        {{item.nombre}}
-                    </v-card-title> 
-                </v-col>
-                <v-col cols="12" sm="4" 
-                class="d-flex justify-sm-end pb-0 pt-0">
-                    <v-card-title class="horas pt-0   pt-sm-4">
-                        {{item.duracion}}
-                    </v-card-title> 
-                </v-col>
-            </v-row>
+            <v-card-title class="titulo d-flex justify-center">
+                {{item.nombre}}
+            </v-card-title> 
+        
+            <v-card-subtitle class="d-flex justify-center mt-1 text-subtitle-1">
+                {{item.acre}} 
+            </v-card-subtitle>
 
-            <v-card-subtitle class="mr-sm-16 salto"
-            :class="item.colorTexto">
-                {{item.des}} 
+            <v-card-subtitle class="d-flex justify-end text-caption">
+                Realizado el año: {{item.año}}
             </v-card-subtitle>
-            <v-card-subtitle 
-            :class="item.colorTexto">
-                Expedido el año: {{item.año}}
-            </v-card-subtitle>
-           
-            <p class="d-flex justify-end"
-            :class="item.colorAcre">
-                Acreditado: {{item.acre}}
-            </p>
         </v-card-text>       
     </v-card>
 </v-container>
@@ -40,9 +24,22 @@
 
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+.titulo{
+    font-family: 'Bree Serif', serif;
+}
+.v-card__title {
+    word-break: break-word;
+    color: #71a9d9;
+}
+.v-application .text-subtitle-1 {
+    font-weight: 600;
+}
+.v-application .text-caption {
+    font-weight: 800;
+}
 .borde {
     border:	#DAA520 10px double;
-    background: #eeefe8;
 }
 .fondoRey{
     background: #eeefe8;
@@ -58,17 +55,20 @@ export default {
     ventana: 0,
     titulos:[
         {
-            colorImg:'pixel',
-            colorCard:'pixelCard',
-            colorTexto:'textBlanco',
-            colorAcre:'colorAcredirado',
-            nombre: 'Front End Developer',
-            des:'HTML5, CSS3, Web Responsive, SASS, GIT, PWA, Bootstrap, Vuetify, Jquery, Javascript avanzado, ECMAScript, Angular, React, Vue, Vue Cli, Angular conNodeJS. \n (Siguen agregando más contenido).',
-            duracion:'Más de 120h',
-            acre:'Pixelpro y Microsoft',
-            año:'2021',
+            nombre: 'F.P. Superior Instalaciones Electrotécnicas',
+            acre:'CIPFP Faitanar, Quart de Poblet',
+            año:'(2010 - 2012)',
         },
-       
+        {
+            nombre: 'F.P. Superior, Sistemas de Telecomunicación e Informáticos',
+            acre:'Centro Privado Escuela Profesional La Salle, Paterna',
+            año:'(2007 - 2009)',
+        },
+        {
+            nombre: 'F.P. Medio, Equipos Electrónicos de Consumo',
+            acre:'Centro Privado Escuela Profesional La Salle, Paterna',
+            año:'(2005 - 2007)',
+        },
     ],//titulos
     }),//data
 }
