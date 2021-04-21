@@ -1,6 +1,6 @@
 <template>
 <v-container>
-    <v-card shaped class="mx-auto mt-2" max-width="800"
+    <v-card class="mx-auto mb-8" max-width="800"
     v-for="item in titulos" :key="item.id" >
         <v-img height="50" contain class="fondoRey"
         src="@/assets/rey2.png">
@@ -25,6 +25,9 @@
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+.v-card{
+    border-radius: 24px 24px 0 0;
+}
 .titulo{
     font-family: 'Bree Serif', serif;
 }
@@ -52,7 +55,6 @@ export default {
 
     data: () => ({
  
-    ventana: 0,
     titulos:[
         {
             nombre: 'F.P. Superior Instalaciones Electrotécnicas',

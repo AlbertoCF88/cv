@@ -38,12 +38,13 @@
     </v-bottom-navigation>
   </v-app-bar>
 
-    <v-main>
-      <v-container fluid>
-        <router-view> </router-view>
-      </v-container>
-    </v-main>
-<comGracias></comGracias>
+  <v-main>
+    <v-container fluid>
+      <router-view> </router-view>
+    </v-container>
+  </v-main>
+
+  <comGracias></comGracias>
 
   <comFooter
     :color="color"
@@ -63,7 +64,6 @@
 }
 }/*fin media*/
 </style>
-
 
 <script>
 import comFooter from '@/components/ComFooter.vue';
@@ -85,8 +85,6 @@ export default {
           default: return 'color1'
         }
       },
-    },
-  
-
+    },//computed
 };
 </script>

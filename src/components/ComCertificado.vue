@@ -1,6 +1,6 @@
 <template>
 <v-container>
-    <v-card shaped class="mx-auto mt-2" max-width="800"
+    <v-card shaped class="mx-auto mb-8" max-width="800"
     v-for="item in certificados" :key="item.id" >
         <v-img height="50" contain :class="item.colorImg"
         :src="item.img">
@@ -10,7 +10,7 @@
         class="pt-1">
             <v-row >
                 <v-col cols="12" sm="8" class="pb-0">
-                    <v-card-title class="pt-1 pl-1">
+                    <v-card-title class="pt-1 d-flex justify-center">
                         {{item.nombre}}
                     </v-card-title> 
                 </v-col>
@@ -63,7 +63,7 @@
     background-color: #2a8cc8;
     color: whitesmoke !important;
 }
-.colorAcredirado{
+.colorAcreditado{
     color: #00639e;
     font-weight: bold;
     margin: 0px 12px;
@@ -76,7 +76,7 @@
     background-color:#165191;
     color: whitesmoke !important;
 }
-.colorAcrediradoFord{
+.colorAcreditadoFord{
     color:#1f86f9;
     font-weight: bold;
     margin: 0px 12px;
@@ -89,7 +89,7 @@
     background-color:#05b5f0;
     color: whitesmoke !important;
 }
-.colorAcrediradoCisco{
+.colorAcreditadoCisco{
     color:#00000055;
     font-weight: bold;
     margin: 0px 12px;
@@ -104,14 +104,13 @@ export default {
 
     data: () => ({
  
-    ventana: 0,
     certificados:[
         {
             img: require('@/assets/pixel.png'),
             colorImg:'pixel',
             colorCard:'pixelCard',
             colorTexto:'textBlanco',
-            colorAcre:'colorAcredirado',
+            colorAcre:'colorAcreditado',
             nombre: 'Front End Developer',
             des:'HTML5, CSS3, Web Responsive, SASS, GIT, PWA, Bootstrap, Vuetify, Jquery, Javascript avanzado, ECMAScript, Angular, React, Vue, Vue Cli, Angular conNodeJS. \n (Siguen agregando más contenido).',
             duracion:'Más de 120h',
@@ -123,7 +122,7 @@ export default {
             colorImg:'pixel',
             colorCard:'pixelCard',
             colorTexto:'textBlanco',
-            colorAcre:'colorAcredirado',
+            colorAcre:'colorAcreditado',
             nombre: 'Curso CSS3',
             des:'Principios fundamentales de uso y aplicación de CSS3.',
             duracion:'20h',
@@ -135,7 +134,7 @@ export default {
             colorImg:'ford',
             colorCard:'fordCard',
             colorTexto:'textBlanco',
-            colorAcre:'colorAcrediradoFord',
+            colorAcre:'colorAcreditadoFord',
             nombre: 'Curso KRC4 programación (Robot KUKA)',
             des: 'Descripción del Sistema KUKA KRC4,  Seguridades,Operación, Puesta en servicio,Administración de programa, Principios de la programación de movimientos.',
             duracion:'40h',
@@ -147,7 +146,7 @@ export default {
             colorImg:'cisco',
             colorCard:'ciscoCard',
             colorTexto:'textBlanco',
-            colorAcre:'colorAcrediradoCisco',
+            colorAcre:'colorAcreditadoCisco',
             nombre: 'Curso CCNA 1 Networking basiscs',
             des: 'Construir redes LAN simples, realizar configuraciones básicas para routers y switches e implementar esquemas de direccionamiento IP.',
             duracion:'70h',

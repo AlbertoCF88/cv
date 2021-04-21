@@ -48,6 +48,10 @@
                 <comTitu></comTitu>
                 </div>
 
+                <div v-if="ventana==2">   
+                <comExp></comExp>
+                </div>
+
               </v-col>
             </v-row>          
           </v-card-text>
@@ -119,10 +123,11 @@
 <script>
 import comCert from '@/components/ComCertificado.vue';
 import comTitu from '@/components/ComTitulo.vue';
+import comExp from '@/components/ComExp.vue';
 export default {
   name: 'comCv',
   components: {
-  comCert, comTitu
+  comCert, comTitu, comExp
   },
     data: () => ({
 
