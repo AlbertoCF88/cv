@@ -11,59 +11,66 @@
         class="pt-1">
 
             <v-card-title 
-            class="pt-1 d-flex justify-center">
+            class="mt-1 d-flex justify-center ">
                 {{item.nombre}}
             </v-card-title> 
-
+   
             <v-container fluid v-if="item.salir">
+                
+            <comLeye class="ocularLeyenda justify-center mt-0 mb-4"
+            :certificados="certificados">
+            </comLeye>
+
                 <v-img height="300" contain
                 :src="item.frontImg">
-                    <div class="altura d-flex justify-space-between align-center">
+                    <div  class="desaparece altura d-flex justify-space-between align-center">
                         <ul>
-                              
                             <div class="cajaIcon">
-                                <v-icon v-for="color in item.colorLista" :key="color.id"  :color="color">
+                                <v-icon v-for="color in item.colorLista" 
+                                :key="color.id"  
+                                :color="color">
                                      mdi-square-rounded  
                                 </v-icon>
                             </div>
-                        
-                               <div class="cajaLista">
-                            <li v-for="li in item.lista" :key="li.id" >
-                                {{li}}
-                            </li>
-                             </div>
+                            <div class="cajaLista textBlanco">
+                                <li v-for="li in item.lista" 
+                                :key="li.id" >
+                                    {{li}}
+                                </li>
+                            </div>
                         </ul>
-
                         <ul>
                            <div class="cajaIcon">
-                                <v-icon v-for="color2 in item.colorLista2" :key="color2.id"  :color="color2">
+                                <v-icon v-for="color2 in item.colorLista2" 
+                                :key="color2.id"  
+                                :color="color2">
                                      mdi-square-rounded  
                                 </v-icon>
                             </div>
-                        
-                               <div class="cajaLista">
-                            <li v-for="li2 in item.lista2" :key="li2.id" >
-                                {{li2}}
-                            </li>
-                             </div>
+                            <div class="cajaLista textBlanco">
+                                <li v-for="li2 in item.lista2" 
+                                :key="li2.id" >
+                                    {{li2}}
+                                </li>
+                            </div>
                         </ul>
                     </div>
                 </v-img>
             </v-container>
             
             <v-card-subtitle 
-            class="salto d-flex justify-center mx-sm-11"
-            :class="item.colorTexto">
+            class="salto d-flex justify-center mx-sm-11 mt-2"
+            :class="item.color">
                 {{item.des}} 
             </v-card-subtitle>
 
             <v-card-subtitle 
             class="d-flex justify-center"
-            :class="item.colorTexto">
+            :class="item.color">
                 {{item.duracion}} 
             </v-card-subtitle>
             
-           <div class="d-sm-flex justify-space-between">
+           <div class="d-sm-flex justify-space-between añoAcreditacion">
                 <p :class="item.colorAcre">
                     Expedido el año: {{item.año}}
                 </p>
@@ -74,10 +81,25 @@
             </div>
         </v-card-text>       
     </v-card>
+
+
+
 </v-container>
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Zen+Dots&display=swap');
+@media (max-width:840px) {
+    .desaparece{
+        opacity: 0;
+    }
+   .ocularLeyenda{
+       display: block !important;
+    }
+}
+.ocularLeyenda{
+       display: none;
+    }
 .altura{
    height: 300px;
 }
@@ -96,7 +118,8 @@ ul {
     list-style: none;
     display: flex;
     align-content: center;
-    flex-wrap: wrap;
+    flex-wrap: initial;
+    padding: 0;
 }
 li{
     line-height: 3rem;
@@ -114,6 +137,14 @@ li{
 }
 .v-card__title {
     word-break: break-word;
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Zen Dots', cursive;
+    
+}
+.añoAcreditacion{
+    font-weight: bold;
+    margin: 0px 12px;
+    line-height:1rem;
 }
 /*Pixel */
 .pixel{
@@ -125,8 +156,6 @@ li{
 }
 .colorAcreditado{
     color: #00639e;
-    font-weight: bold;
-    margin: 0px 12px;
 }
 /*Ford */
 .ford{
@@ -138,8 +167,6 @@ li{
 }
 .colorAcreditadoFord{
     color:#1f86f9;
-    font-weight: bold;
-    margin: 0px 12px;
 }
 /*Cisco */
 .cisco{
@@ -151,26 +178,28 @@ li{
 }
 .colorAcreditadoCisco{
     color:#00000055;
-    font-weight: bold;
-    margin: 0px 12px;
+  
 }
 
 </style>
 
 
 <script>
+import comLeye from '@/components/ComLeyenda.vue';
 export default {
     name: 'comCert',
-
+    components:{
+        comLeye,
+    },
     data: () => ({
- 
+    dialog: false,
     certificados:[
         {
             img: require('@/assets/pixel.png'),
             frontImg: require('@/assets/frontSin.png'),
             colorImg:'pixel',
             colorCard:'pixelCard',
-            colorTexto:'textBlanco',
+            color:'textBlanco',
             colorAcre:'colorAcreditado',
             nombre: 'Front End Developer',
             des:'HTML5, CSS3, Web Responsive, SASS, Bootstrap, Vuetify,\nGIT,PWA, Jquery, Javascript avanzado, ECMAScript, Angular, React, Vue, Vue Cli, Angular conNodeJS. \n (Siguen agregando más contenido).',
@@ -178,16 +207,16 @@ export default {
             acre:'Pixelpro y Microsoft',
             año:'2021',
             salir:true,
-            lista:['Version Control','Package managers','JS Frameworks','JS Preprocessors','Back-End'],
-            lista2:['Core','Image Manipulations','UI Frameworks','Responsible Web design','CSS Preprocessors'],
-            colorLista:['red','blue','black','red','blue'],
-            colorLista2:['red','blue','black','red','blue']
+            lista:['Core','Image Manipulations','UI Frameworks','Responsible Web design','CSS Preprocessors'],
+            lista2:['Version Control','Package managers','JS Frameworks','JS Preprocessors','Back-End'],
+            colorLista:['#737ec8','#448aff','#c5cae9','#009688','#b1dfdb'],
+            colorLista2:['#607d8b','#e64a19','#ff9800','#d32f2f','#e38ad7']
         },
         {
             img: require('@/assets/pixel.png'),
             colorImg:'pixel',
             colorCard:'pixelCard',
-            colorTexto:'textBlanco',
+            color:'textBlanco',
             colorAcre:'colorAcreditado',
             nombre: 'Curso CSS3',
             des:'Principios fundamentales de uso y aplicación de CSS3.',
@@ -199,7 +228,7 @@ export default {
             img: require('@/assets/ford.png'),
             colorImg:'ford',
             colorCard:'fordCard',
-            colorTexto:'textBlanco',
+            color:'textBlanco',
             colorAcre:'colorAcreditadoFord',
             nombre: 'Curso KRC4 programación (Robot KUKA)',
             des: 'Descripción del Sistema KUKA KRC4,  Seguridades,Operación, Puesta en servicio,Administración de programa, Principios de la programación de movimientos.',
@@ -211,7 +240,7 @@ export default {
             img: require('@/assets/cisco.png'),
             colorImg:'cisco',
             colorCard:'ciscoCard',
-            colorTexto:'textBlanco',
+            color:'textBlanco',
             colorAcre:'colorAcreditadoCisco',
             nombre: 'Curso CCNA 1 Networking basiscs',
             des: 'Construir redes LAN simples, realizar configuraciones básicas para routers y switches e implementar esquemas de direccionamiento IP.',
