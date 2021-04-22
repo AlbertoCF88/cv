@@ -1,5 +1,6 @@
 <template>
 <v-container>
+
     <v-card shaped class="mx-auto mb-8" max-width="800"
     v-for="item in certificados" :key="item.id" >
         <v-img height="50" contain :class="item.colorImg"
@@ -8,39 +9,98 @@
         <v-card-text 
         :class="item.colorCard"
         class="pt-1">
-            <v-row >
-                <v-col cols="12" sm="8" class="pb-0">
-                    <v-card-title class="pt-1 d-flex justify-center">
-                        {{item.nombre}}
-                    </v-card-title> 
-                </v-col>
-                <v-col cols="12" sm="4" 
-                class="d-flex justify-sm-end pb-0 pt-0">
-                    <v-card-title class="horas pt-0   pt-sm-4">
-                        {{item.duracion}}
-                    </v-card-title> 
-                </v-col>
-            </v-row>
 
-            <v-card-subtitle class="mr-sm-16 salto"
+            <v-card-title 
+            class="pt-1 d-flex justify-center">
+                {{item.nombre}}
+            </v-card-title> 
+
+            <v-container fluid v-if="item.salir">
+                <v-img height="300" contain
+                :src="item.frontImg">
+                    <div class="altura d-flex justify-space-between align-center">
+                        <ul>
+                              
+                            <div class="cajaIcon">
+                                <v-icon v-for="color in item.colorLista" :key="color.id"  :color="color">
+                                     mdi-square-rounded  
+                                </v-icon>
+                            </div>
+                        
+                               <div class="cajaLista">
+                            <li v-for="li in item.lista" :key="li.id" >
+                                {{li}}
+                            </li>
+                             </div>
+                        </ul>
+
+                        <ul>
+                           <div class="cajaIcon">
+                                <v-icon v-for="color2 in item.colorLista2" :key="color2.id"  :color="color2">
+                                     mdi-square-rounded  
+                                </v-icon>
+                            </div>
+                        
+                               <div class="cajaLista">
+                            <li v-for="li2 in item.lista2" :key="li2.id" >
+                                {{li2}}
+                            </li>
+                             </div>
+                        </ul>
+                    </div>
+                </v-img>
+            </v-container>
+            
+            <v-card-subtitle 
+            class="salto d-flex justify-center mx-sm-11"
             :class="item.colorTexto">
                 {{item.des}} 
             </v-card-subtitle>
+
             <v-card-subtitle 
+            class="d-flex justify-center"
             :class="item.colorTexto">
-                Expedido el año: {{item.año}}
+                {{item.duracion}} 
             </v-card-subtitle>
-           
-            <p class="d-flex justify-end"
-            :class="item.colorAcre">
-                Acreditado: {{item.acre}}
-            </p>
+            
+           <div class="d-sm-flex justify-space-between">
+                <p :class="item.colorAcre">
+                    Expedido el año: {{item.año}}
+                </p>
+                <p class="d-flex justify-sm-end"
+                :class="item.colorAcre">
+                    Acreditado: {{item.acre}}
+                </p>
+            </div>
         </v-card-text>       
     </v-card>
 </v-container>
 </template>
 
 <style scoped>
+.altura{
+   height: 300px;
+}
+.cajaIcon{
+    display: grid;
+}
+.v-icon.v-icon {
+    font-size: 31px !important;
+    line-height: 1.4 !important;
+}
+.cajaLista{
+    display: grid;
+    padding-left: 10px;
+}
+ul {
+    list-style: none;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+li{
+    line-height: 3rem;
+}
 /*salto + \n en el objeto*/
 .salto{
     white-space: pre-line;
@@ -107,15 +167,21 @@ export default {
     certificados:[
         {
             img: require('@/assets/pixel.png'),
+            frontImg: require('@/assets/frontSin.png'),
             colorImg:'pixel',
             colorCard:'pixelCard',
             colorTexto:'textBlanco',
             colorAcre:'colorAcreditado',
             nombre: 'Front End Developer',
-            des:'HTML5, CSS3, Web Responsive, SASS, GIT, PWA, Bootstrap, Vuetify, Jquery, Javascript avanzado, ECMAScript, Angular, React, Vue, Vue Cli, Angular conNodeJS. \n (Siguen agregando más contenido).',
+            des:'HTML5, CSS3, Web Responsive, SASS, Bootstrap, Vuetify,\nGIT,PWA, Jquery, Javascript avanzado, ECMAScript, Angular, React, Vue, Vue Cli, Angular conNodeJS. \n (Siguen agregando más contenido).',
             duracion:'Más de 120h',
             acre:'Pixelpro y Microsoft',
             año:'2021',
+            salir:true,
+            lista:['Version Control','Package managers','JS Frameworks','JS Preprocessors','Back-End'],
+            lista2:['Core','Image Manipulations','UI Frameworks','Responsible Web design','CSS Preprocessors'],
+            colorLista:['red','blue','black','red','blue'],
+            colorLista2:['red','blue','black','red','blue']
         },
         {
             img: require('@/assets/pixel.png'),
