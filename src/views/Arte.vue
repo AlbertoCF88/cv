@@ -2,12 +2,23 @@
     <div>
         <v-container>
             <h1  class="color2--text d-flex justify-center text-center titulo my-6">Galeria De Fotos Dinámica</h1>
-            
-            <v-row  class="d-flex justify-center text-center">
-                <v-col  sm="4" cols="6" v-for="(item,index) in fotos" :key="index">
-                    <v-hover v-slot="{ hover }" >
-                        <v-card color="color2" hover>
-                            
+        </v-container>
+
+        <v-sheet class="mx-auto d-flex justify-center" elevation="8" >
+      <v-slide-group  class="pa-4" show-arrows center-active>
+        <v-slide-item  v-for="(item,index) in cuadros" :key="index"
+        v-slot="{ active, toggle }">
+              <v-hover v-slot="{ hover }" >
+          <v-card
+            :color="active ? 'primary' : 'grey lighten-1'"
+            class="ma-4"
+          height="100"
+          width="200"
+            @click="toggle"
+            :to="{name:'arte', params: {page: item.id}}"
+          >
+          
+             
                             <v-img  aspect-ratio="2"
                             :src="item.foto">
                                 <v-expand-transition>
@@ -15,28 +26,28 @@
                                     class="d-flex transition-fast-in-fast-out color2 darken-2 
                                     v-card--reveal display-3 white--text"
                                     style="height: 100%;">
-                                        <v-btn  dark text 
-                                        class="botonEntrar text-caption 
-                                        text-sm-subtitle-1 text-md-h6 text-lg-h4 text-xl-h3"
-                                        :to="{name:'arte', params: {page: item.id}}">
                                             Entrar
-                                        </v-btn >
                                     </div>
                                 </v-expand-transition>
                             </v-img>
+             <v-card-text class="py-8 botonEntrar text-capitalize  text-caption 
+                            text-sm-subtitle-1 text-md-h6 text-lg-h4 text-xl-h3">
+                    {{item.titulo}}
+             </v-card-text>
+    
+            
 
-                            <v-btn  dark text 
-                            class="py-8 botonEntrar text-capitalize  text-caption 
-                            text-sm-subtitle-1 text-md-h6 text-lg-h4 text-xl-h3"
-                            :to="{name:'arte', params: {page: item.id}}">
-                                {{item.titulo}}
-                            </v-btn >
-                        </v-card>
-                    </v-hover>
-                </v-col>
-            </v-row>
-        </v-container>
-
+          </v-card>
+            </v-hover>
+        </v-slide-item>
+      </v-slide-group>
+  
+    
+    </v-sheet>
+      
+ 
+     
+    
         <comCuadro :cuadros="cuadros"/>
 
     </div>
@@ -70,18 +81,9 @@ export default {
     },
     data(){
         return{
-        cuadros:[
-            {
-                id:'dialluvioso',
-                titulo:'Dia Luvioso',
-            },
-            {
-                id:'retratoana',
-                titulo:'Retrato Ana'
-            }
-    ],
+        
 
-    fotos:[
+    cuadros:[
         {
             id:'dialluvioso',
             titulo:'Dia Lluvioso',
@@ -116,6 +118,17 @@ export default {
 
         }
     },
+    methods:{
+        home(){
+            this.$router.push('/')
+        },
+        anterior(){
+            this.$router.go(-1)
+        },
+        siguiente(){
+                this.$router.go(1)
+            }
+        }
      
     }
 </script>
