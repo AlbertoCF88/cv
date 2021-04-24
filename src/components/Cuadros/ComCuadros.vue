@@ -6,7 +6,7 @@
 
   <div  v-for="(item,index) in cuadros" :key="index"> 
     <div v-if="$route.params.page==item.id">
-    <!-- <h1>{{item.titulo}}}</h1>
+    <h1>{{item.titulo}}}</h1>
     <v-carousel  :show-arrows="false">
       <v-carousel-item
       v-for="item in fotos" :key="item"
@@ -24,7 +24,7 @@
           </v-img>
         </v-col>
       </v-row>
-    </v-container>  -->
+    </v-container> 
     </div>
   </div>
 </div>

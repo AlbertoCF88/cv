@@ -1,51 +1,42 @@
 <template>
     <div>
         <v-container>
-            <h1 class="d-flex justify-center text-center titulo my-6">Galeria De Fotos Dinámica</h1>
+            <h1  class="color2--text d-flex justify-center text-center titulo my-6">Galeria De Fotos Dinámica</h1>
             
             <v-row  class="d-flex justify-center text-center">
-                <v-btn></v-btn>
                 <v-col  sm="4" cols="6" v-for="(item,index) in fotos" :key="index">
                     <v-hover v-slot="{ hover }" >
                         <v-card color="color2" hover>
                             
                             <v-img  aspect-ratio="2"
                             :src="item.foto">
-                            <v-expand-transition>
-                                <div v-if="hover"
-                                class="d-flex transition-fast-in-fast-out color2 darken-2 
-                                v-card--reveal display-3 white--text"
-                                style="height: 100%;">
-                                    <v-btn  dark text class="botonEntrar text-caption 
-                                    text-sm-subtitle-1 text-md-h6 text-lg-h4 text-xl-h3"
-                                    :to="{name:'arte', params: {page: item.id}}">
-                                        Entrar
-                                    </v-btn >
-                                </div>
-                            </v-expand-transition>
+                                <v-expand-transition>
+                                    <div v-if="hover"
+                                    class="d-flex transition-fast-in-fast-out color2 darken-2 
+                                    v-card--reveal display-3 white--text"
+                                    style="height: 100%;">
+                                        <v-btn  dark text 
+                                        class="botonEntrar text-caption 
+                                        text-sm-subtitle-1 text-md-h6 text-lg-h4 text-xl-h3"
+                                        :to="{name:'arte', params: {page: item.id}}">
+                                            Entrar
+                                        </v-btn >
+                                    </div>
+                                </v-expand-transition>
                             </v-img>
 
-                        
-                                 <v-btn  dark text class="py-8 botonEntrar text-capitalize  text-caption 
-                                    text-sm-subtitle-1 text-md-h6 text-lg-h4 text-xl-h3"
-                                    :to="{name:'arte', params: {page: item.id}}">
-                                   {{item.titulo}}
-                                    </v-btn >
-                        
-                        
-                        
+                            <v-btn  dark text 
+                            class="py-8 botonEntrar text-capitalize  text-caption 
+                            text-sm-subtitle-1 text-md-h6 text-lg-h4 text-xl-h3"
+                            :to="{name:'arte', params: {page: item.id}}">
+                                {{item.titulo}}
+                            </v-btn >
                         </v-card>
                     </v-hover>
                 </v-col>
             </v-row>
         </v-container>
 
-      
-
-        <button @click="home()">Home</button>
-        <button @click="anterior()">Anterior</button>
-        <button @click="siguiente()">Siguiente</button>
-    
         <comCuadro :cuadros="cuadros"/>
 
     </div>
@@ -125,17 +116,6 @@ export default {
 
         }
     },
-    methods:{
-        home(){
-            this.$router.push('/')
-        },
-        anterior(){
-            this.$router.go(-1)
-        },
-        siguiente(){
-                this.$router.go(1)
-            }
-        }
      
     }
 </script>
