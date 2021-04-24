@@ -169,9 +169,6 @@
     margin-top: 20px;
     margin-bottom: 19px;
 }
-.v-list-item:hover{
-    background: #43b8832d !important;
-}
 /*boton stop */
 .v-btn--absolute.v-btn--right, .v-btn--fixed.v-btn--right {
   right: -16px;

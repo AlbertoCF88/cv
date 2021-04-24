@@ -47,11 +47,11 @@
           <p class="texto">
             Hola,
             <br>
-            Soy una persona tranquila, paciente, amable e imaginativo.
+            Soy tranquilo, paciente, amable e imaginativo.
             <br>
             En los tiempos que vivimos me ha hecho retomar el mundo de la porgramación al que me gustaba por su creatividad.
             <br>
-            Si te interesa contrartar a una persona creativa, responsable, madura y nueva en esto pero con muchas ganas de trabajar no dude en contacar conmigo: 
+            Si le interesa contrartar a una persona creativa, responsable, madura y nueva en esto pero con muchas ganas de trabajar no dude en contactar conmigo: 
             <a href="mailto: alcafefront@gmail.com" target="_blank">alcafefront@gmail.com</a>
              <br>
              <br>

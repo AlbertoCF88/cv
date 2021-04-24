@@ -15,6 +15,12 @@ const routes = [
     name: 'Arte',
     component: () => import('../views/Arte.vue')
   },
+  //arte en minusculas para diferenciar del Arte
+  {
+    path: '/arte/:page',
+    name: 'arte',
+    component: () => import('../views/Arte.vue')
+  },
   {
     path: '/webs',
     name: 'Webs',

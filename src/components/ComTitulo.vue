@@ -5,12 +5,12 @@
         <v-img height="50" contain class="fondoRey"
         src="@/assets/rey2.png">
         </v-img>
-        <v-card-text class="pt-1 borde ">
-            <v-card-title class="titulo d-flex justify-center">
+        <v-card-text class="pt-1 borde">
+            <v-card-title class="salto titulo d-flex justify-center tituloMovil text-center">
                 {{item.nombre}}
             </v-card-title> 
         
-            <v-card-subtitle class="d-flex justify-center mt-1 text-subtitle-1">
+            <v-card-subtitle class="d-flex justify-center mt-1 text-subtitle-2 text-md-subtitle-1">
                 {{item.acre}} 
             </v-card-subtitle>
 
@@ -24,22 +24,31 @@
 
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap');
+@media (max-width:600px) {
+    .tituloMovil {
+        font-size:1rem;
+    }
+}
+/*salto + \n en el objeto*/
+.salto{
+    white-space: pre-line;
+}
 .v-card{
     border-radius: 24px 24px 0 0;
-}
-.titulo{
-    font-family: 'Bree Serif', serif;
 }
 .v-card__title {
     word-break: break-word;
     color: #71a9d9;
+    font-family: 'Noticia Text', serif;
+    line-height: 1.5rem !important;
 }
-.v-application .text-subtitle-1 {
-    font-weight: 600;
-}
-.v-application .text-caption {
+.text-subtitle-1 ,.text-subtitle-2 {
     font-weight: 800;
+}
+.text-caption {
+    font-weight: 800;
+    color:#DAA520 !important;
 }
 .borde {
     border:	#DAA520 10px double;
@@ -49,6 +58,8 @@
     border: solid #a6a89a 1px;
 }
 </style>
+
+
 <script>
 export default {
     name: 'comTitu',
@@ -57,17 +68,17 @@ export default {
  
     titulos:[
         {
-            nombre: 'F.P. Superior Instalaciones Electrotécnicas',
+            nombre: 'F.P. Superior\nInstalaciones Electrotécnicas',
             acre:'CIPFP Faitanar, Quart de Poblet',
             año:'(2010 - 2012)',
         },
         {
-            nombre: 'F.P. Superior, Sistemas de Telecomunicación e Informáticos',
+            nombre: 'F.P. Superior\nSistemas de Telecomunicación e Informáticos',
             acre:'Centro Privado Escuela Profesional La Salle, Paterna',
             año:'(2007 - 2009)',
         },
         {
-            nombre: 'F.P. Medio, Equipos Electrónicos de Consumo',
+            nombre: 'F.P. Medio\nEquipos Electrónicos de Consumo',
             acre:'Centro Privado Escuela Profesional La Salle, Paterna',
             año:'(2005 - 2007)',
         },

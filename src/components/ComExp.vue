@@ -9,18 +9,18 @@
         :class="item.colorCard"
         class="pt-1">
             <v-card-title 
-            class="text-sm-h4 d-flex justify-center">
+            class="salto text-sm-h4 d-flex justify-center text-center">
                 {{item.nombre}}
             </v-card-title> 
         
             <v-card-subtitle 
-            class="d-flex justify-center font-italic puesto"
+            class="salto d-flex justify-center font-italic puesto text-center"
             :class="item.colorTexto">
                 {{item.puesto}} 
             </v-card-subtitle>
 
             <v-card-subtitle 
-            class="salto mx-md-16 text-sm-subtitle-1"
+            class="salto mx-md-16 text-sm-subtitle-1 d-flex justify-center"
             :class="item.colorTexto">
                 {{item.des}}
             </v-card-subtitle>
@@ -70,6 +70,7 @@
 .fordCard{
     background-color:#165191;
     color: whitesmoke !important;
+    border:#c7d9df solid 5px;
 }
 .colorAñoFord{
     color:#1f86f9;
@@ -77,12 +78,75 @@
     margin: 0px 12px;
 }
 /*paterna */
+.paterna{
+    background-color:#313131;
+}
+.paternaCard{
+    background-color:#d0ab03;
+    color: whitesmoke !important;
+    border:#313131 solid 5px;
+}
+.colorAñoPaterna{
+    color:#847010;
+    font-weight: bold;
+    margin: 0px 12px;
+}
 /*autrial */
+.autrial{
+    background-color:#ffffff;
+}
+.autrialCard{
+    background-color:#2a6197;
+    color: whitesmoke !important;
+    border:#ffffff solid 5px;
+}
+.colorAñoAutrial{
+    color:#3f94e7;
+    font-weight: bold;
+    margin: 0px 12px;
+}
 /*sigma */
+.sigma{
+    background-color:#ffffff;
+}
+.sigmaCard{
+    background-color:#131212;
+    color: whitesmoke !important;
+    border:#ffffff solid 5px;
+}
+.colorAñoSigma{
+    color:#8a6262;
+    font-weight: bold;
+    margin: 0px 12px;
+}
 /*inter */
+.inter{
+    background-color:#ffffff;
+}
+.interCard{
+    background-color:#48912a;
+    color: whitesmoke !important;
+    border:#ffffff solid 5px;
+}
+.colorAñoInter{
+    color:#61c437;
+    font-weight: bold;
+    margin: 0px 12px;
+}
 /*serrano */
-
-
+.serrano{
+    background-color:#ed1b2e;
+}
+.serranoCard{
+    background-color: #f9a139;
+    color: whitesmoke !important;
+    border:#ed1b2e solid 5px;
+}
+.colorAñoSerrano{
+    color:#d07407;
+    font-weight: bold;
+    margin: 0px 12px;
+}
 </style>
 
 
@@ -99,7 +163,7 @@ export default {
             colorCard:'binoCard',
             colorTexto:'textBlanco',
             colorAño:'colorAñoBino',
-            nombre: 'Binoovo Smart Industry',
+            nombre: 'Binoovo\n Smart Industry',
             puesto:'Técnico electricista',
             des:'Fabricación de cuadros fotovoltaicos.',
             año:'Junio de 2019 – octubre de 2020 (1 año 5 meses)',
@@ -110,7 +174,7 @@ export default {
             colorCard:'fordCard',
             colorTexto:'textBlanco',
             colorAño:'colorAñoFord',
-            nombre:'Ford Motor Company',
+            nombre:'Ford\nMotor Company',
             puesto:'Operario de línea y mantenimiento',
             des:'➤ (2013-2018): Planta de carrocerías como auxiliar de jefe de equipo, controlando el proceso informático, mecánico y robótico.\n➤ (2018-2019): Planta de montaje (acabado final del vehículo) usando pistolas eléctricas de apriete.',
             año:'Junio de 2013 - junio de 2019 (6 años 1 mes)',
@@ -122,7 +186,7 @@ export default {
             colorTexto:'textBlanco',
             colorAño:'colorAñoPaterna',
             nombre:'Ayuntamiento Paterna',
-            puesto:'Técnico electricista (La Dipu te beca)',
+            puesto:'Técnico electricista\n(La Dipu te beca)',
             des:'Instalar, reparar y mantener las estructuras eléctricas de los edificios de la propiedad del ayuntamiento, además de instalaciones en exteriores de alumbrado en las vías urbanas.',
             año:'Junio de 2012 - agosto de 2012 (3meses)',
         },
@@ -132,18 +196,18 @@ export default {
             colorCard:'autrialCard',
             colorTexto:'textBlanco',
             colorAño:'colorAñoAutrial',
-            nombre:'Autrial - WEG Group',
+            nombre:'Autrial \n WEG Group',
             puesto:'Técnico electricista en prácticas',
             des:'Fabricación de cuadros eléctricos de BT: mecanizado, cableado, programación y realización de esquemas eléctricos.',
             año:'Marzo de 2012 - mayo de 2012 (3 meses)',
         },
         {
             img: require('@/assets/sigma.jpg'),
-            colorImg:'autrial',
-            colorCard:'autrialCard',
+            colorImg:'sigma',
+            colorCard:'sigmaCard',
             colorTexto:'textBlanco',
             colorAño:'colorAñoSigma',
-            nombre:'Sigma Inspección organismo de control autorizado',
+            nombre:'Sigma Inspección',
             puesto:'Técnico de telecomunicación en prácticas',
             des:'Inspecciones acústicas y redacción de informes.',
             año:'Marzo de 2009 - mayo de 2009 (3 meses)',
