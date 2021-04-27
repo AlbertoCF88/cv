@@ -19,7 +19,7 @@
       <v-card color="black">
         <v-toolbar
           dark
-          color="primary"
+          color="color2"
         >
           <v-btn
             icon
@@ -28,7 +28,7 @@
           >
             <v-icon>mdi-close</v-icon>
           </v-btn>
-          <v-toolbar-title>Settings</v-toolbar-title>
+          <v-toolbar-title>Cerrar</v-toolbar-title>
    
                </v-toolbar>
  <div  v-for="(item,index) in cuadros" :key="index"> 
@@ -36,10 +36,16 @@
 
  <v-carousel width="100%" height="100%" 
   v-for="img in item.galeria" :key="img.id"
-    class="justify-center "
+    class="justify-center"
+      :show-arrows="false"
+      delimiter-icon="mdi-checkbox-blank-circle-outline"
+    
+      
    >
         <v-carousel-item v-for="lienzo in img.imagenes" :key="lienzo.id"
    contain 
+       reverse-transition="fade-transition"
+      transition="fade-transition"
        :src="lienzo" >  
          
         </v-carousel-item>
@@ -54,6 +60,18 @@
     </v-dialog>
   </v-row>
 </template>
+
+
+
+<style scoped>
+.v-image__image, .v-image__placeholder {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+</style>
 
 <script>
 import comcargando from "@/components/ComCargando.vue"
