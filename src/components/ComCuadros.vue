@@ -14,20 +14,39 @@
       </v-carousel>
 
       <v-container class="mb-10">
-        <v-row class="mt-5 d-flex justify-center">
+        <v-row   @click=" añadirClase()"
+        class="mt-5 d-flex justify-center">
      
-          <v-col 
-        
+
+          <!-- @click="zoom = true"
+         :class="{'col-Zoom': zoom}" -->
+          <v-col id="col"
+
+          color="black"
+  
+      
+       
           v-for="img in item.galeria" :key="img.id" 
           class="d-flex child-flex lupa" cols="4">
-  
+
+  <!-- remove class dejandolo vacio-->
+      
             <v-img 
-           
+            id="img"
+      
+            contain
+        
             :src="img" spect-ratio="2" 
-            class="grey lighten-2">
+            class="black">
+             <v-icon v-if="zoom"
+         
+          dark>
+            mdi-close
+          </v-icon>
               <template v-slot:placeholder>
                 <comcargando></comcargando>
               </template>
+
             </v-img>
  
           
@@ -72,9 +91,19 @@
     -webkit-text-stroke: 2px black;
     color: transparent;
 }
-.col-4:hover{
+
+.imagen{
+    z-index: none;
     position: fixed;
-    z-index: 999999;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+  
+}
+.col-Zoom{
+    position: fixed;
+    z-index: 100;
     top: 0;
     left: 0;
     height: 100%;
@@ -83,11 +112,14 @@
     cursor: default;
     max-width: none;
 }
+
+
 </style>
 
 
 <script>
 import comcargando from "@/components/ComCargando.vue"
+import {mapState, mapMutations} from "vuex";
 export default {
   name: 'comCuadro',
    components:{
@@ -96,17 +128,40 @@ export default {
  props:{
     cuadros: {
       type: Array,
-    
+    }
     },
     data:()=>({
-      
-
-    }),
-  
+   
+    }),//data
+  computed:{
+       ...mapState(['zoom'])
+   },//computed
+    methods:{
+       ...mapMutations(['CambioZoom']),
+         añadirClase:function(){
+           	if (document.querySelector('v-col')) {
  
- },
- }
-     
+          ele.classList.add("col-Zoom");
+             }
+             	if (target.tagName == 'V-IMG') {
+
+          ele.classList.add("imagen");
+             }
+         
+	}
+
+        },
+      //  eliminarClase:function(){
+      //    console.log('hola');
+      //      var e = document.getElementById("col");
+      //       e.classList.remove("col-Zoom");
+      //         var a = document.getElementById("img");
+      //       a.classList.remove("imagen");
+      //  },
+
+ }//export default
+ 
+    
     
     
 </script>
