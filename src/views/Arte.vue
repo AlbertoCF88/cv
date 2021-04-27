@@ -77,68 +77,110 @@ export default {
   
     cuadros:[
           {
+            zoom:false,
             id:'bosquesinfin',
             titulo:'Bosque Sin Fin',
             foto: require('@/assets/cuadros/bosque/1.png'),
             galeria: [
-                        require('@/assets/cuadros/bosque/1.png'),
+                        {
+                        imagenes:[
+                                require('@/assets/cuadros/bosque/1.png'),
+                                ],
+                      
+                        }                
                     ],
         },
         {
+            zoom:false,
             id:'dialluvioso',
             titulo:'Dia Lluvioso',
             foto: require('@/assets/cuadros/diaLluvioso/3.png'),
             galeria: [
-                        require('@/assets/cuadros/diaLluvioso/1.png'),
-                        require('@/assets/cuadros/diaLluvioso/2.png'),
-                        require('@/assets/cuadros/diaLluvioso/3.png'),
+                        {
+                       imagenes:[
+                                require('@/assets/cuadros/diaLluvioso/1.png'),
+                                require('@/assets/cuadros/diaLluvioso/2.png'),
+                                require('@/assets/cuadros/diaLluvioso/3.png'),
+                                ],
+                        
+                        }                
                     ],
         },
          {
+              zoom:false,
             id:'retratoana',
             titulo:'Retrato Ana',
             foto: require('@/assets/cuadros/ana/4.png'),
             galeria: [
-                        require('@/assets/cuadros/ana/1.png'),
-                        require('@/assets/cuadros/ana/2.png'),
-                        require('@/assets/cuadros/ana/3.png'),
-                        require('@/assets/cuadros/ana/4.png'),
-                        require('@/assets/cuadros/ana/5.png'),
+                        {
+                        imagenes:[
+                                require('@/assets/cuadros/ana/1.png'),
+                                require('@/assets/cuadros/ana/2.png'),
+                                require('@/assets/cuadros/ana/3.png'),
+                                require('@/assets/cuadros/ana/4.png'),
+                                require('@/assets/cuadros/ana/5.png'),
+                                ],
+                   
+                        }                
                     ],
         },
          {
+              zoom:false,
             id:'lageisha',
             titulo:'La Geisha',
             foto: require('@/assets/cuadros/laGeisha/2.png'),
             galeria: [
-                        require('@/assets/cuadros/laGeisha/1.png'),
-                        require('@/assets/cuadros/laGeisha/2.png'),
+                        {
+                        imagenes:[
+                                require('@/assets/cuadros/laGeisha/1.png'),
+                                require('@/assets/cuadros/laGeisha/2.png'),
+                                ],
+                 
+                        }                
                     ],
         },
          {
+              zoom:false,
             id:'torrepaterna',
             titulo:'Torre Paterna',
             foto: require('@/assets/cuadros/torrePaterna/3.png'),
             galeria: [
-                        require('@/assets/cuadros/torrePaterna/1.png'),
-                        require('@/assets/cuadros/torrePaterna/2.png'),
-                        require('@/assets/cuadros/torrePaterna/3.png'),
+                        {
+                        imagenes:[
+                                require('@/assets/cuadros/torrePaterna/1.png'),
+                                require('@/assets/cuadros/torrePaterna/2.png'),
+                                require('@/assets/cuadros/torrePaterna/3.png'),
+                                ],
+              
+                        }                
                     ],
         },
          {
+              zoom:false,
             id:'libros',
             titulo:'Libros',
             foto: require('@/assets/cuadros/libros/1.png'),
             galeria: [
-                        require('@/assets/cuadros/libros/1.png'),
+                        {
+                        imagenes:[
+                                require('@/assets/cuadros/libros/1.png'),
+                                ],
+                
+                        }                
                     ],
         },
          {
+              zoom:false,
             id:'cesta',
             titulo:'Cesta',
             foto: require('@/assets/cuadros/cesta/1.png'),
             galeria: [
-                        require('@/assets/cuadros/cesta/1.png'),
+                        {
+                        imagenes:[
+                                require('@/assets/cuadros/cesta/1.png'),
+                                ],
+
+                        }                
                     ],
          }
         ],//cuadros
