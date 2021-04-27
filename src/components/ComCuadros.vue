@@ -40,6 +40,10 @@
     </div>
   </div> 
   
+
+<comZoom :cuadros="cuadros"></comZoom>
+
+  
 </div>
 </template>
 
@@ -94,12 +98,13 @@
 
 
 <script>
+import comZoom from "@/components/ComZoom.vue"
 import comcargando from "@/components/ComCargando.vue"
 
 export default {
   name: 'comCuadro',
    components:{
-       comcargando, 
+       comcargando, comZoom
     },
  props:{
     cuadros: {
@@ -107,7 +112,7 @@ export default {
     }
     },
     data:()=>({
-   
+    
     }),//data
 
  }//export default

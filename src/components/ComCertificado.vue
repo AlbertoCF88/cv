@@ -192,7 +192,7 @@ export default {
         comLeye,
     },
     data: () => ({
-    dialog: false,
+ 
     certificados:[
         {
             img: require('@/assets/pixel.png'),
@@ -202,7 +202,7 @@ export default {
             color:'textBlanco',
             colorAcre:'colorAcreditado',
             nombre: 'Front End Developer',
-            des:'HTML5,HTML5-semántico,Tipografía, CSS3, Web Responsive, SASS, Bootstrap,\nGit,PWA, Jquery, Javascript avanzado,Javascript orientado Objetos, ECMAScript, Angular, React, Vue, Vue Cli, Angular conNodeJS.\n \nAdemás de ampliar por mi cuenta contenido como: Gimp, Vuetify y mejorar las tecnologísas aprendidas .',
+            des:'HTML5,HTML5-semántico,Tipografía, CSS3, Web Responsive, SASS, Bootstrap,\nGit,PWA, Jquery, Javascript avanzado,Javascript orientado Objetos, ECMAScript, Angular, React, Vue, Vue Cli, Angular conNodeJS.\n \nAdemás de ampliar por mi cuenta contenido como: Gimp, Vuetify y mejorar las tecnologías aprendidas.',
             duracion:'Más de 120h',
             acre:'Pixelpro y Microsoft',
             año:'2021',

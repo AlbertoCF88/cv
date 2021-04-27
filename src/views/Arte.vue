@@ -107,7 +107,7 @@ export default {
                     ],
         },
          {
-              zoom:false,
+            zoom:false,
             id:'retratoana',
             titulo:'Retrato Ana',
             foto: require('@/assets/cuadros/ana/4.png'),
@@ -125,7 +125,7 @@ export default {
                     ],
         },
          {
-              zoom:false,
+            zoom:false,
             id:'lageisha',
             titulo:'La Geisha',
             foto: require('@/assets/cuadros/laGeisha/2.png'),
@@ -140,7 +140,7 @@ export default {
                     ],
         },
          {
-              zoom:false,
+            zoom:false,
             id:'torrepaterna',
             titulo:'Torre Paterna',
             foto: require('@/assets/cuadros/torrePaterna/3.png'),
@@ -156,7 +156,7 @@ export default {
                     ],
         },
          {
-              zoom:false,
+            zoom:false,
             id:'libros',
             titulo:'Libros',
             foto: require('@/assets/cuadros/libros/1.png'),
@@ -170,7 +170,7 @@ export default {
                     ],
         },
          {
-              zoom:false,
+            zoom:false,
             id:'cesta',
             titulo:'Cesta',
             foto: require('@/assets/cuadros/cesta/1.png'),
