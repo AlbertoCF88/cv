@@ -4,7 +4,8 @@
     <v-row class="mb-7">
         <!--Creador de tareas-->
         <v-col cols="12"  md="6" order-md="2">
-            <v-card outlined shaped dark color="deep-purple lighten-2" class="sticky">
+            <v-card outlined shaped dark 
+            color="deep-purple lighten-2" class="sticky">
                 <v-card-title>
                     Añadir tarea:
                 </v-card-title>
@@ -12,22 +13,25 @@
                     <v-form @submit.prevent="agregar()">
                         <v-row>
                             <v-col>
-                        <v-text-field v-model="tituloTarea"
-                        counter="18" filled color="deep-purple" label="Titulo tarea:" type="text">
-                        </v-text-field>
-
+                                <v-text-field v-model="tituloTarea" label="Titulo tarea:" 
+                                type="text" counter="18" filled color="deep-purple">
+                                </v-text-field>
                             </v-col>
                         </v-row>
-                        <v-textarea v-model="texto" auto-grow filled color="deep-purple"
-                        label="Descripción tarea:"  rows="2">
+
+                        <v-textarea v-model="texto" 
+                        auto-grow filled color="deep-purple"
+                        label="Descripción tarea:" rows="2">
                         </v-textarea>
-                        <v-btn  type="submit" block 
+
+                        <v-btn type="submit" block 
                         color="deep-purple accent-4" class="mb-1">
                             Agregar tarea
                         </v-btn>
                     </v-form>
-                    <v-btn  block  class="mb-1" 
-                    @click="ordenar= !ordenar;on = !on"
+
+                    <v-btn block class="mb-1" 
+                    @click="ordenar= !ordenar; on = !on"
                     :class="{'ordenarDe':on, 'ordenar': !on}">
                         Ordenar
                             <span v-if="on" class="pl-2">Deshabilitado</span>
@@ -46,82 +50,106 @@
                     <v-tooltip top >
                         <template v-slot:activator="{ on, attrs }" >
                             <div v-bind="attrs" v-on="on">
-                                <v-container class="d-flex justify-space-between" >
-                                    <v-chip class="ma-4 text-uppercase" color="pink" label text-color="white">
-                                        <v-btn icon color="black" @click="item.hecho=!item.hecho" class="mr-2">
-                                            <v-icon small color="light-green accent-3">mdi-check-bold</v-icon>
-                                        </v-btn>
-                                        <div class="mr-2">{{index +1}}.</div>
-                                        <v-text-field v-model="item.titulo" :disabled="item.textarea"
-                                        class="input" dark
-                                        counter="18" filled color="deep-purple" type="text">
-                                        </v-text-field>
-                                    </v-chip>
-                                    <v-tooltip bottom >
-                                        <template v-slot:activator="{ on, attrs }" >
-                                            <v-btn v-bind="attrs" fab color="transparent" v-on="on" elevation="0"
-                                            :class="{'amarillo':item.importante, 'rojo': !item.importante}"
-                                            @click="item.importante =!item.importante;guardarImpor(index)">
-                                                <v-icon large > mdi-exclamation </v-icon>
+                           
+                                <v-row class="d-flex justify-space-between">
+                                    <v-col cols="8" sm="10">
+                                        <v-chip class="ma-4 text-uppercase" 
+                                        color="pink" label text-color="white">
+                                            <v-btn icon color="black" 
+                                            @click="item.hecho=!item.hecho">
+                                                <v-icon small color="light-green accent-3">
+                                                    mdi-check-bold
+                                                </v-icon>
                                             </v-btn>
-                                        </template>
-                                        <span>¿Importante?</span>
-                                    </v-tooltip>
-                                </v-container>
+                                            <div class="mr-2">{{index +1}}.</div>
+                                            <v-text-field v-model="item.titulo" :disabled="item.textarea"
+                                            class="input" darkcounter="18" filled 
+                                            color="deep-purple" dark type="text">
+                                            </v-text-field>
+                                        </v-chip>
+                                    </v-col>
+
+                                    <v-col cols="4" sm="2" 
+                                    class="d-flex justify-center align-center"> 
+                                        <v-tooltip bottom>
+                                            <template v-slot:activator="{ on, attrs }">
+                                                <v-btn v-bind="attrs" v-on="on" fab color="transparent" elevation="0"
+                                                :class="{'amarillo':item.importante, 'rojo': !item.importante}"
+                                                @click="item.importante =!item.importante;guardarImpor(index)">
+                                                    <v-icon large> mdi-exclamation </v-icon>
+                                                </v-btn>
+                                            </template>
+                                            <span>¿Importante?</span>
+                                        </v-tooltip>
+                                    </v-col>
+                                </v-row>
+                                   
                                 <v-card-text >
                                     <v-textarea v-model="item.desc" :disabled="item.textarea" 
-                                    :class="{'altura':item.altura}" rows="2" auto-grow hint="Recuerde guardar" class="font-weight-black" color="deep-purple accent-4">
+                                    :class="{'altura':item.altura}" 
+                                    hint="Recuerde guardar" rows="2" auto-grow
+                                    class="font-weight-black" color="deep-purple accent-4">
                                     </v-textarea>
                                 </v-card-text>
+
                                 <v-card-actions>
                                     <v-row>
-                                        <v-col>
-                                            <v-btn text color="deep-purple accent-4" @click="item.textarea=false; item.altura=false">
+                                        <v-col cols="6" sm="3" class="d-flex justify-center">
+                                            <v-btn text color="deep-purple accent-4" 
+                                            @click="item.textarea=false; item.altura=false">
                                                 Editar
                                             </v-btn>
                                         </v-col>
-                                            <v-col>
-                                                <v-tooltip bottom>
-                                                    <template v-slot:activator="{ on, attrs }">
-                                                        <v-btn  v-bind="attrs" v-on="on" :disabled="item.textarea"
-                                                        text color="green darken-4" 
-                                                        @click="item.textarea=true;guardarImpor(index);item.altura=false" >
-                                                            Guardar
-                                                        </v-btn>
-                                                    </template>
-                                                    <span>Modificará la fecha</span>
-                                                </v-tooltip>
-                                            </v-col>
-                                            <v-col>
-                                                <v-btn text color="red darken-4" @click="item.altura = !item.altura">
-                                                    Altura
-                                                </v-btn>
-                                            </v-col>
-                                            <v-col class="d-flex justify-end pr-3">
-                                                <v-btn icon color="black" @click="eliminar(index)">
-                                                    <v-icon large > mdi-delete </v-icon>
-                                                </v-btn>
-                                            </v-col>
-                                        </v-row>
-                                    </v-card-actions>
-                                    <v-card-subtitle class="d-flex justify-space-between" >
-                                        {{item.fecha}} 
-                                            <div>{{index +1}}/{{listaTareas.length}}</div>
-                                                <div> 
-                                                    <v-icon class="mr-2" small> mdi-clock </v-icon>
-                                                        {{item.hora}}:{{item.minuto}}:{{item.segundo}}
-                                                </div>
-                                    </v-card-subtitle>
-                                </div>
-                            </template>
-                            <span>Muevelo para cambiar el orden</span>
-                        </v-tooltip>
-                    </v-card>
-                </Draggable>
-            </v-col>
-        </v-row>
 
-    <!--mensaje temporal top le quitas ek top y por defecto sale abajo--->
+                                        <v-col cols="6" sm="3" class="d-flex justify-center">
+                                            <v-tooltip bottom>
+                                                <template v-slot:activator="{ on, attrs }">
+                                                    <v-btn  v-bind="attrs" v-on="on" 
+                                                    :disabled="item.textarea"
+                                                    text color="green darken-4" 
+                                                    @click="item.textarea=true;guardarImpor(index);
+                                                    item.altura=false; guardar(index)">
+                                                         Guardar
+                                                    </v-btn>
+                                                </template>
+                                                <span>Modificará la fecha</span>
+                                            </v-tooltip>
+                                        </v-col>
+
+                                        <v-col cols="6" sm="3" class="d-flex justify-center">
+                                            <v-btn text color="red darken-4"
+                                            @click="item.altura = !item.altura">
+                                                Altura
+                                            </v-btn>
+                                        </v-col>
+
+                                        <v-col cols="6" sm="3" class="d-flex justify-center">
+                                            <v-btn icon color="black" 
+                                            @click="eliminar(index)">
+                                                <v-icon large> mdi-delete </v-icon>
+                                            </v-btn>
+                                        </v-col>
+                                    </v-row>
+                                </v-card-actions>
+
+                                 <v-card-subtitle class="d-flex justify-space-between">
+                                    {{item.fecha}} 
+                                    <div>{{index +1}}/{{listaTareas.length}}</div>
+                                    <div> 
+                                        <v-icon class="mr-2" small> mdi-clock </v-icon>
+                                        {{item.hora}}:{{item.minuto}}:{{item.segundo}}
+                                    </div>
+                                </v-card-subtitle>
+                            </div><!--activador--->
+                        </template><!---v-slot:activator--->
+                        <span>Muevelo para cambiar el orden</span>
+                    </v-tooltip>
+                </v-card>
+            </Draggable>
+        </v-col>
+    </v-row>
+
+    <!--mensaje temporal--->
     <v-snackbar v-model="snackbar"  top rounded="pill" >
         {{ mensaje }}
         <template v-slot:action="{ attrs }">
@@ -134,8 +162,17 @@
     <!--Fin mensaje temporal--->
 
 </v-container>
-
 </template>
+
+
+<style >
+.v-chip .v-chip__content {
+    width: 100%;
+}
+.v-chip.v-size--default {
+    width: 100% !important;
+}
+</style>
 
 <style scoped>
 .sticky {
@@ -182,10 +219,11 @@
 
 <script>
 import Draggable from 'vuedraggable'
+import comSnack from '@/components/ComSnack.vue'
 export default {
     name: 'comTareas',
     components: {
-        Draggable,
+        Draggable,comSnack
     },
     data(){
         return{
@@ -252,21 +290,21 @@ export default {
             }
             this.tituloTarea='';
             this.texto='';
-            this.guardarLocal()
+            this.guardarLocal(index)
         },
         eliminar:function(index){
             this.listaTareas.splice(index, 1);
-            this.guardarLocal();
+            this.guardarLocal(index);
        },
        guardar:function(index){
            this.listaTareas[index].fecha = new Date().toLocaleDateString();
            this.listaTareas[index].hora = new Date().getHours();
            this.listaTareas[index].minuto = new Date().getMinutes();
            this.listaTareas[index].segundo = new Date().getSeconds();
-           this.guardarLocal()
+           this.guardarLocal(index)
        },
        guardarImpor(index){
-            this.guardarLocal()
+            this.guardarLocal(index)
        },
        guardarLocal:function(){
              //setItem guardar , y get recuperar
