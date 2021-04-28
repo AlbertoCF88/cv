@@ -1,5 +1,6 @@
 <template>
 <div>
+
   <div  v-for="(item,index) in cuadros" :key="index"> 
     <div v-if="$route.params.page==item.id"> 
 
@@ -17,45 +18,28 @@
 
       <v-container class="mb-10 mt-0">
         <v-row v-for="img in item.galeria" :key="img.id" 
-        class=" d-flex justify-center">
+        class="d-flex justify-center">
 
           <v-col   
-           v-for="(lienzo, index ) in img.imagenes" :key="index" 
-      
+          v-for="(lienzo, i) in img.imagenes" :key="i" 
           color="black" cols="4" md="3"
-          :class="{'col-Zoom':cuadros[index].zoom,'':!cuadros[index].zoom}" 
-          class="d-flex child-flex lupa pt-0" >
-          <!-- remove class dejandolo vacio-->
-           
-      <router-link :to="{name:'arte/:page', params:{page:item.id ,fotografia:lienzo}}" 
-        >
-            <button>
-              {{lienzo}}
-            </button>
-        </router-link>
-        
-            <v-img
-              @click="cuadros[index].zoom = !cuadros[index].zoom"
-            :class="{'imagen': cuadros[index].zoom , '':!cuadros[index].zoom}" 
-            :src="lienzo" spect-ratio="2" 
-            class="black" contain>
-            <div  >
-            <comZoom :cuadros="cuadros"
-            ></comZoom>
-            </div>      
-              <template v-slot:placeholder>
-                <comcargando></comcargando>
-              </template>
-         
-          </v-img>
-         
+          class="d-flex child-flex pt-0">
+              
+            <router-link class="black d-flex align-center"
+            :to="{name:'arte/:page', params:{page:item.id ,fotografia:lienzo}}" >
+              <v-img
+              :src="lienzo" spect-ratio="2" 
+              class="black lupa " contain>
+                <template v-slot:placeholder>
+                  <comcargando></comcargando>
+                </template>
+              </v-img>
+            </router-link>
           </v-col>
         </v-row>
       </v-container> 
-      
     </div>
   </div> 
-
 
 </div>
 </template>
@@ -96,41 +80,16 @@
   color: transparent;
   font-size:138px;
 }
-.imagen{
-  z-index: none;
-  position: fixed;
-  top: 5%;
-  left: 5%;
-  width: 90%;
-  height: 90%;
-  
-}
-.col-Zoom{
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background: black;
-    align-items: center;
-    cursor: default;
-    max-width: none;
-}  
-
 </style>
 
-
 <script>
-import comZoom from "@/components/ComZoom.vue"
 import comcargando from "@/components/ComCargando.vue"
-import comDiapositiva from "@/components/ComDiapositiva.vue"
-
 export default {
   name: 'comCuadro',
    components:{
-       comcargando, comZoom, comDiapositiva
+       comcargando,
     },
- props:{
+  props:{
     cuadros: {
       type: Array,
     }
@@ -138,10 +97,5 @@ export default {
     data:()=>({
     
     }),//data
-
  }//export default
- 
-    
-    
-    
 </script>

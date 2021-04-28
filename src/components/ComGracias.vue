@@ -1,8 +1,10 @@
 <template>
-  <div class="text-center">
+  <div>
+    <v-container class="d-flex justify-center text-center">
     <v-snackbar 
     v-model="snackbar"
-    :timeout="timeout">
+    >
+     <!-- :timeout="timeout" -->
         <span class="color4--text">
             {{text}} 
             <v-icon small color="color4">
@@ -24,6 +26,7 @@
             </v-btn>
         </template>
     </v-snackbar>
+    </v-container>
   </div>
 </template>
 
@@ -33,7 +36,7 @@
     data: () => ({
       snackbar: true,
       text: `¡ Gracias por visitar mi WEB`,
-      timeout: 4000,
+      // timeout: 4000,
     }),
   }
 </script>

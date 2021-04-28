@@ -1,13 +1,15 @@
 <template>
     <div>
         <v-container>
-            <h1  class="color2--text d-flex justify-center text-center titulo my-6">Galeria De Fotos Dinámica</h1>
+            <h1 class="color2--text d-flex justify-center text-center titulo my-6">
+                Galeria De Fotos Dinámica
+            </h1>
         </v-container>
 
         <v-sheet class="mx-auto d-flex justify-center">
-            <v-slide-group  class="pa-4" show-arrows center-active >
+            <v-slide-group class="pa-4" show-arrows center-active >
                 <v-slide-item  v-for="(item,index) in cuadros" :key="index"
-                v-slot="{  toggle }">
+                v-slot="{ toggle }">
                     <v-hover v-slot="{ hover }" >
                         <v-card class="ma-4" height="100" color="black"
                         width="200" @click="toggle"
@@ -19,7 +21,7 @@
                                     class="d-flex transition-fast-in-fast-out color2 darken-2 
                                     v-card--reveal display-3 white--text"
                                     style="height: 100%;">
-                                            Entrar
+                                        Entrar
                                     </div>
                                 </v-expand-transition>
                                 <!--cargando-->
@@ -29,7 +31,7 @@
                                 <!--cargando-->
                             </v-img>
 
-                            <v-card-text class="py-8 botonEntrar text-capitalize  text-caption 
+                            <v-card-text class="py-8 botonEntrar text-capitalize text-caption 
                             text-sm-subtitle-1 text-md-h6 text-lg-h4 text-xl-h3">
                                 {{item.titulo}}
                             </v-card-text>
