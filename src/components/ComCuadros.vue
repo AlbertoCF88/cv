@@ -21,29 +21,41 @@
 
           <v-col   
            v-for="(lienzo, index ) in img.imagenes" :key="index" 
-          @click="cuadros[index].zoom = !cuadros[index].zoom"
+      
           color="black" cols="4" md="3"
           :class="{'col-Zoom':cuadros[index].zoom,'':!cuadros[index].zoom}" 
           class="d-flex child-flex lupa pt-0" >
           <!-- remove class dejandolo vacio-->
            
-     
-           
+      <router-link :to="{name:'arte/:page', params:{page:item.id ,fotografia:lienzo}}" 
+        >
+            <button>
+              {{lienzo}}
+            </button>
+        </router-link>
+        
             <v-img
+              @click="cuadros[index].zoom = !cuadros[index].zoom"
             :class="{'imagen': cuadros[index].zoom , '':!cuadros[index].zoom}" 
             :src="lienzo" spect-ratio="2" 
             class="black" contain>
-<comZoom :cuadros="cuadros"></comZoom>
+            <div  >
+            <comZoom :cuadros="cuadros"
+            ></comZoom>
+            </div>      
               <template v-slot:placeholder>
                 <comcargando></comcargando>
               </template>
-            </v-img>
+         
+          </v-img>
+         
           </v-col>
         </v-row>
       </v-container> 
+      
     </div>
   </div> 
-  
+
 
 </div>
 </template>
@@ -111,11 +123,12 @@
 <script>
 import comZoom from "@/components/ComZoom.vue"
 import comcargando from "@/components/ComCargando.vue"
+import comDiapositiva from "@/components/ComDiapositiva.vue"
 
 export default {
   name: 'comCuadro',
    components:{
-       comcargando, comZoom
+       comcargando, comZoom, comDiapositiva
     },
  props:{
     cuadros: {

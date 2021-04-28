@@ -22,6 +22,11 @@ const routes = [
     component: () => import('../views/Arte.vue')
   },
   {
+    path: '/arte/:page/:fotografia',
+    name: 'arte/:page',
+    component: () => import('../components/ComDiapositiva.vue')
+  },
+  {
     path: '/webs',
     name: 'Webs',
     component: () => import('../views/Webs.vue')
