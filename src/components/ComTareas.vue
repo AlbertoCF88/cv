@@ -3,7 +3,8 @@
 <v-container mt-8>
     <v-row class="mb-7">
         <!--Creador de tareas-->
-        <v-col cols="12"  md="6" order-md="2">
+        <v-col cols="12" md="6" order-md="2"
+        class="pt-0">
             <v-card outlined shaped dark 
             color="deep-purple lighten-2" class="sticky">
                 <v-card-title>

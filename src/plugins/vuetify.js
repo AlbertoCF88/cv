@@ -11,7 +11,7 @@ export default new Vuetify({
           color1:'#43b883',
           color1os:'#33495e',
           color2:'#4943B8',
-          color3:'#B84378',
+          color3:'#b84343',
           color4:'#B3B843',
         },
       },
