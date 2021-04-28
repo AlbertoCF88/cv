@@ -219,11 +219,11 @@
 
 <script>
 import Draggable from 'vuedraggable'
-import comSnack from '@/components/ComSnack.vue'
+
 export default {
     name: 'comTareas',
     components: {
-        Draggable,comSnack
+        Draggable,
     },
     data(){
         return{
@@ -267,7 +267,6 @@ export default {
             if(this.tituloTarea === ''){
                this.snackbar =true;
                this.mensaje ="No se puede agregar una tarea sin título"
-               console.log('vacio')
             }else if(this.texto === ''){
                 this.snackbar =true;
                 this.mensaje ="No se puede agregar una tarea vacia"
@@ -290,21 +289,21 @@ export default {
             }
             this.tituloTarea='';
             this.texto='';
-            this.guardarLocal(index)
+            this.guardarLocal()
         },
         eliminar:function(index){
             this.listaTareas.splice(index, 1);
-            this.guardarLocal(index);
+            this.guardarLocal();
        },
        guardar:function(index){
            this.listaTareas[index].fecha = new Date().toLocaleDateString();
            this.listaTareas[index].hora = new Date().getHours();
            this.listaTareas[index].minuto = new Date().getMinutes();
            this.listaTareas[index].segundo = new Date().getSeconds();
-           this.guardarLocal(index)
+           this.guardarLocal()
        },
-       guardarImpor(index){
-            this.guardarLocal(index)
+       guardarImpor(){
+            this.guardarLocal()
        },
        guardarLocal:function(){
              //setItem guardar , y get recuperar
