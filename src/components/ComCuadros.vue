@@ -26,7 +26,7 @@
           class="d-flex child-flex pt-0">
               
             <router-link class="black d-flex align-center"
-            :to="{name:'arte/:page', params:{page:item.id ,fotografia:lienzo}}" >
+            :to="{name:'arte/:page', params:{page:item.id ,fotografia:lienzo}}">
               <v-img
               :src="lienzo" spect-ratio="2" 
               class="black lupa " contain>

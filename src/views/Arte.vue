@@ -1,20 +1,41 @@
 <template>
-    <div>
+    <div class="tamaño">
         <v-container>
             <h1 class="color2--text d-flex justify-center text-center titulo my-6">
                 Galeria De Fotos Dinámica
             </h1>
         </v-container>
 
-        <v-sheet class="mx-auto d-flex justify-center">
-            <v-slide-group class="pa-4" show-arrows center-active >
-                <v-slide-item  v-for="(item,index) in cuadros" :key="index"
+        <v-sheet class="mx-auto d-flex justify-center black">
+            <v-slide-group show-arrows center-active
+            :class="{'carrete1':mover,'carrete2': !mover}">
+                <template v-slot:prev="{ on, attrs }">
+                    <v-btn @click="mover=!mover"
+                    v-bind="attrs" v-on="on"
+                    color="black" tile>
+                        <v-icon color="color2">
+                            mdi-arrow-left-circle-outline
+                        </v-icon>
+                    </v-btn>
+                </template>
+                <template v-slot:next="{ on, attrs }">
+                    <v-btn @click="mover=!mover"
+                    v-bind="attrs" v-on="on"
+                    color="black" tile>
+                        <v-icon color="color2">
+                            mdi-arrow-right-circle-outline
+                        </v-icon>
+                    </v-btn>
+                </template>
+
+                <v-slide-item v-for="(item,index) in cuadros" :key="index"
+            
                 v-slot="{ toggle }">
-                    <v-hover v-slot="{ hover }" >
+                    <v-hover v-slot="{ hover }">
                         <v-card class="ma-4" height="100" color="black"
                         width="200" @click="toggle"
                         :to="{name:'arte', params: {page: item.id}}">
-                            <v-img  aspect-ratio="2"
+                            <v-img aspect-ratio="2" class="sombra"
                             :src="item.foto">
                                 <v-expand-transition>
                                     <div v-if="hover"
@@ -46,10 +67,35 @@
     </div>
 </template>
 
+
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
 .titulo{
     font-family: 'Train One', cursive;
+}
+.v-btn:not(.v-btn--round).v-size--default {
+    height: 106px;
+    min-width: -11px;
+    padding: 3px;
+    width: 100%;
+}
+.carrete1{
+    background: url(../assets/carrete2.png); 
+    background-size: contain;
+    background-position: center;
+}
+.carrete2{
+    background: url(../assets/carrete2.png); 
+    background-size: contain;
+    background-position: none;
+}
+.sombra{
+   box-shadow: 9px 1px 7px 2px #01010175, -9px 1px 8px 0px #00000070;
+}
+.tamaño{
+    width: 100%;
+    height: 100%;
+    background-color: #f5f4ff;
 }
 .botonEntrar{
     height: 100% !important;
@@ -65,21 +111,19 @@
 }
 </style>
 
+
 <script>
 import comcargando from "@/components/ComCargando.vue"
 import comCuadro from "@/components/ComCuadros.vue"
-
-
 export default {
     name: 'Arte',
     components:{
        comcargando, comCuadro
     },
     data:()=>({
-  
+    mover:true,
     cuadros:[
           {
-            zoom:false,
             id:'bosquesinfin',
             titulo:'Bosque Sin Fin',
             foto: require('@/assets/cuadros/bosque/1.png'),
@@ -88,12 +132,10 @@ export default {
                         imagenes:[
                                 require('@/assets/cuadros/bosque/1.png'),
                                 ],
-                      
                         }                
                     ],
         },
         {
-            zoom:false,
             id:'dialluvioso',
             titulo:'Dia Lluvioso',
             foto: require('@/assets/cuadros/diaLluvioso/3.png'),
@@ -104,12 +146,10 @@ export default {
                                 require('@/assets/cuadros/diaLluvioso/2.png'),
                                 require('@/assets/cuadros/diaLluvioso/3.png'),
                                 ],
-                        
                         }                
                     ],
         },
          {
-            zoom:false,
             id:'retratoana',
             titulo:'Retrato Ana',
             foto: require('@/assets/cuadros/ana/4.png'),
@@ -122,12 +162,10 @@ export default {
                                 require('@/assets/cuadros/ana/4.png'),
                                 require('@/assets/cuadros/ana/5.png'),
                                 ],
-                   
                         }                
                     ],
         },
          {
-            zoom:false,
             id:'lageisha',
             titulo:'La Geisha',
             foto: require('@/assets/cuadros/laGeisha/2.png'),
@@ -137,12 +175,10 @@ export default {
                                 require('@/assets/cuadros/laGeisha/1.png'),
                                 require('@/assets/cuadros/laGeisha/2.png'),
                                 ],
-                 
                         }                
                     ],
         },
          {
-            zoom:false,
             id:'torrepaterna',
             titulo:'Torre Paterna',
             foto: require('@/assets/cuadros/torrePaterna/3.png'),
@@ -153,12 +189,10 @@ export default {
                                 require('@/assets/cuadros/torrePaterna/2.png'),
                                 require('@/assets/cuadros/torrePaterna/3.png'),
                                 ],
-              
                         }                
                     ],
         },
          {
-            zoom:false,
             id:'libros',
             titulo:'Libros',
             foto: require('@/assets/cuadros/libros/1.png'),
@@ -167,12 +201,10 @@ export default {
                         imagenes:[
                                 require('@/assets/cuadros/libros/1.png'),
                                 ],
-                
                         }                
                     ],
         },
          {
-            zoom:false,
             id:'cesta',
             titulo:'Cesta',
             foto: require('@/assets/cuadros/cesta/1.png'),
@@ -181,7 +213,6 @@ export default {
                         imagenes:[
                                 require('@/assets/cuadros/cesta/1.png'),
                                 ],
-
                         }                
                     ],
          }
