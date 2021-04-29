@@ -53,13 +53,16 @@
 </template>
 
 <style>
+.v-main {
+  padding: 52px 0px  !important;
+}
 .v-item-group.v-bottom-navigation--shift .v-btn--active .v-btn__content > *:not(.v-icon) {
-    top:100% !important;
+  top:100% !important;
 }
 @media (max-width:959px) { 
   .v-footer--fixed {
     position: absolute;
-}
+  }
 }/*fin media*/
 </style>
 

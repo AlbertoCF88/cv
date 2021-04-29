@@ -54,6 +54,8 @@
             Si le interesa contrartar a una persona creativa, responsable, madura y nueva en esto pero con muchas ganas de trabajar no dude en contactar conmigo: 
             <a href="mailto: alcafefront@gmail.com" target="_blank">alcafefront@gmail.com</a>
              <br>
+             Esta web esta creada con Vue CLI, separado por componentes, (Vue Router, Vuex, Vuetify y Visual Studio Code como editor de código). <br>
+             Puedes visualizar el codigo en mi cuenta de Github <a href="https://github.com/AlbertoCF88" target="_blank">AlbertoCF88</a>
              <br>
              <br>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure placeat magni at eius incidunt voluptatibus, maiores libero quibusdam odio totam adipisci cupiditate.
