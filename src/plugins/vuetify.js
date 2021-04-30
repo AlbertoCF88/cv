@@ -13,6 +13,7 @@ export default new Vuetify({
           color2:'#4943B8',
           color3:'#b84343',
           color4:'#B3B843',
+          dragon:'#ff6600',
         },
       },
     },
