@@ -75,7 +75,7 @@
 }
 .v-btn:not(.v-btn--round).v-size--default {
     height: 106px;
-    min-width: -11px;
+    min-width:0px !important;
     padding: 3px;
     width: 100%;
 }

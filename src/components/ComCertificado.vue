@@ -139,7 +139,6 @@ li{
     word-break: break-word;
     font-family: 'Press Start 2P', cursive;
     font-family: 'Zen Dots', cursive;
-    
 }
 .añoAcreditacion{
     font-weight: bold;

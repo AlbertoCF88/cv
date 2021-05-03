@@ -1,6 +1,6 @@
 <template>
 <v-container>
-<v-row no-gutters class="d-flex justify-center mt-5">
+<v-row no-gutters class="d-flex justify-center mt-10">
   <v-col>
     <v-row class="encuadre">
       <v-col order-md="2" order="1"  cols="12" md="6" >

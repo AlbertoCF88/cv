@@ -26,9 +26,9 @@
     </v-card-subtitle>
 
     <v-card-actions>
-      <v-btn @click="revelar = true"
+      <v-btn @click="revelar = true; edad()"
       color="color4" text block >
-        Saber mas
+        Saber más
       </v-btn>
     </v-card-actions>
 
@@ -42,24 +42,21 @@
 
         <v-card-text class="pb-0">
           <p class="display-1 biografia">
-             Biografía
+            SOBRE MÍ
           </p>
           <p class="texto">
-            Hola,
+            !Hola!, 
             <br>
-            Soy tranquilo, paciente, amable e imaginativo.
+            Me llamo Alberto y tengo {{edadActual}} años.
+            <br><br>
+            No tengo experiencia laboral en este ambito pero soy una persana tranquila, paciente, amable, resolutiva, creativa responsable y madura. 
             <br>
-            En los tiempos que vivimos me ha hecho retomar el mundo de la porgramación al que me gustaba por su creatividad.
+            Como ya he mencionado anteriormente soy nuevo en esto pero con muchas ganas de trabajar en este sector, no dude en ponerse en contacto conmigo por correo electronico
+            <a href="mailto: alcafefront@gmail.com" target="_blank">alcafefront@gmail.com</a> o por teléfono sí así lo desea <a href="tel:635507429" target="_blank">635507429</a>
             <br>
-            Si le interesa contrartar a una persona creativa, responsable, madura y nueva en esto pero con muchas ganas de trabajar no dude en contactar conmigo: 
-            <a href="mailto: alcafefront@gmail.com" target="_blank">alcafefront@gmail.com</a>
-             <br>
-             Esta web esta creada con Vue CLI, separado por componentes, (Vue Router, Vuex, Vuetify y Visual Studio Code como editor de código). <br>
+             <br><br>
+             Esta web ha sido creada con Vue CLI, separado por componentes, (Vue Router, Vuex, Vuetify y Visual Studio Code como editor de código). <br>
              Puedes visualizar el codigo en mi cuenta de Github <a href="https://github.com/AlbertoCF88" target="_blank">AlbertoCF88</a>
-             <br>
-             <br>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure placeat magni at eius incidunt voluptatibus, maiores libero quibusdam odio totam adipisci cupiditate.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptas maiores nulla quidem! Ex maxime molestiae ratione veritatis id rem amet reprehenderit.
           </p>
         </v-card-text>
 
@@ -174,7 +171,7 @@
   .marcoColor1Entrada{
     z-index: 0;
     display: flex;
-    height: 449px;
+    height: 95%;
     position: absolute;
     animation: marcoAnimaEntrada 0.5s ease 0.3s forwards; 
   }
@@ -213,7 +210,7 @@
   .marcoColor2Entrada{
     z-index: 0;
     display: flex;
-    height: 449px;
+    height: 95%;
     position: absolute;
     animation: marcoAnimaEntrada2 0.5s ease 0.8s forwards; 
   }
@@ -385,19 +382,28 @@ export default {
   name: 'comTarjeta',
   components: {
   },
-  props:[],
+
   data:() => ({
     revelar:false,
     hover: false,
     hover2: false,
+    edadActual:'',
   }),
   computed:{
     ...mapState(['loading'])
   },
     methods: {
-       ...mapMutations(['CambioLoading']),
+      ...mapMutations(['CambioLoading']),
+
       clickFuera () {
-      this. revelar = false
+        this. revelar = false
+      },
+      edad(){
+        let fechanacimiento = new Date('03/06/1988');
+        let hoy = new Date();
+        this.edadActual = hoy.getFullYear() - fechanacimiento.getFullYear();
+
+        return this.edadActual
       },
     },
 }//export default

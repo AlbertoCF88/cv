@@ -1,15 +1,12 @@
-<template >
+<template>
 <div>
 
-<comTareas></comTareas>
+    <comTareas></comTareas>
 
 </div>
 </template>
 
-
-
 <script>
-
 import comTareas from '@/components/ComTareas.vue'
 export default {
     name: 'Post-it',
