@@ -33,7 +33,7 @@
                 v-slot="{ toggle }">
                     <v-hover v-slot="{ hover }">
                         <v-card class="ma-4" height="100" color="black"
-                        width="200" @click="toggle"
+                        width="200" @click="toggle;ver=false"
                         :to="{name:'arte', params: {page: item.id}}">
                             <v-img aspect-ratio="2" class="sombra"
                             :src="item.foto">
@@ -61,6 +61,12 @@
                 </v-slide-item>
             </v-slide-group>
         </v-sheet>
+
+        <v-container v-if="ver">
+            <h2 class="d-flex justify-center text-center  my-6">
+                Selecciona un cuadro
+            </h2>
+        </v-container>
 
         <comCuadro :cuadros="cuadros"></comCuadro> 
 
@@ -121,6 +127,7 @@ export default {
        comcargando, comCuadro
     },
     data:()=>({
+    ver:true,
     mover:true,
     cuadros:[
           {
