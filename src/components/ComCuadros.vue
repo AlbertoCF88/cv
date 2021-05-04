@@ -1,6 +1,45 @@
 <template>
 <div>
 
+  <!--Primer cuadro a mostrar-->
+  <div v-if="$route.params.page==null"> 
+    <v-carousel 
+    cycle class="altura" hide-delimiters
+    :show-arrows="false">
+      <v-carousel-item 
+      v-for="lienzo in cuadros[0].galeria[0].imagenes" :key="lienzo">  
+        <v-parallax :src="lienzo">
+          <h1 class="titulo d-flex justify-center text-center">
+            {{cuadros[0].titulo}} 
+          </h1> 
+        </v-parallax>
+      </v-carousel-item>
+    </v-carousel>
+
+    <v-container class="mb-10 mt-0">
+      <v-row 
+      class="d-flex justify-center">
+        <v-col   
+        v-for="lienzo in cuadros[0].galeria[0].imagenes" 
+        :key="lienzo.col"
+        color="black" cols="4" md="3"
+        class="d-flex child-flex pt-0">  
+          <router-link class="black d-flex align-center lupa"
+          :to="{name:'arte/:page', params:{page:cuadros[0].id,fotografia:lienzo}}">
+            <v-img :src="lienzo" 
+            spect-ratio="2" class="black" contain>
+              <template v-slot:placeholder>
+                <comcargando></comcargando>
+              </template>
+            </v-img>
+          </router-link> 
+        </v-col>
+      </v-row>
+    </v-container>  
+  </div>
+  <!--if ver-->
+
+  <!--cuadros a mostrar segun eleccion-->
   <div  v-for="(item,index) in cuadros" :key="index"> 
     <div v-if="$route.params.page==item.id"> 
 
@@ -91,7 +130,10 @@ export default {
     },
   props:{
     cuadros: {
-      type: Array,
+        type: Array,
+        },
+    ver:{
+     type:Boolean, 
     }
     },
     data:()=>({

@@ -61,15 +61,10 @@
                 </v-slide-item>
             </v-slide-group>
         </v-sheet>
-
-        <v-container v-if="ver">
-            <h2 class="d-flex justify-center text-center  my-6">
-                Selecciona un cuadro
-            </h2>
-        </v-container>
-
-        <comCuadro :cuadros="cuadros"></comCuadro> 
-
+           
+     
+        <comCuadro :cuadros="cuadros" :ver="ver"></comCuadro> 
+  
     </div>
 </template>
 
