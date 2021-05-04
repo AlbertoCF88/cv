@@ -55,7 +55,7 @@
             <a href="mailto: alcafefront@gmail.com" target="_blank">alcafefront@gmail.com</a> o por teléfono sí así lo desea <a href="tel:635507429" target="_blank">635507429</a>
             <br>
              <br><br>
-             Esta web ha sido creada con Vue CLI, separado por componentes, (Vue Router, Vuex, Vuetify y Visual Studio Code como editor de código). <br>
+             Esta web ha sido creada con Vue CLI, separado por componentes, (Vue Router, Vuex, Vuetify, adaptado para todos los dispositivos,WebApp y Visual Studio Code como editor de código). <br>
              Puedes visualizar el codigo en mi cuenta de Github <a href="https://github.com/AlbertoCF88" target="_blank">AlbertoCF88</a>
           </p>
         </v-card-text>

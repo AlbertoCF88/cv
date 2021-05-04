@@ -2,7 +2,7 @@
 <v-container>
 
     <v-card  width="380">
-        <v-list two-line class="alto">
+        <v-list two-line class="altura">
             <v-list-item >
                 <v-row>
                     <v-col cols="12" sm="2" class="d-flex justify-center  justify-sm-start altura">
@@ -134,6 +134,15 @@
             </v-list-item>
         </v-list>
          
+        <v-btn class="cv"
+        text block color="color4"
+        href="/files/cv.pdf" target="_blank" >
+            <v-icon left>
+                mdi-download
+            </v-icon>
+            Curriculum pdf
+        </v-btn>
+  
         <v-tooltip bottom >
             <template v-slot:activator="{ on, attrs }" >
                 <v-btn v-bind="attrs" v-on="on" color="color3"
@@ -155,8 +164,12 @@
 </template>
 
 <style scoped>
+.cv{
+    position: relative;
+    bottom: 8px;
+}
 .botonLoad:before{
-  background-color: transparent !important;
+    background-color: transparent !important;
 }
 .mdi-calendar-month::before {
     padding-top: 9px;
@@ -165,9 +178,8 @@
 .v-list-item__content {
     padding: 18px 0;
 }
-.alto{
-    margin-top: 20px;
-    margin-bottom: 19px;
+.altura{
+    margin-bottom: 0.5px;
 }
 /*boton stop */
 .v-btn--absolute.v-btn--right, .v-btn--fixed.v-btn--right {
