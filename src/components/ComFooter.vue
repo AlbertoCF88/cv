@@ -1,5 +1,6 @@
 <template>
 <div>
+
   <v-footer fixed padless>
     <v-card flat tile width="100%" class="text-center"
     v-model="value"
@@ -78,6 +79,7 @@
       </v-card-actions>
     </v-card>
   </v-footer>
+  
 </div>
 </template>
 

@@ -1,5 +1,6 @@
 <template>
-  <div class="text-center">
+<div class="text-center">
+
     <v-snackbar 
     v-model="snackbar"
     :timeout="timeout">
@@ -24,7 +25,8 @@
             </v-btn>
         </template>
     </v-snackbar>
-  </div>
+
+</div>
 </template>
 
 <script>

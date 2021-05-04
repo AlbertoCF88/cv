@@ -1,5 +1,6 @@
 <template>
 <v-container>
+
     <v-card class="mx-auto mb-8" max-width="800"
     v-for="item in titulos" :key="item.id" >
         <v-img height="50" contain class="fondoRey"
@@ -19,6 +20,7 @@
             </v-card-subtitle>
         </v-card-text>       
     </v-card>
+    
 </v-container>
 </template>
 

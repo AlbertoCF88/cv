@@ -1,84 +1,84 @@
 <template>
 <v-container class="pa-0">
 
-<v-row >
-  <v-col >
-    <v-item-group  
-    v-model="ventana"
-    mandatory>
-      <v-row >
-        <v-col class="d-flex justify-center" 
-        v-for="item in titulos" :key="item.id">
-          <v-item v-slot="{ active, toggle }">
-            <v-btn :color="item.color" outlined
-            :disabled="loading"
-            :input-value="active"
-            @click="toggle(); loader = 'loading'">
-              {{item.titulo}}
-              <v-icon :loading="loading" :disabled="loading" right>
-                {{item.icono}}
-              </v-icon>
-            </v-btn>
-          </v-item>
-        </v-col>
-      </v-row>
-    </v-item-group>
-  </v-col>
+  <v-row >
+    <v-col >
+      <v-item-group  
+      v-model="ventana"
+      mandatory>
+        <v-row >
+          <v-col class="d-flex justify-center" 
+          v-for="item in titulos" :key="item.id">
+            <v-item v-slot="{ active, toggle }">
+              <v-btn :color="item.color" outlined
+              :disabled="loading"
+              :input-value="active"
+              @click="toggle(); loader = 'loading'">
+                {{item.titulo}}
+                <v-icon :loading="loading" :disabled="loading" right>
+                  {{item.icono}}
+                </v-icon>
+              </v-btn>
+            </v-item>
+          </v-col>
+        </v-row>
+      </v-item-group>
+    </v-col>
 
-  <v-col cols="12">
-    <v-window v-model="ventana" vertical>
-      <v-window-item v-for="item in titulos" :key="item.id">
-        <v-card flat class="mb-16">
-          <v-card-text  class="pa-0">
-            <v-container class="titulo title text-truncate" :class="item.color"> 
-              {{item.titulo}}
-            </v-container>
-            <v-avatar :class="item.color" class="avatarTamaño">
-            <v-icon dark size="40"> {{item.icono}} </v-icon>
-            </v-avatar>
+    <v-col cols="12">
+      <v-window v-model="ventana" vertical>
+        <v-window-item v-for="item in titulos" :key="item.id">
+          <v-card flat class="mb-16">
+            <v-card-text  class="pa-0">
+              <v-container class="titulo title text-truncate" :class="item.color"> 
+                {{item.titulo}}
+              </v-container>
+              <v-avatar :class="item.color" class="avatarTamaño">
+              <v-icon dark size="40"> {{item.icono}} </v-icon>
+              </v-avatar>
 
-            <v-row class="d-flex justify-center">
-              <v-col cols="12" >
+              <v-row class="d-flex justify-center">
+                <v-col cols="12" >
 
-                <div v-if="ventana==0">   
-                <comCert></comCert>
-                </div>
-                
-                <div v-if="ventana==1">   
-                <comTitu></comTitu>
-                </div>
+                  <div v-if="ventana==0">   
+                  <comCert></comCert>
+                  </div>
+                  
+                  <div v-if="ventana==1">   
+                  <comTitu></comTitu>
+                  </div>
 
-                <div v-if="ventana==2">   
-                <comExp></comExp>
-                </div>
+                  <div v-if="ventana==2">   
+                  <comExp></comExp>
+                  </div>
 
-              </v-col>
-            </v-row>          
-          </v-card-text>
-        </v-card>
-      </v-window-item>
-    </v-window>
-  </v-col>
+                </v-col>
+              </v-row>          
+            </v-card-text>
+          </v-card>
+        </v-window-item>
+      </v-window>
+    </v-col>
 
-  <v-col >
-    <v-item-group  
-    v-model="ventana"
-    mandatory>
-      <v-row >
-        <v-col  class="d-flex justify-center"
-         v-for="item in titulos" :key="item.id">
-          <v-item v-slot="{ active, toggle }">
-            <v-btn color="color1os" icon 
-            :input-value="active"
-            @click="toggle">
-              <v-icon>mdi-record</v-icon>
-            </v-btn>
-          </v-item>
-        </v-col>
-      </v-row>
-    </v-item-group>
-  </v-col>
-</v-row>
+    <v-col >
+      <v-item-group  
+      v-model="ventana"
+      mandatory>
+        <v-row >
+          <v-col  class="d-flex justify-center"
+          v-for="item in titulos" :key="item.id">
+            <v-item v-slot="{ active, toggle }">
+              <v-btn color="color1os" icon 
+              :input-value="active"
+              @click="toggle">
+                <v-icon>mdi-record</v-icon>
+              </v-btn>
+            </v-item>
+          </v-col>
+        </v-row>
+      </v-item-group>
+    </v-col>
+  </v-row>
 
 </v-container>
 </template>

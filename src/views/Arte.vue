@@ -62,8 +62,7 @@
             </v-slide-group>
         </v-sheet>
            
-     
-        <comCuadro :cuadros="cuadros" :ver="ver"></comCuadro> 
+        <comCuadro :cuadros="cuadros"></comCuadro> 
   
     </div>
 </template>
@@ -122,7 +121,6 @@ export default {
        comcargando, comCuadro
     },
     data:()=>({
-    ver:true,
     mover:true,
     cuadros:[
           {

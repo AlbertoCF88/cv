@@ -1,6 +1,6 @@
 <template>
-
 <v-container mt-10>
+    
     <v-row class="mb-7">
         <!--Creador de tareas-->
         <v-col cols="12" md="6" order-md="2"

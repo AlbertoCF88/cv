@@ -10,20 +10,20 @@ const routes = [
     name: 'Home',
     component: () => import('../views/Home.vue')
   },
-   // direccion base
+   // dirección base
   {
     path: '/arte',
     name: 'Arte',
     component: () => import('../views/Arte.vue')
   },
   
-    // arte en minusculas para diferenciar del Arte, direccion componente cuadro
+    // arte en minúsculas para diferenciar del Arte, dirección componente cuadro
     {
       path: '/arte/:page',
       name: 'arte',
       component: () => import('../views/Arte.vue')
     },
-     // direccion por cada foto del compornete cuadro
+     // dirección por cada foto del componete cuadro
       {
         path: '/arte/:page/:fotografia',
         name: 'arte/:page',

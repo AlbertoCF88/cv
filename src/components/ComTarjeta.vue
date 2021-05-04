@@ -90,15 +90,15 @@
     </v-progress-linear> 
   </v-card>
 
-        <v-container 
-        :class="{'marcoColor2Entrada':hover2,'marcoColor2Salida':!hover2}"
-        class="color1 anchoHover"> 
-        </v-container>
+  <v-container 
+  :class="{'marcoColor2Entrada':hover2,'marcoColor2Salida':!hover2}"
+  class="color1 anchoHover"> 
+  </v-container>
     
-        <v-container 
-        :class="{'marcoColor1Entrada':hover,'marcoColor1Salida':!hover}"
-        class="color1os anchoHover "> 
-        </v-container>
+  <v-container 
+  :class="{'marcoColor1Entrada':hover,'marcoColor1Salida':!hover}"
+  class="color1os anchoHover "> 
+  </v-container>
         
 </v-container>
 </template>

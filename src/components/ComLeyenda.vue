@@ -1,22 +1,18 @@
 <template>
-  <div class="text-center">
+<div class="text-center">
+
     <v-dialog
-      v-model="dialog"
-      
-    >
+      v-model="dialog">
       <template v-slot:activator="{ on, attrs }">
-        <v-btn
-          color="color1"
-          dark 
-          v-bind="attrs"
-          v-on="on"
-        >
+        <v-btn v-bind="attrs" v-on="on"
+        color="color1" dark>
           Leyenda
         </v-btn>
       </template>
 
       <v-card>
-        <v-card-title class="headline color1 d-flex justify-center"  >
+        <v-card-title 
+        class="headline color1 d-flex justify-center">
           Leyenda
         </v-card-title>
         <!--un if dentro de un for...--->
@@ -25,7 +21,7 @@
         v-if="item.salir"
         class="d-flex justify-space-between align-center overflow-y-auto">
     
-        <ul > 
+        <ul> 
             <div class="cajaIcon">
                 <v-icon 
                 v-for="color in item.colorLista" 
@@ -75,7 +71,8 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
-  </div>
+
+</div>
 </template>
 
 <style scoped>
