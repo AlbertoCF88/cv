@@ -37,7 +37,7 @@
       </v-row>
     </v-container>  
   </div>
-  <!--if ver-->
+  <!--primer cuadro-->
 
   <!--cuadros a mostrar segun eleccion-->
   <div  v-for="(item,index) in cuadros" :key="index"> 
@@ -103,7 +103,7 @@
     height:200px !important;
   }
   .titulo{
-    font-size:90px !important;
+    font-size:76px !important;
   }
 }
 @media (min-width:1200px) {
@@ -128,11 +128,7 @@ export default {
    components:{
        comcargando,
     },
-  props:{
-    cuadros: {
-        type: Array,
-        },
-    },
+  props:['cuadros'],
     data:()=>({
     
     }),//data

@@ -134,7 +134,7 @@
             </v-list-item>
         </v-list>
          
-        <v-btn class="cv"
+        <v-btn class="cv marginTop"
         text block color="color4"
         href="/files/cv.pdf" target="_blank" >
             <v-icon left>
@@ -152,7 +152,7 @@
                     <v-icon> mdi-alert-octagon-outline </v-icon>
                 </v-btn>
             </template>
-            <span>¿Te moleta la barra?</span>
+            <span>¿Te molesta la barra?</span>
         </v-tooltip>
         <v-progress-linear
         :indeterminate="loading"
@@ -204,11 +204,13 @@
         max-width: 100%;
     } 
     .altura{
-        padding-bottom: 0px;
-        height: 46px;
+        margin-bottom: -53.5px; 
+    }
+    .marginTop{
+        margin-top: 70px;
     }
     .v-application--is-ltr .v-list-item__action:first-child, .v-application--is-ltr .v-list-item__icon:first-child {
-     margin-right: 0px;
+        margin-right: 0px;
     }
  }
  /*----------FIn---@media (max-width:812px)------------------------*/

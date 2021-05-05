@@ -13,6 +13,13 @@ export default new Vuetify({
           color2:'#4943B8',
           color3:'#b84343',
           color4:'#B3B843',
+
+          //icon navegacio
+          ico1:'#00ff4d',  
+          ico2:'#008eff',  
+          ico3:'#ff5245',  
+          ico4:'#fbff00',  
+
           dragon:'#ff6600',
         },
       },

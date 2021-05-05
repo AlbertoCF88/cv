@@ -16,8 +16,7 @@ const routes = [
     name: 'Arte',
     component: () => import('../views/Arte.vue')
   },
-  
-    // arte en minúsculas para diferenciar del Arte, dirección componente cuadro
+    // arte en minúsculas para diferenciar del Arte, dirección paquete cuadros del componete arte
     {
       path: '/arte/:page',
       name: 'arte',

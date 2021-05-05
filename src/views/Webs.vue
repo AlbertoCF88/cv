@@ -15,7 +15,7 @@
                                     <v-list-item-avatar tile 
                                     height="auto" width="300" size="80">
                                         <v-img
-                                        src="../assets/supervivencia1.png">
+                                        src="../assets/supervivencia1.webp">
                                         </v-img>
                                     </v-list-item-avatar>
                                 </v-list-item>
@@ -29,7 +29,7 @@
                                         </v-list-item-title>
                                         <v-list-item-subtitle >
                                             Pagina web de ayuda al juego de mesa:
-                                            <br>"Dragon ball Super, La Supervivencia del Universo"
+                                            <br>"Dragon ball Super, La Supervivencia del Universo".
                                         </v-list-item-subtitle>
                                     </v-list-item-content>
                                 </v-list-item>
@@ -38,7 +38,7 @@
                         <v-card-text
                         class="d-flex justify-center text-center 
                         justify-md-start text-md-start">
-                            Web realizada Con Vue CDN, Bootstrap y librerias (animate.css).
+                            Web realizada Con Vue CDN, Bootstrap y es progressive Web App.
                         </v-card-text>
                         <v-card-actions
                         class="d-flex justify-center justify-md-start ">
@@ -67,7 +67,7 @@
                                     <v-list-item-avatar tile 
                                     height="auto" width="300" size="80">
                                         <v-img
-                                        src="../assets/supervivencia2.png">
+                                        src="../assets/supervivencia2.webp">
                                         </v-img>
                                     </v-list-item-avatar>
                                 </v-list-item>
@@ -91,7 +91,7 @@
                         <v-card-text 
                         class="d-flex justify-center text-center 
                         justify-md-start text-md-start">
-                            Conversion en web App, puedes visualizar la ficha de Play Store en el siguiente enlace
+                            Conversión App, puedes visualizar la ficha de Play Store en el siguiente enlace.
                         </v-card-text>
                         <v-card-actions
                         class="d-flex justify-center justify-md-start ">
@@ -111,7 +111,7 @@
         <v-card class="altura" 
         color="transparent" elevation="0" >
             <v-img class="altura align-center"
-            src="../assets/gitazul.png">
+            src="../assets/gitazul.webp">
                 <v-container>
                     <v-row class="d-flex justify-center text-center">
                         <v-col cols="8" sm="4" md="5" lg="4" 

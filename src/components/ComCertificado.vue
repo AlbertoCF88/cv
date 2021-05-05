@@ -194,8 +194,8 @@ export default {
  
     certificados:[
         {
-            img: require('@/assets/pixel.png'),
-            frontImg: require('@/assets/frontSin.png'),
+            img: require('@/assets/pixel.webp'),
+            frontImg: require('@/assets/frontSin.webp'),
             colorImg:'pixel',
             colorCard:'pixelCard',
             color:'textBlanco',
@@ -212,7 +212,7 @@ export default {
             colorLista2:['#607d8b','#e64a19','#ff9800','#d32f2f','#e38ad7']
         },
         {
-            img: require('@/assets/pixel.png'),
+            img: require('@/assets/pixel.webp'),
             colorImg:'pixel',
             colorCard:'pixelCard',
             color:'textBlanco',
@@ -224,7 +224,7 @@ export default {
             año:'2020',
         },
         {
-            img: require('@/assets/ford.png'),
+            img: require('@/assets/ford.webp'),
             colorImg:'ford',
             colorCard:'fordCard',
             color:'textBlanco',
@@ -236,7 +236,7 @@ export default {
             año: '2014',
         },
         {
-            img: require('@/assets/cisco.png'),
+            img: require('@/assets/cisco.webp'),
             colorImg:'cisco',
             colorCard:'ciscoCard',
             color:'textBlanco',

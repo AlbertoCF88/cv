@@ -9,28 +9,28 @@
         <v-slide-item  v-slot="{toggle}">
           <v-btn :to="{ path: '/'}" @click="toggle">
             <span class="font-weight-bold">Inicio</span>
-            <v-icon color="#2A7352">mdi-account</v-icon>
+            <v-icon color="ico1">mdi-account</v-icon>
           </v-btn>
         </v-slide-item>
 
         <v-slide-item  v-slot="{toggle}">
           <v-btn :to="{name: 'Arte'}" @click="toggle">
             <span class="font-weight-bold">Arte</span>
-            <v-icon color="#2E2A73">mdi-lead-pencil</v-icon>
+            <v-icon color="ico2">mdi-lead-pencil</v-icon>
           </v-btn>
         </v-slide-item>
 
         <v-slide-item  v-slot="{toggle}">
           <v-btn :to="{name: 'Webs'}" @click="toggle">
             <span class="font-weight-bold">Otras Webs</span>
-            <v-icon color="#732A4B" >mdi-remote-desktop</v-icon>
+            <v-icon color="ico3" >mdi-remote-desktop</v-icon>
           </v-btn>
         </v-slide-item>
 
         <v-slide-item  v-slot="{toggle}">
           <v-btn :to="{name: 'Post-it'}" @click="toggle">
             <span class="font-weight-bold">Post-it</span>
-            <v-icon color="#70732A">mdi-note-text</v-icon>
+            <v-icon color="ico4">mdi-note-text</v-icon>
           </v-btn>
         </v-slide-item>
 

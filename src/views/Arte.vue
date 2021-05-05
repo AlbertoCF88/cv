@@ -33,7 +33,7 @@
                 v-slot="{ toggle }">
                     <v-hover v-slot="{ hover }">
                         <v-card class="ma-4" height="100" color="black"
-                        width="200" @click="toggle;ver=false"
+                        width="200" @click="toggle"
                         :to="{name:'arte', params: {page: item.id}}">
                             <v-img aspect-ratio="2" class="sombra"
                             :src="item.foto">
@@ -63,7 +63,7 @@
         </v-sheet>
            
         <comCuadro :cuadros="cuadros"></comCuadro> 
-  
+   
     </div>
 </template>
 
@@ -80,12 +80,12 @@
     width: 100%;
 }
 .carrete1{
-    background: url(../assets/carrete2.png); 
+    background: url(../assets/carrete.webp); 
     background-size: contain;
     background-position: center;
 }
 .carrete2{
-    background: url(../assets/carrete2.png); 
+    background: url(../assets/carrete.webp); 
     background-size: contain;
     background-position: none;
 }
@@ -113,111 +113,20 @@
 
 
 <script>
+/*json solo reconoce imagenes en carpeta public*/
+import cuadros from '/public/cuadros.json'
 import comcargando from "@/components/ComCargando.vue"
 import comCuadro from "@/components/ComCuadros.vue"
+
 export default {
     name: 'Arte',
     components:{
        comcargando, comCuadro
     },
     data:()=>({
-    mover:true,
-    cuadros:[
-          {
-            id:'bosquesinfin',
-            titulo:'Bosque Sin Fin',
-            foto: require('@/assets/cuadros/bosque/1.png'),
-            galeria: [
-                        {
-                        imagenes:[
-                                require('@/assets/cuadros/bosque/1.png'),
-                                ],
-                        }                
-                    ],
-        },
-        {
-            id:'dialluvioso',
-            titulo:'Dia Lluvioso',
-            foto: require('@/assets/cuadros/diaLluvioso/3.png'),
-            galeria: [
-                        {
-                       imagenes:[
-                                require('@/assets/cuadros/diaLluvioso/1.png'),
-                                require('@/assets/cuadros/diaLluvioso/2.png'),
-                                require('@/assets/cuadros/diaLluvioso/3.png'),
-                                ],
-                        }                
-                    ],
-        },
-         {
-            id:'retratoana',
-            titulo:'Retrato Ana',
-            foto: require('@/assets/cuadros/ana/4.png'),
-            galeria: [
-                        {
-                        imagenes:[
-                                require('@/assets/cuadros/ana/1.png'),
-                                require('@/assets/cuadros/ana/2.png'),
-                                require('@/assets/cuadros/ana/3.png'),
-                                require('@/assets/cuadros/ana/4.png'),
-                                require('@/assets/cuadros/ana/5.png'),
-                                ],
-                        }                
-                    ],
-        },
-         {
-            id:'lageisha',
-            titulo:'La Geisha',
-            foto: require('@/assets/cuadros/laGeisha/2.png'),
-            galeria: [
-                        {
-                        imagenes:[
-                                require('@/assets/cuadros/laGeisha/1.png'),
-                                require('@/assets/cuadros/laGeisha/2.png'),
-                                ],
-                        }                
-                    ],
-        },
-         {
-            id:'torrepaterna',
-            titulo:'Torre Paterna',
-            foto: require('@/assets/cuadros/torrePaterna/3.png'),
-            galeria: [
-                        {
-                        imagenes:[
-                                require('@/assets/cuadros/torrePaterna/1.png'),
-                                require('@/assets/cuadros/torrePaterna/2.png'),
-                                require('@/assets/cuadros/torrePaterna/3.png'),
-                                ],
-                        }                
-                    ],
-        },
-         {
-            id:'libros',
-            titulo:'Libros',
-            foto: require('@/assets/cuadros/libros/1.png'),
-            galeria: [
-                        {
-                        imagenes:[
-                                require('@/assets/cuadros/libros/1.png'),
-                                ],
-                        }                
-                    ],
-        },
-         {
-            id:'cesta',
-            titulo:'Cesta',
-            foto: require('@/assets/cuadros/cesta/1.png'),
-            galeria: [
-                        {
-                        imagenes:[
-                                require('@/assets/cuadros/cesta/1.png'),
-                                ],
-                        }                
-                    ],
-         }
-        ],//cuadros
+        mover:true,
+    	cuadros: cuadros
     }),//data
-     
-}//export default
+    
+}//export default       
 </script>

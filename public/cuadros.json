@@ -1,0 +1,95 @@
+[
+    {
+        "id":"bosquesinfin",
+        "titulo":"Bosque Sin Fin",
+        "foto":"/cuadros/bosque/bosque1.webp",
+        "galeria": [
+                    {
+                    "imagenes":[
+                            "/cuadros/bosque/bosque1.webp"
+                            ]
+                    }                
+                ]
+    },
+    {
+        "id":"dialluvioso",
+        "titulo":"Dia Lluvioso",
+        "foto": "/cuadros/diaLluvioso/lluvia3.webp",
+        "galeria": [
+                    {
+                   "imagenes":[
+                            "/cuadros/diaLluvioso/lluvia1.webp",
+                            "/cuadros/diaLluvioso/lluvia2.webp",
+                            "/cuadros/diaLluvioso/lluvia3.webp"
+                            ]
+                    }                
+                ]
+    },
+    {
+        "id":"retratoana",
+        "titulo":"Retrato Ana",
+        "foto": "/cuadros/ana/ana4.webp",
+        "galeria": [
+                    {
+                    "imagenes":[
+                            "/cuadros/ana/ana1.webp",
+                            "/cuadros/ana/ana2.webp",
+                            "/cuadros/ana/ana3.webp",
+                            "/cuadros/ana/ana4.webp",
+                            "/cuadros/ana/ana5.webp"
+                            ]
+                    }                
+                ]
+    },
+    {
+        "id":"lageisha",
+        "titulo":"La Geisha",
+        "foto": "/cuadros/laGeisha/gei2.webp",
+        "galeria": [
+                    {
+                    "imagenes":[
+                            "/cuadros/laGeisha/gei1.webp",
+                            "/cuadros/laGeisha/gei2.webp"
+                            ]
+                    }                
+                ]
+    },
+    {
+        "id":"torrepaterna",
+        "titulo":"Torre Paterna",
+        "foto": "/cuadros/torrePaterna/torre3.webp",
+        "galeria": [
+                    {
+                    "imagenes":[
+                            "/cuadros/torrePaterna/torre1.webp",
+                            "/cuadros/torrePaterna/torre2.webp",
+                            "/cuadros/torrePaterna/torre3.webp"
+                            ]
+                    }                
+                ]
+    },
+    {
+        "id":"libros",
+        "titulo":"Libros",
+        "foto": "/cuadros/libros/libro1.webp",
+        "galeria": [
+                    {
+                    "imagenes":[
+                            "/cuadros/libros/libro1.webp"
+                            ]
+                    }                
+                ]
+    },
+    {
+        "id":"cesta",
+        "titulo":"Cesta",
+        "foto": "/cuadros/cesta/cesta1.webp",
+        "galeria": [
+                    {
+                    "imagenes":[
+                            "/cuadros/cesta/cesta1.webp"
+                            ]
+                    }                
+                ]
+    }
+]

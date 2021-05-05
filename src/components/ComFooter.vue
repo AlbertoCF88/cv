@@ -9,19 +9,19 @@
       <v-card-actions class="d-flex justify-center">
         <v-slide-group show-arrows  center-active>
 
-          <v-slide-item v-slot="{toggle}">
+ <v-slide-item v-slot="{toggle}">
             <v-tooltip  top>
               <template v-slot:activator="{ on, attrs }">
                 <v-btn v-bind="attrs" v-on="on"
-                link class="mx-4" icon color="black"
-                role=link href="https://github.com/AlbertoCF88" target="_blank" 
+                link class="mx-4" icon color="ico4"
+                role=link href="tel:635507429" target="_blank"
                 @click="toggle">
                   <v-icon size="24px">
-                    mdi-github
+                    mdi-phone
                   </v-icon>
                 </v-btn>
               </template>
-              <span>Ir a Github</span>
+              <span>Llamar por teléfono</span>
             </v-tooltip>
           </v-slide-item>
 
@@ -29,7 +29,7 @@
             <v-tooltip  top>
               <template v-slot:activator="{ on, attrs }">
                 <v-btn v-bind="attrs" v-on="on"
-                link class="mx-4" icon color="red"
+                link class="mx-4" icon color="ico3"
                 href="/files/cv.pdf" target="_blank"  
                 :loading="loading" 
                 :disabled="loading"
@@ -43,11 +43,28 @@
             </v-tooltip>
           </v-slide-item>
 
+  <v-slide-item v-slot="{toggle}">
+            <v-tooltip  top>
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn v-bind="attrs" v-on="on"
+                link class="mx-4" icon color="ico2"
+                role=link href="https://github.com/AlbertoCF88" target="_blank" 
+                @click="toggle">
+                  <v-icon size="24px">
+                    mdi-github
+                  </v-icon>
+                </v-btn>
+              </template>
+              <span>Ir a Github</span>
+            </v-tooltip>
+          </v-slide-item>
+
+
           <v-slide-item v-slot="{toggle}">
             <v-tooltip top>
               <template v-slot:activator="{ on, attrs }">
                 <v-btn v-bind="attrs" v-on="on"
-                link class="mx-4" icon color="blue lighten-1"
+                link class="mx-4" icon color="ico1"
                 role=link href="mailto: alcafefront@gmail.com" target="_blank" 
                 @click="toggle">
                   <v-icon size="24px">
@@ -59,21 +76,13 @@
             </v-tooltip>
           </v-slide-item>
 
-          <v-slide-item v-slot="{toggle}">
-            <v-tooltip  top>
-              <template v-slot:activator="{ on, attrs }">
-                <v-btn v-bind="attrs" v-on="on"
-                link class="mx-4" icon color="black"
-                role=link href="tel:635507429" target="_blank"
-                @click="toggle">
-                  <v-icon size="24px">
-                    mdi-phone
-                  </v-icon>
-                </v-btn>
-              </template>
-              <span>Llamar por telefono</span>
-            </v-tooltip>
-          </v-slide-item>
+        
+
+
+
+
+
+         
 
         </v-slide-group> 
       </v-card-actions>

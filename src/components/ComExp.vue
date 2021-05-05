@@ -160,7 +160,7 @@ export default {
  
     exp:[
         {
-            img: require('@/assets/bino.png'),
+            img: require('@/assets/bino.webp'),
             colorImg:'bino',
             colorCard:'binoCard',
             colorTexto:'textBlanco',
@@ -171,7 +171,7 @@ export default {
             año:'Junio de 2019 – octubre de 2020 (1 año 5 meses)',
         },
         {
-            img: require('@/assets/ford.png'),
+            img: require('@/assets/ford.webp'),
             colorImg:'ford',
             colorCard:'fordCard',
             colorTexto:'textBlanco',
@@ -182,7 +182,7 @@ export default {
             año:'Junio de 2013 - junio de 2019 (6 años 1 mes)',
         },
         {
-            img: require('@/assets/paterna.png'),
+            img: require('@/assets/paterna.webp'),
             colorImg:'paterna',
             colorCard:'paternaCard',
             colorTexto:'textBlanco',
@@ -193,7 +193,7 @@ export default {
             año:'Junio de 2012 - agosto de 2012 (3meses)',
         },
         {
-            img: require('@/assets/autrial.jpg'),
+            img: require('@/assets/autrial.webp'),
             colorImg:'autrial',
             colorCard:'autrialCard',
             colorTexto:'textBlanco',
@@ -204,7 +204,7 @@ export default {
             año:'Marzo de 2012 - mayo de 2012 (3 meses)',
         },
         {
-            img: require('@/assets/sigma.jpg'),
+            img: require('@/assets/sigma.webp'),
             colorImg:'sigma',
             colorCard:'sigmaCard',
             colorTexto:'textBlanco',
@@ -215,7 +215,7 @@ export default {
             año:'Marzo de 2009 - mayo de 2009 (3 meses)',
         },
         {
-            img: require('@/assets/inter.png'),
+            img: require('@/assets/inter.webp'),
             colorImg:'inter',
             colorCard:'interCard',
             colorTexto:'textBlanco',
@@ -226,7 +226,7 @@ export default {
             año:'Marzo de 2007 - mayo de 2007 (3 meses) ',
         },
         {
-            img: require('@/assets/serrano.png'),
+            img: require('@/assets/serrano.webp'),
             colorImg:'serrano',
             colorCard:'serranoCard',
             colorTexto:'textBlanco',

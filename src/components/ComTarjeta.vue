@@ -49,13 +49,13 @@
             <br>
             Me llamo Alberto y tengo {{edadActual}} años.
             <br><br>
-            No tengo experiencia laboral en este ambito pero soy una persana tranquila, paciente, amable, resolutiva, creativa responsable y madura. 
+            Soy tranquilo, paciente, amable, resolutivo, creativo responsable y maduro. Me gusta cultivar plantas carnívoras y la pintura.
             <br>
-            Como ya he mencionado anteriormente soy nuevo en esto pero con muchas ganas de trabajar en este sector, no dude en ponerse en contacto conmigo por correo electronico
+            He decubirto hace poco que el mundo de la programación es muy imaginativo y me gustaria trabajar en este sector, no dude en ponerse en contacto conmigo por correo electrónico
             <a href="mailto: alcafefront@gmail.com" target="_blank">alcafefront@gmail.com</a> o por teléfono sí así lo desea <a href="tel:635507429" target="_blank">635507429</a>
             <br>
              <br><br>
-             Esta web ha sido creada con Vue CLI, separado por componentes, (Vue Router, Vuex, Vuetify, adaptado para todos los dispositivos,WebApp y Visual Studio Code como editor de código). <br>
+             Esta web ha sido creada con Vue CLI, separado por componentes, (Vue Router, Vuex, Vuetify, adaptado para todos los dispositivos, progressive Web App y Visual Studio Code como editor de código). <br>
              Puedes visualizar el codigo en mi cuenta de Github <a href="https://github.com/AlbertoCF88" target="_blank">AlbertoCF88</a>
           </p>
         </v-card-text>
@@ -81,7 +81,7 @@
           <v-icon> mdi-alert-octagon-outline </v-icon>
         </v-btn>
       </template>
-      <span>¿Te moleta la barra?</span>
+      <span>¿Te molesta la barra?</span>
     </v-tooltip>
 
     <v-progress-linear
