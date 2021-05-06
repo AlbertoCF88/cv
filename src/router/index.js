@@ -33,11 +33,6 @@ const routes = [
     name: 'Webs',
     component: () => import('../views/Webs.vue')
   },
-  {
-    path: '/post-it',
-    name: 'Post-it',
-    component: () => import('../views/Post-it.vue')
-  },
 ]
 
 const router = new VueRouter({

@@ -27,13 +27,6 @@
           </v-btn>
         </v-slide-item>
 
-        <v-slide-item  v-slot="{toggle}">
-          <v-btn :to="{name: 'Post-it'}" @click="toggle">
-            <span class="font-weight-bold">Post-it</span>
-            <v-icon color="ico4">mdi-note-text</v-icon>
-          </v-btn>
-        </v-slide-item>
-
       </v-slide-group>
     </v-bottom-navigation>
   </v-app-bar>

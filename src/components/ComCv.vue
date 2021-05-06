@@ -59,25 +59,6 @@
         </v-window-item>
       </v-window>
     </v-col>
-
-    <v-col >
-      <v-item-group  
-      v-model="ventana"
-      mandatory>
-        <v-row >
-          <v-col  class="d-flex justify-center"
-          v-for="item in titulos" :key="item.id">
-            <v-item v-slot="{ active, toggle }">
-              <v-btn color="color1os" icon 
-              :input-value="active"
-              @click="toggle">
-                <v-icon>mdi-record</v-icon>
-              </v-btn>
-            </v-item>
-          </v-col>
-        </v-row>
-      </v-item-group>
-    </v-col>
   </v-row>
 
 </v-container>

@@ -41,18 +41,34 @@
       style="height: 100%;">
 
         <v-card-text class="pb-0">
-          <p class="display-1 biografia">
+          <p class="display-1 color1--text text-center">
             SOBRE MÍ
           </p>
-          <p class="texto">
-            !Hola!, 
+          <p class="texto text-justify mx-6">
+            !Hola!
             <br>
             Me llamo Alberto y tengo {{edadActual}} años.
-            <br><br>
-            Soy tranquilo, paciente, amable, resolutivo, creativo responsable y maduro. Me gusta cultivar plantas carnívoras y la pintura.
             <br>
-            He decubirto hace poco que el mundo de la programación es muy imaginativo y me gustaria trabajar en este sector, no dude en ponerse en contacto conmigo por correo electrónico
-            <a href="mailto: alcafefront@gmail.com" target="_blank">alcafefront@gmail.com</a> o por teléfono sí así lo desea <a href="tel:635507429" target="_blank">635507429</a>
+            Soy paciente, resolutivo, creativo y responsable. 
+            <br><br>
+            En mi tiempo libre me gusta cultivar plantas, la pintura y programar. La programación es un campo que me apasiona ya que puedo poner en práctica mis habilidades creativas. 
+            <br>  <br>
+            Puedes descubrir alguno de mis proyectos en esta página web. Echa un vistazo a mis pinturas 
+            <v-btn icon fab x-small
+            :to="{name: 'Arte'}">
+              <v-icon color="ico2">mdi-lead-pencil</v-icon>
+            </v-btn>
+            y a mis páginas webs
+            <v-btn icon fab x-small
+             :to="{name: 'Webs'}">
+            <v-icon color="ico3">mdi-remote-desktop</v-icon>
+          </v-btn>
+            <br><br>
+            No dudes en ponerte en contacto conmigo:
+            <br>
+            <a href="mailto: alcafefront@gmail.com" target="_blank">alcafefront@gmail.com</a> 
+            <br>
+            <a href="tel:635507429" target="_blank">635507429</a>
             <br>
              <br><br>
              Esta web ha sido creada con Vue CLI, separado por componentes, (Vue Router, Vuex, Vuetify, adaptado para todos los dispositivos, progressive Web App y Visual Studio Code como editor de código). <br>
@@ -106,9 +122,6 @@
 <style scoped>
 .botonLoad:before{
   background-color: transparent !important;
-}
-.biografia{
-  color:#43b883;
 }
 .texto{
   color:#d9d9d9;
