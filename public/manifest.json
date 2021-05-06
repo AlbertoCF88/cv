@@ -1,7 +1,7 @@
 {
     "name": "CValbertoCF",
     "short_name": "CValbertoCF",
-    "start_url": "http://CValbertoCF.deysol.com/",
+    "start_url": "https://cvalbertocf.deysol.com/",
     "display": "standalone",
     "orientation": "any",
     "scope":".",
@@ -19,6 +19,10 @@
         "sizes": "16x16"
       },
       {
+        "src": "ico/60.png",
+        "sizes": "60x60"
+      },
+      {
         "src": "ico/72.png",
         "sizes": "72x72",
         "type": "image/png"
@@ -31,6 +35,11 @@
       {
         "src": "ico/144.png",
         "sizes": "144x144",
+        "type": "image/png"
+      },
+      {
+        "src": "ico/180.png",
+        "sizes": "180x180",
         "type": "image/png"
       },
       {
