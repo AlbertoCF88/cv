@@ -4,15 +4,21 @@
     align="center"
     justify="center">
          <v-progress-circular
-        indeterminate
-        color="color2">
+        indeterminate 
+        :color="circulo"
+        :size="circuloAltura">
         </v-progress-circular>
     </v-row>
 </template>
 
 <script>
 export default {
-    name: 'comCargando',
-   
-    }
+   name: 'comCargando',
+   components:{
+    },
+  props:['circulo','circuloAltura'],
+    data:()=>({
+    
+    }),//data
+ }//export default
 </script>

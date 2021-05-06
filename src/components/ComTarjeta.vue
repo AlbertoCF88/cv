@@ -7,7 +7,13 @@
 
     <v-avatar class="d-flex justify-center"
     height="auto" width="auto" tile>
-      <v-img src="@/assets/albertoPng.png"></v-img>
+      <v-img src="@/assets/albertoPng.png">
+        <!--cargando-->
+        <template v-slot:placeholder>
+          <comcargando class="color1os" circulo="color1" circuloAltura="70"></comcargando>
+        </template>
+        <!--cargando-->
+      </v-img>
     </v-avatar>
     
     <div class="d-flex justify-space-between altura">
@@ -62,13 +68,13 @@
             <v-btn icon fab x-small
              :to="{name: 'Webs'}">
             <v-icon color="ico3">mdi-remote-desktop</v-icon>
-          </v-btn>
+            </v-btn>
             <br><br>
             No dudes en ponerte en contacto conmigo:
             <br>
-            <a href="mailto: alcafefront@gmail.com" target="_blank">alcafefront@gmail.com</a> 
+            Correo: <a href="mailto: alcafefront@gmail.com" target="_blank">alcafefront@gmail.com</a> 
             <br>
-            <a href="tel:635507429" target="_blank">635507429</a>
+            Móvil: <a href="tel:635507429" target="_blank">635507429</a>
             <br>
              <br><br>
              Esta web ha sido creada con Vue CLI, separado por componentes, (Vue Router, Vuex, Vuetify, adaptado para todos los dispositivos, progressive Web App y Visual Studio Code como editor de código). <br>
@@ -390,10 +396,11 @@
 
 <script>
 import {mapState, mapMutations} from "vuex";
-
+import comcargando from "@/components/ComCargando.vue"
 export default {
   name: 'comTarjeta',
   components: {
+    comcargando
   },
 
   data:() => ({

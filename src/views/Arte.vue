@@ -47,7 +47,7 @@
                                 </v-expand-transition>
                                 <!--cargando-->
                                 <template v-slot:placeholder>
-                                  <comcargando></comcargando>
+                                  <comcargando circulo="color2"></comcargando>
                                 </template>
                                 <!--cargando-->
                             </v-img>

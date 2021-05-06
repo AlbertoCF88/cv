@@ -12,7 +12,7 @@
                             <v-col cols="12" md="3" lg="2">
                                 <v-list-item three-line 
                                 class="d-flex justify-center justify-md-start">
-                                    <v-list-item-avatar tile 
+                                    <v-list-item-avatar tile color="white"
                                     height="auto" width="300" size="80">
                                         <v-img
                                         src="../assets/supervivencia1.webp">
@@ -64,7 +64,7 @@
                             <v-col cols="12" md="3" lg="2">
                                 <v-list-item three-line 
                                 class="d-flex justify-center justify-md-start">
-                                    <v-list-item-avatar tile 
+                                    <v-list-item-avatar tile color="white"
                                     height="auto" width="300" size="80">
                                         <v-img
                                         src="../assets/supervivencia2.webp">

@@ -3,8 +3,8 @@
 
     <v-card shaped class="mx-auto mb-8" max-width="800"
     v-for="item in certificados" :key="item.id" >
-        <v-img height="50" contain :class="item.colorImg"
-        :src="item.img">
+        <v-img height="50" contain 
+        :class="item.colorImg" :src="item.img">
         </v-img>
         <v-card-text 
         :class="item.colorCard"
@@ -55,6 +55,12 @@
                             </div>
                         </ul>
                     </div>
+
+                    <!--cargando-->
+                    <template v-slot:placeholder>
+                        <comcargando circulo="color1" circuloAltura="70"></comcargando>
+                    </template>
+                    <!--cargando-->
                 </v-img>
             </v-container>
             
@@ -185,10 +191,11 @@ li{
 
 <script>
 import comLeye from '@/components/ComLeyenda.vue';
+import comcargando from "@/components/ComCargando.vue"
 export default {
     name: 'comCert',
     components:{
-        comLeye,
+        comLeye, comcargando
     },
     data: () => ({
  

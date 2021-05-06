@@ -6,7 +6,7 @@
         :src="$route.params.fotografia" spect-ratio="2" 
         class="imagen" contain>
             <template v-slot:placeholder>
-                <comcargando></comcargando>
+                <comcargando circulo="color2"></comcargando>
             </template>
             <v-row>
                 <v-col>

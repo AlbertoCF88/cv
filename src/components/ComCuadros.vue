@@ -29,7 +29,7 @@
             <v-img :src="lienzo" 
             spect-ratio="2" class="black" contain>
               <template v-slot:placeholder>
-                <comcargando></comcargando>
+                <comcargando circulo="color2"></comcargando>
               </template>
             </v-img>
           </router-link> 
@@ -70,7 +70,7 @@
               :src="lienzo" spect-ratio="2" 
               class="black" contain>
                 <template v-slot:placeholder>
-                  <comcargando></comcargando>
+                  <comcargando circulo="color2"></comcargando>
                 </template>
               </v-img>
             </router-link>
