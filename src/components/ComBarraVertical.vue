@@ -143,21 +143,7 @@
             Curriculum pdf
         </v-btn>
   
-        <v-tooltip bottom >
-            <template v-slot:activator="{ on, attrs }" >
-                <v-btn v-bind="attrs" v-on="on" color="color3"
-                fab dark x-small absolute bottom  right elevation="0"
-                @click="CambioLoading()"
-                class="botonLoad">
-                    <v-icon> mdi-alert-octagon-outline </v-icon>
-                </v-btn>
-            </template>
-            <span>¿Te molesta la barra?</span>
-        </v-tooltip>
-        <v-progress-linear
-        :indeterminate="loading"
-        bottom color="color1">
-        </v-progress-linear> 
+    <div class="pie"></div>  
   </v-card>
 
 </v-container>
@@ -167,9 +153,6 @@
 .cv{
     position: relative;
     bottom: 8px;
-}
-.botonLoad:before{
-    background-color: transparent !important;
 }
 .mdi-calendar-month::before {
     padding-top: 9px;
@@ -181,12 +164,10 @@
 .altura{
     margin-bottom: 0.5px;
 }
-/*boton stop */
-.v-btn--absolute.v-btn--right, .v-btn--fixed.v-btn--right {
-  right: -16px;
-}
-.v-btn--fab.v-size--x-small.v-btn--absolute.v-btn--bottom {
-  bottom: -13px;
+.pie{
+    width: 100%;
+    height: 5px;
+    background: #43b883;
 }
 /*------------------------------@media ---290--------------------------------------------------- */
 @media (max-width:294px) {
@@ -218,14 +199,8 @@
 
 
 <script>
-import {mapState, mapMutations} from "vuex";
 export default {
     name: 'comBarraV',
-    computed:{
-       ...mapState(['loading'])
-   },
-   methods:{
-       ...mapMutations(['CambioLoading'])
-   }
+    
 }
 </script>

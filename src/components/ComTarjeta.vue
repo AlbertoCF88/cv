@@ -1,7 +1,7 @@
 <template>
 <v-container mb-2 class="posicion ancho d-flex justify-center">
 
-  <v-card class="Zcard"  hover 
+  <v-card class="Zcard" hover 
   @mouseover="hover=true; hover2=true"
   @mouseleave="hover=false; hover2=false">
 
@@ -83,33 +83,16 @@
         </v-card-text>
 
         <v-card-actions>
-
           <v-btn text block color="color4" 
           @click="revelar = false">
             Cerrar
           </v-btn>
           
         </v-card-actions>
-  
       </v-card>
     </v-expand-transition>
 
-    <v-tooltip bottom >
-      <template v-slot:activator="{ on, attrs }" >
-        <v-btn v-bind="attrs" v-on="on" color="color3"
-        fab dark x-small absolute bottom  right elevation="0"
-        @click="CambioLoading()"
-        class="botonLoad">
-          <v-icon> mdi-alert-octagon-outline </v-icon>
-        </v-btn>
-      </template>
-      <span>¿Te molesta la barra?</span>
-    </v-tooltip>
-
-    <v-progress-linear
-    :indeterminate="loading"
-    bottom color="color1">
-    </v-progress-linear> 
+    <div class="pie"></div>
   </v-card>
 
   <v-container 
@@ -126,9 +109,6 @@
 </template>
 
 <style scoped>
-.botonLoad:before{
-  background-color: transparent !important;
-}
 .texto{
   color:#d9d9d9;
 }
@@ -168,19 +148,16 @@
   height: 0;
 }
 /*Fin triangulos avatar */
-/*boton stop */
-.v-btn--absolute.v-btn--right, .v-btn--fixed.v-btn--right {
-  right: -16px;
-}
-.v-btn--fab.v-size--x-small.v-btn--absolute.v-btn--bottom {
-  bottom: -13px;
-}
-/*fin boton stop */
 .v-card--reveal {
   bottom: 0;
   opacity: 1 !important;
   position: absolute;
   width: 100%;
+}
+.pie{
+    width: 100%;
+    height: 5px;
+    background: #43b883;
 }
 /*marcos card */
 .anchoHover{
@@ -209,7 +186,7 @@
   .marcoColor1Salida{
     z-index: 0;
     display: flex;
-    height: 449px;
+    height: 95%;
     position: absolute;
     animation:  marcoAnimaSalida 1.5s ease forwards; 
   }
@@ -221,7 +198,7 @@
       }  
     100%{
         left: 25px;
-        top: 40px;
+        top: 25px;
         opacity:0;
       }
   } 
@@ -248,7 +225,7 @@
   .marcoColor2Salida{
     z-index: 0;
     display: flex;
-    height: 449px;
+    height: 95%;
     position: absolute;
     animation:  marcoAnimaSalida2 1.5s ease  forwards; 
   }
@@ -261,7 +238,7 @@
     100%{
           opacity:0;
           left: 35px;
-          top: 50px;
+          top: 35px;
       }
   } 
 /*fin marcos card */
@@ -294,7 +271,7 @@
   }
   /*Fin triangulos*/
 } /*fin media 295px */
-/*------------------------------@media (max-width:961px) ------------------------------------------------------ */
+/*------------------------------@media (max-width:961px) ------movil-------------------- */
 @media (max-width:959px) { 
   .anchoHover{
     height: 102%;
@@ -395,7 +372,6 @@
 </style>
 
 <script>
-import {mapState, mapMutations} from "vuex";
 import comcargando from "@/components/ComCargando.vue"
 export default {
   name: 'comTarjeta',
@@ -409,22 +385,17 @@ export default {
     hover2: false,
     edadActual:'',
   }),
-  computed:{
-    ...mapState(['loading'])
-  },
-    methods: {
-      ...mapMutations(['CambioLoading']),
-
-      clickFuera () {
-        this. revelar = false
-      },
-      edad(){
-        let fechanacimiento = new Date('03/06/1988');
-        let hoy = new Date();
-        this.edadActual = hoy.getFullYear() - fechanacimiento.getFullYear();
-
-        return this.edadActual
-      },
+  methods: {
+    clickFuera () {
+      this. revelar = false
     },
+    edad(){
+      let fechanacimiento = new Date('03/06/1988');
+      let hoy = new Date();
+      this.edadActual = hoy.getFullYear() - fechanacimiento.getFullYear();
+
+      return this.edadActual
+    },
+  },//methods
 }//export default
 </script>
