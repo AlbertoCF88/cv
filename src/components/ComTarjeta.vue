@@ -51,7 +51,7 @@
             SOBRE MÍ
           </p>
           <p class="texto text-justify mx-6">
-            !Hola!
+            ¡Hola!
             <br>
             Me llamo Alberto y tengo {{edadActual}} años.
             <br>

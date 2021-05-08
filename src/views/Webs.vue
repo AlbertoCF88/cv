@@ -118,7 +118,7 @@
                         class="pt-16">
                             <v-card-title 
                             class="d-flex justify-center text-caption text-md-subtitle-2  text-lg-subtitle-1">
-                                No dispongo de más contenido por el momento pero puedes visualizar repositorios en el siguinte enlace en el portal de Github 
+                                No dispongo de más contenido por el momento pero puedes visualizar repositorios en el siguiente enlace en el portal de Github 
                             </v-card-title>
                         </v-col>
                         <v-col cols="12" 

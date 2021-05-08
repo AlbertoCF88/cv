@@ -95,7 +95,6 @@
   }
    .titulo{
     font-size: 10vw !important;
-    -webkit-text-stroke: 1px black !important;
   }
 }
 @media (min-width: 600px) and (max-width: 1200px) {
