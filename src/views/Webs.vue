@@ -27,7 +27,7 @@
                                         <v-list-item-title class="headline mb-1">
                                             Universo Dragon
                                         </v-list-item-title>
-                                        <v-list-item-subtitle >
+                                        <v-list-item-subtitle>
                                             Pagina web de ayuda al juego de mesa:
                                             <br>"Dragon ball Super, La Supervivencia del Universo".
                                         </v-list-item-subtitle>

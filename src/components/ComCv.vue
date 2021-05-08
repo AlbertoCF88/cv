@@ -1,7 +1,10 @@
 <template>
+<div id="cv"     Target>
+<div class="separador"></div>
+
 <v-container class="pa-0">
 
-  <v-row >
+  <v-row>
     <v-col >
       <v-item-group  
       v-model="ventana"
@@ -25,10 +28,10 @@
       </v-item-group>
     </v-col>
 
-    <v-col cols="12">
-      <v-window v-model="ventana" vertical>
-        <v-window-item v-for="item in titulos" :key="item.id">
-          <v-card flat class="mb-16">
+    <v-col cols="12" class="mb-5">
+      <v-window v-model="ventana" touchless class="fondo">
+        <v-window-item v-for="item in titulos" :key="item.id" >
+          <v-card flat class="mb-3 transparente">
             <v-card-text  class="pa-0">
               <v-container class="titulo title text-truncate" :class="item.color"> 
                 {{item.titulo}}
@@ -55,16 +58,30 @@
                 </v-col>
               </v-row>          
             </v-card-text>
+
+            <div  class="d-flex justify-center mt-n10">
+              <v-btn  @click="$vuetify.goTo('#cv')" color="color1os" >
+                <v-icon color="color1" large >mdi-clipboard-arrow-up</v-icon>
+              </v-btn>
+            </div>
+
           </v-card>
         </v-window-item>
       </v-window>
     </v-col>
   </v-row>
 
+      
 </v-container>
+</div>
 </template>
 
 <style scoped>
+.separador{
+  width: 100%;
+  height: 77px;
+}
+/*boton con icono cargando */
 .theme--light.v-icon.v-icon.v-icon--disabled {
     color: rgba(255, 5, 5, 0.568) !important; 
     animation: cargando 1s ease  backwards; 
@@ -74,10 +91,14 @@
     transform: rotate(360deg);
   }
   } 
+/*Fin boton con icono cargando */
 /*WEb .svg https://bgjar.com/ */
-.v-card {
+.fondo{
     background: url(../assets/Rect.svg) fixed;
     background-size: cover;      
+}
+.transparente{
+  background: transparent !important;
 } 
 .v-avatar {
   display: block;
@@ -111,7 +132,7 @@ export default {
   comCert, comTitu, comExp
   },
     data: () => ({
-
+      
     loader: null,
     loading: false,
     ventana: 0,

@@ -65,7 +65,7 @@
             </v-container>
             
             <v-card-subtitle 
-            class="salto d-flex justify-center mx-sm-11 mt-2"
+            class="salto d-flex justify-center mx-sm-11 mt-2 text-justify"
             :class="item.color">
                 {{item.des}} 
             </v-card-subtitle>
@@ -208,7 +208,7 @@ export default {
             color:'textBlanco',
             colorAcre:'colorAcreditado',
             nombre: 'Front End Developer',
-            des:'HTML5,HTML5-semántico,Tipografía, CSS3, Web Responsive, SASS, Bootstrap,\nGit,PWA, Jquery, Javascript avanzado,Javascript orientado Objetos, ECMAScript, Angular, React, Vue, Vue Cli, Angular conNodeJS.\n \nAdemás de ampliar por mi cuenta contenido como: Gimp, Vuetify y mejorar las tecnologías aprendidas.',
+            des:'HTML5, HTML5-semántico, Tipografía, CSS3, Web Responsive, SASS, Bootstrap, Git, PWA, Jquery, Javascript avanzado, Javascript orientado Objetos, ECMAScript, Angular, React, Vue, Vue Cli, Angular conNodeJS.\n \nAdemás de ampliar por mi cuenta contenido como: Gimp, Vuetify y mejorar las tecnologías aprendidas.',
             duracion:'Más de 120h',
             acre:'Pixelpro y Microsoft',
             año:'2021',

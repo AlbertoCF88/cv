@@ -21,7 +21,7 @@
             </v-card-subtitle>
 
             <v-card-subtitle 
-            class="salto mx-md-16 text-sm-subtitle-1 d-flex justify-center"
+            class="salto mx-md-16 text-sm-subtitle-1 d-flex justify-center text-justify"
             :class="item.colorTexto">
                 {{item.des}}
             </v-card-subtitle>
