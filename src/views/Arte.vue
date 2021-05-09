@@ -7,7 +7,7 @@
         </v-container>
 
         <v-sheet class="mx-auto d-flex justify-center black">
-            <v-slide-group show-arrows center-active
+            <v-slide-group show-arrows center-active 
             :class="{'carrete1':mover,'carrete2': !mover}">
                 <template v-slot:prev="{ on, attrs }">
                     <v-btn @click="mover=!mover"
@@ -29,7 +29,6 @@
                 </template>
 
                 <v-slide-item v-for="(item,index) in cuadros" :key="index"
-            
                 v-slot="{ toggle }">
                     <v-hover v-slot="{ hover }">
                         <v-card class="ma-4" height="100" color="black"
