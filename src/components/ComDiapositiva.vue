@@ -32,9 +32,9 @@
                     </v-row>
                 </div> 
             </div>          
-        </v-img>  
+        </v-img>
 
-</v-container>
+    </v-container>
 </div>
 </template>
 

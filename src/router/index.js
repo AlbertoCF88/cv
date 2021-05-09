@@ -33,6 +33,12 @@ const routes = [
     name: 'Webs',
     component: () => import('../views/Webs.vue')
   },
+  //ruta erronea
+  {
+    path: '*',
+    name: 'not-found',
+    component: () => import('../components/ComRutaError.vue')
+  }
 ]
 
 const router = new VueRouter({

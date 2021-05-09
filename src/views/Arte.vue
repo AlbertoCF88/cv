@@ -108,6 +108,12 @@
   position: absolute;
   width: 100%;
 }
+/*para pantallas tactiles (sin hover) */
+@media (pointer: coarse) {
+ .v-card--reveal{
+     opacity: 0;
+ }
+}
 </style>
 
 

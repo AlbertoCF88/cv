@@ -77,7 +77,7 @@
             Móvil: <a href="tel:635507429" target="_blank">635507429</a>
             <br>
              <br><br>
-             Esta web ha sido creada con Vue CLI, separado por componentes, (Vue Router, Vuex, Vuetify, adaptado para todos los dispositivos, progressive Web App y Visual Studio Code como editor de código). <br>
+             Esta web ha sido creada con Vue CLI, separado por componentes, (Vue Router, Vuetify, adaptado para todos los dispositivos, progressive Web App y Visual Studio Code como editor de código). <br>
              Puedes visualizar el codigo en mi cuenta de Github <a href="https://github.com/AlbertoCF88" target="_blank">AlbertoCF88</a>
           </p>
         </v-card-text>
