@@ -11,7 +11,7 @@
             </template>
             <v-row>
                 <v-col>
-                    <v-btn :to="{name:'arte'}"
+                    <v-btn role=link :to="{name:'arte'}"
                     outlined dark color="color2" small>
                         Salir
                     </v-btn>
@@ -23,7 +23,7 @@
                     <v-row v-for="img in item.galeria" :key="img.id">
                         <v-col v-for="(lienzo,indice) in img.imagenes" :key="indice"
                         class="pl-7" cols="1" sm="12">
-                            <v-btn :to="{name:'arte/:page', 
+                            <v-btn role=link :to="{name:'arte/:page', 
                             params:{page:item.id ,fotografia:lienzo}}"
                             text x-small dark fab color="color2">
                                 {{indice+1}}

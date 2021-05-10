@@ -25,7 +25,7 @@
         color="black" cols="4" md="3"
         class="d-flex child-flex pt-0">  
           <router-link class="black d-flex align-center lupa"
-          :to="{name:'arte/:page', params:{page:cuadros[0].id,fotografia:lienzo}}">
+          role=link :to="{name:'arte/:page', params:{page:cuadros[0].id,fotografia:lienzo}}">
             <v-img :src="lienzo" 
             spect-ratio="2" class="black" contain>
               <template v-slot:placeholder>
@@ -65,7 +65,7 @@
           class="d-flex child-flex pt-0">
               
             <router-link class="black d-flex align-center lupa"
-            :to="{name:'arte/:page', params:{page:item.id ,fotografia:lienzo}}">
+            role=link :to="{name:'arte/:page', params:{page:item.id ,fotografia:lienzo}}">
               <v-img
               :src="lienzo" spect-ratio="2" 
               class="black" contain>

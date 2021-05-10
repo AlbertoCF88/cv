@@ -9,7 +9,7 @@
       <v-card-actions class="d-flex justify-center">
         <v-slide-group show-arrows  center-active>
 
- <v-slide-item v-slot="{toggle}">
+          <v-slide-item v-slot="{toggle}">
             <v-tooltip  top>
               <template v-slot:activator="{ on, attrs }">
                 <v-btn v-bind="attrs" v-on="on"
@@ -30,7 +30,7 @@
               <template v-slot:activator="{ on, attrs }">
                 <v-btn v-bind="attrs" v-on="on"
                 link class="mx-4" icon color="ico3"
-                href="/files/cv.pdf" target="_blank"  
+                role=link href="/files/cv.pdf" target="_blank"  
                 :loading="loading" 
                 :disabled="loading"
                 @click="loader = 'loading'; toggle()">
@@ -43,7 +43,7 @@
             </v-tooltip>
           </v-slide-item>
 
-  <v-slide-item v-slot="{toggle}">
+          <v-slide-item v-slot="{toggle}">
             <v-tooltip  top>
               <template v-slot:activator="{ on, attrs }">
                 <v-btn v-bind="attrs" v-on="on"
@@ -58,7 +58,6 @@
               <span>Ir a Github</span>
             </v-tooltip>
           </v-slide-item>
-
 
           <v-slide-item v-slot="{toggle}">
             <v-tooltip top>
@@ -75,14 +74,6 @@
               <span>Escribir correo</span>
             </v-tooltip>
           </v-slide-item>
-
-        
-
-
-
-
-
-         
 
         </v-slide-group> 
       </v-card-actions>

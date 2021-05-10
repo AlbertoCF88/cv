@@ -60,7 +60,7 @@
             </v-card-text>
 
             <div  class="d-flex justify-center mt-n10">
-              <v-btn  @click="$vuetify.goTo('#cv')" color="color1os" >
+              <v-btn role=link @click="$vuetify.goTo('#cv')" color="color1os" >
                 <v-icon color="color1" large >mdi-clipboard-arrow-up</v-icon>
               </v-btn>
             </div>

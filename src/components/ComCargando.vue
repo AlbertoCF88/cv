@@ -3,7 +3,7 @@
     class="fill-height ma-0"
     align="center"
     justify="center">
-         <v-progress-circular
+         <v-progress-circular role=progressbar
         indeterminate 
         :color="circulo"
         :size="circuloAltura">

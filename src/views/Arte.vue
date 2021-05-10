@@ -33,7 +33,7 @@
                     <v-hover v-slot="{ hover }">
                         <v-card class="ma-4" height="100" color="black"
                         width="200" @click="toggle"
-                        :to="{name:'arte', params: {page: item.id}}">
+                        role=link :to="{name:'arte', params: {page: item.id}}">
                             <v-img aspect-ratio="2" class="sombra"
                             :src="item.foto">
                                 <v-expand-transition>
