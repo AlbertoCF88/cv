@@ -15,7 +15,7 @@
                 {{item.nombre}}
             </v-card-title> 
    
-            <v-container fluid>
+            <v-container fluid v-if="item.salir">
                 
             <comLeye class="ocularLeyenda justify-center mt-0 mb-4"
             :certificados="certificados">
@@ -212,6 +212,7 @@ export default {
             duracion:'Más de 120h',
             acre:'Pixelpro y Microsoft',
             año:'2021',
+            salir:true,
             lista:['Core','Image Manipulations','UI Frameworks','Responsible Web design','CSS Preprocessors'],
             lista2:['Version Control','Package managers','JS Frameworks','JS Preprocessors','Back-End'],
             colorLista:['#737ec8','#448aff','#c5cae9','#009688','#b1dfdb'],
