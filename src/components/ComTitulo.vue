@@ -26,7 +26,6 @@
 
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap');
 @media (max-width:600px) {
     .tituloMovil {
         font-size:1rem;

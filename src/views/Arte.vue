@@ -68,7 +68,6 @@
 
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
 .titulo{
     font-family: 'Train One', cursive;
 }

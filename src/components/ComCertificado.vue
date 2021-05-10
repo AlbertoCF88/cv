@@ -94,7 +94,6 @@
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Zen+Dots&display=swap');
 @media (max-width:840px) {
     .desaparece{
         opacity: 0;
@@ -143,7 +142,6 @@ li{
 }
 .v-card__title {
     word-break: break-word;
-    font-family: 'Press Start 2P', cursive;
     font-family: 'Zen Dots', cursive;
 }
 .añoAcreditacion{
