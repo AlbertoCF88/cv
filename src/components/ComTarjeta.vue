@@ -70,7 +70,7 @@
             <v-icon color="ico3">mdi-remote-desktop</v-icon>
             </v-btn>
             <br><br>
-            No dudes en ponerte en contacto conmigo:
+            No dude en ponerse en contacto conmigo:
             <br>
             Correo: <a href="mailto: alcafefront@gmail.com" target="_blank">alcafefront@gmail.com</a> 
             <br>
@@ -78,7 +78,7 @@
             <br>
              <br><br>
              Esta web ha sido creada con Vue CLI, separado por componentes, (Vue Router, Vuetify, adaptado para todos los dispositivos, progressive Web App y Visual Studio Code como editor de código). <br>
-             Puedes visualizar el codigo en mi cuenta de Github <a href="https://github.com/AlbertoCF88" target="_blank">AlbertoCF88</a>
+             Puedes visualizar el código en mi cuenta de Github <a href="https://github.com/AlbertoCF88" target="_blank">AlbertoCF88</a>
           </p>
         </v-card-text>
 

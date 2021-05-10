@@ -114,9 +114,11 @@
   font-family: 'Original Surfer', cursive;
   position: relative;
   bottom: 191px;
-  -webkit-text-stroke: 2px black;
-  color: transparent;
   font-size:138px;
+   color: black;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.438); 
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
 }
 </style>
 
