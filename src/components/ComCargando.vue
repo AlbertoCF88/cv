@@ -1,13 +1,13 @@
- <template>
-    <v-row
-    class="fill-height ma-0"
-    align="center"
-    justify="center">
-         <v-progress-circular role=progressbar
-        indeterminate 
-        :color="circulo"
-        :size="circuloAltura">
-        </v-progress-circular>
+<template>
+   <v-row
+   class="fill-height ma-0"
+   align="center"
+   justify="center">
+      <v-progress-circular aria-label="cargando imagen"
+      indeterminate 
+      :color="circulo"
+      :size="circuloAltura">
+      </v-progress-circular>
     </v-row>
 </template>
 

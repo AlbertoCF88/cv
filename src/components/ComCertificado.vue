@@ -3,7 +3,7 @@
 
     <v-card shaped class="mx-auto mb-8" max-width="800"
     v-for="item in certificados" :key="item.id" >
-        <v-img height="50" contain 
+        <v-img alt="logoEmpresa" height="50" contain 
         :class="item.colorImg" :src="item.img">
         </v-img>
         <v-card-text 
@@ -15,13 +15,13 @@
                 {{item.nombre}}
             </v-card-title> 
    
-            <v-container fluid v-if="item.salir">
+            <v-container fluid>
                 
             <comLeye class="ocularLeyenda justify-center mt-0 mb-4"
             :certificados="certificados">
             </comLeye>
 
-                <v-img height="300" contain
+                <v-img alt="front-end-spectrum" height="300" contain
                 :src="item.frontImg">
                     <div  class="desaparece altura d-flex justify-space-between align-center">
                         <ul>
@@ -212,7 +212,6 @@ export default {
             duracion:'Más de 120h',
             acre:'Pixelpro y Microsoft',
             año:'2021',
-            salir:true,
             lista:['Core','Image Manipulations','UI Frameworks','Responsible Web design','CSS Preprocessors'],
             lista2:['Version Control','Package managers','JS Frameworks','JS Preprocessors','Back-End'],
             colorLista:['#737ec8','#448aff','#c5cae9','#009688','#b1dfdb'],

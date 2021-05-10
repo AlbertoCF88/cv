@@ -12,9 +12,9 @@
           <v-slide-item v-slot="{toggle}">
             <v-tooltip  top>
               <template v-slot:activator="{ on, attrs }">
-                <v-btn v-bind="attrs" v-on="on"
+                <v-btn aria-label="icono teléfono" v-bind="attrs" v-on="on"
                 link class="mx-4" icon color="ico4"
-                role=link href="tel:635507429" target="_blank"
+                href="tel:635507429" target="_blank" 
                 @click="toggle">
                   <v-icon size="24px">
                     mdi-phone
@@ -28,9 +28,9 @@
           <v-slide-item v-slot="{toggle}">
             <v-tooltip  top>
               <template v-slot:activator="{ on, attrs }">
-                <v-btn v-bind="attrs" v-on="on"
+                <v-btn aria-label="icono descargar CV" v-bind="attrs" v-on="on"
                 link class="mx-4" icon color="ico3"
-                role=link href="/files/cv.pdf" target="_blank"  
+                role="link" href="/files/cv.pdf" target="_blank"
                 :loading="loading" 
                 :disabled="loading"
                 @click="loader = 'loading'; toggle()">
@@ -46,9 +46,9 @@
           <v-slide-item v-slot="{toggle}">
             <v-tooltip  top>
               <template v-slot:activator="{ on, attrs }">
-                <v-btn v-bind="attrs" v-on="on"
+                <v-btn aria-label="icono Github" v-bind="attrs" v-on="on"
                 link class="mx-4" icon color="ico2"
-                role=link href="https://github.com/AlbertoCF88" target="_blank" 
+                href="https://github.com/AlbertoCF88" target="_blank" rel="noreferrer"
                 @click="toggle">
                   <v-icon size="24px">
                     mdi-github
@@ -62,9 +62,9 @@
           <v-slide-item v-slot="{toggle}">
             <v-tooltip top>
               <template v-slot:activator="{ on, attrs }">
-                <v-btn v-bind="attrs" v-on="on"
+                <v-btn aria-label="icono correo" v-bind="attrs" v-on="on"
                 link class="mx-4" icon color="ico1"
-                role=link href="mailto: alcafefront@gmail.com" target="_blank" 
+                href="mailto: alcafefront@gmail.com" target="_blank" rel="noreferrer"
                 @click="toggle">
                   <v-icon size="24px">
                     mdi-at

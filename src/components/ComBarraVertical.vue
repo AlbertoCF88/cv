@@ -31,8 +31,8 @@
                 <v-row>
                     <v-col cols="12" sm="2" class="d-flex justify-center  justify-sm-start altura">
                         <v-list-item-icon >
-                            <v-btn icon elevation="4" 
-                            role=link href="mailto: alcafefront@gmail.com" target="_blank">
+                            <v-btn aria-label="icono correo" icon elevation="4" 
+                            href="mailto: alcafefront@gmail.com" target="_blank">
                                 <v-icon color="color1" >
                                     mdi-at
                                 </v-icon>
@@ -58,8 +58,8 @@
                 <v-row>
                     <v-col cols="12" sm="2" class="d-flex justify-center  justify-sm-start altura">
                         <v-list-item-icon >
-                            <v-btn icon elevation="4"
-                            role=link href="tel:635507429" target="_blank">
+                            <v-btn aria-label="icono teléfono" icon elevation="4"
+                            href="tel:635507429" target="_blank">
                                 <v-icon color="color1" >
                                     mdi-phone
                                 </v-icon>
@@ -85,8 +85,8 @@
                 <v-row>
                     <v-col cols="12" sm="2" class="d-flex justify-center  justify-sm-start altura">
                         <v-list-item-icon >
-                            <v-btn icon elevation="4"
-                            role=link href="https://github.com/AlbertoCF88" target="_blank">
+                            <v-btn aria-label="icono Github" icon elevation="4"
+                            href="https://github.com/AlbertoCF88" target="_blank" rel="noreferrer">
                                 <v-icon color="color1" >
                                     mdi-github
                                 </v-icon>
@@ -112,8 +112,8 @@
                 <v-row>
                     <v-col cols="12" sm="2" class="d-flex justify-center  justify-sm-start altura">
                         <v-list-item-icon >
-                            <v-btn icon elevation="4"
-                            role=link href="https://www.google.es/maps/place/Paterna,+Valencia/@39.5029344,-0.451063,15z/data=!3m1!4b1!4m5!3m4!1s0xd60454892e32d6d:0xb45b9f3dbffa9227!8m2!3d39.5037093!4d-0.4431618?hl=es" target="_blank">
+                            <v-btn aria-label="icono google maps" icon elevation="4"
+                            href="https://www.google.es/maps/place/Paterna,+Valencia/@39.5029344,-0.451063,15z/data=!3m1!4b1!4m5!3m4!1s0xd60454892e32d6d:0xb45b9f3dbffa9227!8m2!3d39.5037093!4d-0.4431618?hl=es" target="_blank" rel="noreferrer">
                                 <v-icon color="color1" >
                                     mdi-map-marker
                                 </v-icon>
@@ -134,7 +134,7 @@
             </v-list-item>
         </v-list>
          
-        <v-btn class="cv marginTop"
+        <v-btn aria-label="icono descargar CV" class="cv marginTop"
         text block color="color4"
         href="/files/cv.pdf" target="_blank" >
             <v-icon left>

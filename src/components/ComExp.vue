@@ -3,7 +3,7 @@
 
     <v-card class="mx-auto mb-8" max-width="800"
     v-for="item in exp" :key="item.id" >
-        <v-img height="50" contain :class="item.colorImg"
+        <v-img alt="LogoEmpresa" height="50" contain :class="item.colorImg"
         :src="item.img">
         </v-img>
         <v-card-text 

@@ -15,10 +15,9 @@
         class="headline color1 d-flex justify-center">
           Leyenda
         </v-card-title>
-        <!--un if dentro de un for...--->
+   
         <v-card-text  
         v-for="item in certificados" :key="item.id" 
-        v-if="item.salir"
         class="d-flex justify-space-between align-center overflow-y-auto">
     
         <ul> 
@@ -31,7 +30,7 @@
                 </v-icon>
             </div>
             <div class="cajaLista text-subtitle-2">
-                <li 
+                <li role="listitem"
                 v-for="li in item.lista" 
                 :key="li.id" >
                     {{li}}
@@ -50,7 +49,7 @@
             </div>
 
             <div class="cajaLista text-subtitle-2">
-                <li 
+                <li role="listitem"
                 v-for="li2 in item.lista2" 
                 :key="li2.id">
                     {{li2}}
@@ -121,7 +120,6 @@ li{
 export default {
     name: 'comLeye',
     props:[
-        
             'certificados'
     ],
     data: () => ({

@@ -43,7 +43,7 @@
                         <v-card-actions
                         class="d-flex justify-center justify-md-start ">
                             <v-btn outlined rounded text
-                            role=link href="http://appdbs.deysol.com/UniversoDragon/app.html" 
+                            role="link" href="http://appdbs.deysol.com/UniversoDragon/app.html" 
                             target="_blank">
                             visitar
                             </v-btn>
@@ -96,7 +96,7 @@
                         <v-card-actions
                         class="d-flex justify-center justify-md-start ">
                             <v-btn outlined rounded text
-                            role=link href="https://play.google.com/store/apps/details?id=com.wUniversoDragon_13367844" 
+                            role="link" href="https://play.google.com/store/apps/details?id=com.wUniversoDragon_13367844" 
                             target="_blank">
                             visitar
                             </v-btn>
@@ -125,7 +125,7 @@
                         class="d-flex justify-center">
                             <v-card-actions>
                                 <v-btn outlined rounded text dark
-                                role=link href="https://github.com/AlbertoCF88" 
+                                role="link" href="https://github.com/AlbertoCF88" 
                                 target="_blank">
                                     visitar
                                 </v-btn>

@@ -17,7 +17,7 @@
             </v-icon>   
         </span> 
         <template v-slot:action="{ attrs }">
-            <v-btn color="color3" icon v-bind="attrs"
+            <v-btn aria-label="aspa cerrar" color="color3" icon v-bind="attrs"
             @click="snackbar = false">
                 <v-icon >
                     mdi-close-outline
