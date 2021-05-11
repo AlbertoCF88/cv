@@ -1,8 +1,7 @@
 <template>
 <div class="text-center">
 
-    <v-dialog
-      v-model="dialog">
+    <v-dialog v-model="dialog">
       <template v-slot:activator="{ on, attrs }">
         <v-btn v-bind="attrs" v-on="on"
         color="color1" dark>
@@ -17,46 +16,44 @@
         </v-card-title>
    
         <v-card-text  
-        v-for="item in certificados" :key="item.id" 
         class="d-flex justify-space-between align-center overflow-y-auto">
     
-        <ul> 
-            <div class="cajaIcon">
-                <v-icon 
-                v-for="color in item.colorLista" 
-                :key="color.id"  
-                :color="color">
-                     mdi-square-rounded  
-                </v-icon>
-            </div>
-            <div class="cajaLista text-subtitle-2">
-                <li role="listitem"
-                v-for="li in item.lista" 
-                :key="li.id" >
-                    {{li}}
-                </li>
-            </div>
-        </ul>
-
-        <ul>
-            <div class="cajaIcon">
-                <v-icon 
-                v-for="color2 in item.colorLista2" 
-                :key="color2.id"  
-                :color="color2">
-                    mdi-square-rounded  
-                </v-icon>
+            <div class="d-flex"> 
+                <div class="cajaIcon">
+                    <v-icon 
+                    v-for="color in certificados[0].colorLista" 
+                    :key="color.id"  
+                    :color="color">
+                        mdi-square-rounded  
+                    </v-icon>
+                </div>
+                <ul class="cajaLista text-subtitle-2">
+                    <li 
+                    v-for="li in certificados[0].lista"
+                    :key="li.id" >
+                        {{li}}
+                    </li>
+                </ul>
             </div>
 
-            <div class="cajaLista text-subtitle-2">
-                <li role="listitem"
-                v-for="li2 in item.lista2" 
-                :key="li2.id">
-                    {{li2}}
-                </li>
+            <div class="d-flex">
+                <div class="cajaIcon">
+                    <v-icon 
+                    v-for="color2 in certificados[0].colorLista2" 
+                    :key="color2.id"  
+                    :color="color2">
+                        mdi-square-rounded  
+                    </v-icon>
+                </div>
+
+                <ul class="cajaLista text-subtitle-2">
+                    <li 
+                    v-for="li2 in certificados[0].lista2" 
+                    :key="li2.id">
+                        {{li2}}
+                    </li>
+                </ul>
             </div>
-        </ul>
-      
         </v-card-text>
 
         <v-card-actions>
@@ -81,7 +78,6 @@
 .headline {
     color: white;
 }
-
 .v-application .text-subtitle-2 {
     font-weight: none;
     color: black;
@@ -92,7 +88,6 @@
 }
 .cajaIcon{
     display: grid;
-   
 }
 .v-icon.v-icon {
     font-size: 31px !important;
@@ -105,9 +100,6 @@
 }
 ul {
     list-style: none;
-    display: flex;
-    align-content: center;
-    flex-wrap: initial;
 }
 li{
     line-height: 3rem;
@@ -116,15 +108,13 @@ li{
 
 
 <script>
-
 export default {
     name: 'comLeye',
     props:[
-            'certificados'
+        'certificados'
     ],
     data: () => ({
         dialog:false,
     })
-   
 }
 </script>

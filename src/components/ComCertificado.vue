@@ -2,10 +2,12 @@
 <v-container>
 
     <v-card shaped class="mx-auto mb-8" max-width="800"
-    v-for="item in certificados" :key="item.id" >
+    v-for="item in certificados" :key="item.id">
+
         <v-img alt="logoEmpresa" height="50" contain 
         :class="item.colorImg" :src="item.img">
         </v-img>
+
         <v-card-text 
         :class="item.colorCard"
         class="pt-1">
@@ -16,48 +18,50 @@
             </v-card-title> 
    
             <v-container fluid v-if="item.salir">
-                
-            <comLeye class="ocularLeyenda justify-center mt-0 mb-4"
-            :certificados="certificados">
-            </comLeye>
-
+                <!--móvil-->   
+                <comLeye class="ocularLeyenda justify-center mt-0 mb-4"
+                :certificados="certificados">
+                </comLeye>
+                <!--Pc-->   
                 <v-img alt="front-end-spectrum" height="300" contain
                 :src="item.frontImg">
+                
                     <div  class="desaparece altura d-flex justify-space-between align-center">
-                        <ul>
+                        <div class="d-flex"> 
                             <div class="cajaIcon">
-                                <v-icon v-for="color in item.colorLista" 
+                                <v-icon 
+                                v-for="color in certificados[0].colorLista" 
                                 :key="color.id"  
                                 :color="color">
-                                     mdi-square-rounded  
+                                    mdi-square-rounded  
                                 </v-icon>
                             </div>
-                            <div class="cajaLista textBlanco">
-                                <ul style="display: block;">
-                                    <li v-for="li in item.lista" 
-                                    :key="li.id" >
-                                        {{li}}
-                                    </li>
-                                </ul>
-                            </div>
-                        </ul>
-                        <ul>
-                           <div class="cajaIcon">
-                                <v-icon v-for="color2 in item.colorLista2" 
+                            <ul class="cajaLista text-subtitle-2">
+                                <li 
+                                v-for="li in certificados[0].lista"
+                                :key="li.id" >
+                                    {{li}}
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="d-flex">
+                            <div class="cajaIcon">
+                                <v-icon 
+                                v-for="color2 in certificados[0].colorLista2" 
                                 :key="color2.id"  
                                 :color="color2">
-                                     mdi-square-rounded  
+                                    mdi-square-rounded  
                                 </v-icon>
                             </div>
-                            <div class="cajaLista textBlanco">
-                                <ul style="display: block;">
-                                    <li v-for="li2 in item.lista2" 
-                                    :key="li2.id" >
-                                        {{li2}}
-                                    </li>
-                                </ul>
-                            </div>
-                        </ul>
+                            <ul class="cajaLista text-subtitle-2">
+                                <li 
+                                v-for="li2 in certificados[0].lista2" 
+                                :key="li2.id">
+                                    {{li2}}
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
                     <!--cargando-->
@@ -91,8 +95,6 @@
             </div>
         </v-card-text>       
     </v-card>
-
-
 
 </v-container>
 </template>
@@ -189,9 +191,7 @@ li{
 }
 .colorAcreditadoCisco{
     color:#00000055;
-  
 }
-
 </style>
 
 

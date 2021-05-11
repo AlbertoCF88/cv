@@ -46,6 +46,10 @@
 </template>
 
 <style>
+/*main se quede pegando al footer abajo */
+.v-main {
+  padding: 52px 0px  !important;
+}
 .v-item-group.v-bottom-navigation--shift .v-btn--active .v-btn__content > *:not(.v-icon) {
   top: 19px !important;
   font-size: 19px;
