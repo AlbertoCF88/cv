@@ -10,7 +10,7 @@
             <v-slide-group show-arrows center-active 
             :class="{'carrete1':mover,'carrete2': !mover}">
                 <template v-slot:prev="{ on, attrs }">
-                    <v-btn @click="mover=!mover"
+                    <v-btn aria-label="icono izquierda" @click="mover=!mover"
                     v-bind="attrs" v-on="on"
                     color="black" tile>
                         <v-icon color="color2">
@@ -19,7 +19,7 @@
                     </v-btn>
                 </template>
                 <template v-slot:next="{ on, attrs }">
-                    <v-btn @click="mover=!mover"
+                    <v-btn aria-label="icono derecha" @click="mover=!mover"
                     v-bind="attrs" v-on="on"
                     color="black" tile>
                         <v-icon color="color2">

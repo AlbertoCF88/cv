@@ -83,7 +83,7 @@
         </v-card-text>
 
         <v-card-actions>
-          <v-btn text block color="color4" 
+          <v-btn text block color="ico4" 
           @click="revelar = false">
             Cerrar
           </v-btn>

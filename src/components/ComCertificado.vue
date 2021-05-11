@@ -33,10 +33,12 @@
                                 </v-icon>
                             </div>
                             <div class="cajaLista textBlanco">
-                                <li v-for="li in item.lista" 
-                                :key="li.id" >
-                                    {{li}}
-                                </li>
+                                <ul style="display: block;">
+                                    <li v-for="li in item.lista" 
+                                    :key="li.id" >
+                                        {{li}}
+                                    </li>
+                                </ul>
                             </div>
                         </ul>
                         <ul>
@@ -48,10 +50,12 @@
                                 </v-icon>
                             </div>
                             <div class="cajaLista textBlanco">
-                                <li v-for="li2 in item.lista2" 
-                                :key="li2.id" >
-                                    {{li2}}
-                                </li>
+                                <ul style="display: block;">
+                                    <li v-for="li2 in item.lista2" 
+                                    :key="li2.id" >
+                                        {{li2}}
+                                    </li>
+                                </ul>
                             </div>
                         </ul>
                     </div>
@@ -111,6 +115,9 @@
 .cajaIcon{
     display: grid;
 }
+.v-card__title {
+    font-size: 1.5rem;
+}
 .v-icon.v-icon {
     font-size: 31px !important;
     line-height: 1.4 !important;
@@ -128,6 +135,7 @@ ul {
 }
 li{
     line-height: 3rem;
+    color: black;
 }
 /*salto + \n en el objeto*/
 .salto{

@@ -12,7 +12,7 @@ export default new Vuetify({
           color1os:'#33495e',
           color2:'#4943B8',
           color3:'#b84343',
-          color4:'#B3B843',
+          color4:'#717515',
 
           //icon navegacio
           ico1:'#00ff4d',  

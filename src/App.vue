@@ -22,7 +22,7 @@
 
         <v-slide-item  v-slot="{toggle}">
           <v-btn role="link" :to="{name: 'Webs'}" @click="toggle">
-            <span class="font-weight-bold">Otras Webs</span>
+            <span class="font-weight-bold">Webs</span>
             <v-icon color="ico3" >mdi-remote-desktop</v-icon>
           </v-btn>
         </v-slide-item>
@@ -46,11 +46,9 @@
 </template>
 
 <style>
-.v-main {
-  padding: 52px 0px  !important;
-}
 .v-item-group.v-bottom-navigation--shift .v-btn--active .v-btn__content > *:not(.v-icon) {
-  top:100% !important;
+  top: 19px !important;
+  font-size: 19px;
 }
 @media (max-width:959px) { 
   .v-footer--fixed {
