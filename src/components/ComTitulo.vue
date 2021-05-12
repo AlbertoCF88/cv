@@ -3,7 +3,7 @@
 
     <v-card class="mx-auto mb-8" max-width="800"
     v-for="item in titulos" :key="item.id" >
-        <v-img height="50" contain class="fondoRey"
+        <v-img height="50" alt="logo España y comunidad Valenciana" contain class="fondoRey"
         src="@/assets/rey.webp">
         </v-img>
         <v-card-text class="pt-1 borde">

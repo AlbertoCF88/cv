@@ -1,5 +1,12 @@
 <template >
 <div class="fondo">
+
+    <v-container>
+        <h1 class="d-flex justify-center align-center color3--text mt-6">
+            Otras Webs
+        </h1>
+    </v-container>
+
     <v-container class="pt-10 contGoku">
         <v-row>
             <v-col cols="12" md="6">

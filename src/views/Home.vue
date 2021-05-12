@@ -1,5 +1,9 @@
 <template>
-<v-container>
+<v-container class="mt-6">
+  
+  <h1 class="d-flex justify-center align-center color1--text">
+    Currículum Vitae
+  </h1>
 
   <v-row no-gutters class="d-flex justify-center mt-10">
     <v-col>

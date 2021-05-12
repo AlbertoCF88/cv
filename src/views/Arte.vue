@@ -1,7 +1,7 @@
 <template>
     <div class="tamaño">
         <v-container>
-            <h1 class="color2--text d-flex justify-center text-center titulo my-6">
+            <h1 class="color2--text d-flex justify-center text-center titulo mt-6">
                 Galeria De Fotos Dinámica
             </h1>
         </v-container>
@@ -39,9 +39,9 @@
                                 <v-expand-transition>
                                     <div v-if="hover"
                                     class="d-flex transition-fast-in-fast-out color2 darken-2 
-                                    v-card--reveal display-3 white--text"
+                                    v-card--reveal button white--text"
                                     style="height: 100%;">
-                                        Entrar
+                                        {{item.titulo}}
                                     </div>
                                 </v-expand-transition>
                                 <!--cargando-->
