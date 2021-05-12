@@ -1,27 +1,27 @@
 <template>
 <v-app>
-  <v-app-bar app dark height="56" >
+  <v-app-bar app dark height="56">
     <v-bottom-navigation 
     v-model="value"
     :background-color="color"
     dark shift app>
       <v-slide-group  show-arrows  center-active>
         <v-slide-item  v-slot="{toggle}">
-          <v-btn role="link" :to="{ path: '/'}" @click="toggle">
+          <v-btn title="Página de inicio" :to="{ path: '/'}" @click="toggle">
             <span class="font-weight-bold">Inicio</span>
             <v-icon color="ico1">mdi-account</v-icon>
           </v-btn>
         </v-slide-item>
 
         <v-slide-item  v-slot="{toggle}">
-          <v-btn role="link" :to="{name: 'Arte'}" @click="toggle">
+          <v-btn title="Arte" :to="{name: 'Arte'}" @click="toggle">
             <span class="font-weight-bold">Arte</span>
             <v-icon color="ico2">mdi-lead-pencil</v-icon>
           </v-btn>
         </v-slide-item>
 
         <v-slide-item  v-slot="{toggle}">
-          <v-btn role="link" :to="{name: 'Webs'}" @click="toggle">
+          <v-btn title="Otras Webs" :to="{name: 'Webs'}" @click="toggle">
             <span class="font-weight-bold">Webs</span>
             <v-icon color="ico3" >mdi-remote-desktop</v-icon>
           </v-btn>

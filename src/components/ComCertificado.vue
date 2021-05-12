@@ -4,7 +4,7 @@
     <v-card shaped class="mx-auto mb-8" max-width="800"
     v-for="item in certificados" :key="item.id">
 
-        <v-img alt="logoEmpresa" height="50" contain 
+        <v-img :alt="'Logo'+ item.logo" height="50" contain 
         :class="item.colorImg" :src="item.img">
         </v-img>
 
@@ -207,6 +207,7 @@ export default {
  
     certificados:[
         {
+            logo:'Pixelpro',
             img: require('@/assets/pixel.webp'),
             frontImg: require('@/assets/frontSin.webp'),
             colorImg:'pixel',
@@ -225,6 +226,7 @@ export default {
             colorLista2:['#607d8b','#e64a19','#ff9800','#d32f2f','#e38ad7']
         },
         {
+            logo:'Pixelpro',
             img: require('@/assets/pixel.webp'),
             colorImg:'pixel',
             colorCard:'pixelCard',
@@ -237,6 +239,7 @@ export default {
             año:'2020',
         },
         {
+            logo:'Ford Motor Company',
             img: require('@/assets/ford.webp'),
             colorImg:'ford',
             colorCard:'fordCard',
@@ -249,6 +252,7 @@ export default {
             año: '2014',
         },
         {
+            logo:'Cisco',
             img: require('@/assets/cisco.webp'),
             colorImg:'cisco',
             colorCard:'ciscoCard',

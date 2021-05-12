@@ -33,11 +33,11 @@
         <v-window-item v-for="item in titulos" :key="item.id" >
           <v-card flat class="mb-3 transparente">
             <v-card-text  class="pa-0">
-              <v-container class="titulo title text-truncate" :class="item.color"> 
-                {{item.titulo}}
+              <v-container :class="item.color"> 
+                <h2 class="titulo title text-truncate">{{item.titulo}}</h2>
               </v-container>
               <v-avatar :class="item.color" class="avatarTamaño">
-              <v-icon dark size="40"> {{item.icono}} </v-icon>
+                <v-icon dark size="40"> {{item.icono}} </v-icon>
               </v-avatar>
 
               <v-row class="d-flex justify-center">
@@ -59,7 +59,7 @@
               </v-row>          
             </v-card-text>
 
-            <div class="d-flex justify-center mt-n10">
+            <div class="d-flex justify-center mt-n10" title="Inicio CV">
               <v-btn aria-label="subir CV" @click="$vuetify.goTo('#cv')" color="color1os">
                 <v-icon color="color1" large >mdi-clipboard-arrow-up</v-icon>
               </v-btn>
@@ -112,7 +112,6 @@
 }
 .titulo{
   padding-left: 4rem;
-  height: 3rem;
   color: white;
 }
 .v-progress-circular {

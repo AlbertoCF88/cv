@@ -25,15 +25,15 @@
                 </v-row>
             </v-list-item>
 
-            <v-divider   inset></v-divider>
+            <v-divider inset></v-divider>
 
             <v-list-item >
                 <v-row>
-                    <v-col cols="12" sm="2" class="d-flex justify-center  justify-sm-start altura">
+                    <v-col cols="12" sm="2" class="d-flex justify-center justify-sm-start altura">
                         <v-list-item-icon >
                             <v-btn aria-label="icono correo" icon elevation="4" 
                             href="mailto: alcafefront@gmail.com" target="_blank">
-                                <v-icon color="color1" >
+                                <v-icon color="color1">
                                     mdi-at
                                 </v-icon>
                             </v-btn>

@@ -7,7 +7,7 @@
 
     <v-avatar class="d-flex justify-center"
     height="auto" width="auto" tile>
-      <v-img src="@/assets/albertoPng.png">
+      <v-img alt="Foto Alberto Carrasco" src="@/assets/albertoPng.png">
         <!--cargando-->
         <template v-slot:placeholder>
           <comcargando class="color1os" circulo="color1" circuloAltura="70"></comcargando>
@@ -22,13 +22,13 @@
     </div>
 
     <v-card-title class="d-flex justify-center font-weight-black
-      text-sm-h6 text-subtitle-1">
-      <p>Alberto Carrasco Fernández</p> 
+    text-sm-h6 text-subtitle-1">
+      <strong>Alberto Carrasco Fernández</strong> 
     </v-card-title>
 
     <v-card-subtitle class="d-flex justify-center color1--text 
     font-weight-black text-sm-subtitle-1 text-subtitle-2 ">
-      Front-End Developer 
+      <strong>Front-End Developer</strong> 
     </v-card-subtitle>
 
     <v-card-actions>
@@ -60,19 +60,19 @@
             En mi tiempo libre me gusta cultivar plantas, la pintura y programar. La programación es un campo que me apasiona ya que puedo poner en práctica mis habilidades creativas. 
             <br>  <br>
             Puedes descubrir alguno de mis proyectos en esta página web. Echa un vistazo a mis pinturas 
-            <v-btn icon fab x-small
+            <v-btn icon fab x-small title="Arte"
             :to="{name: 'Arte'}">
               <v-icon color="ico2">mdi-lead-pencil</v-icon>
             </v-btn>
             y a mis páginas webs
-            <v-btn icon fab x-small
-             :to="{name: 'Webs'}">
+            <v-btn icon fab x-small title="Otras Webs"
+            :to="{name: 'Webs'}">
             <v-icon color="ico3">mdi-remote-desktop</v-icon>
             </v-btn>
             <br><br>
             No dude en ponerse en contacto conmigo:
             <br>
-            Correo: <a href="mailto: alcafefront@gmail.com" target="_blank">alcafefront@gmail.com</a> 
+            Correo: <a href="mailto:alcafefront@gmail.com" target="_blank">alcafefront@gmail.com</a> 
             <br>
             Móvil: <a href="tel:635507429" target="_blank">635507429</a>
             <br>

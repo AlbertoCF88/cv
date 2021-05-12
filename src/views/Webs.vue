@@ -21,7 +21,7 @@
                                 class="d-flex justify-center justify-md-start">
                                     <v-list-item-avatar tile color="white"
                                     height="auto" width="300" size="80">
-                                        <v-img
+                                        <v-img alt="Logo Universo Dragon"
                                         src="../assets/supervivencia1.webp">
                                         </v-img>
                                     </v-list-item-avatar>
@@ -49,7 +49,7 @@
                         </v-card-text>
                         <v-card-actions
                         class="d-flex justify-center justify-md-start ">
-                            <v-btn outlined rounded text
+                            <v-btn outlined rounded text title="http://appdbs.deysol.com/UniversoDragon/app.html"
                             rel="noreferrer" href="http://appdbs.deysol.com/UniversoDragon/app.html" 
                             target="_blank">
                             visitar
@@ -73,7 +73,7 @@
                                 class="d-flex justify-center justify-md-start">
                                     <v-list-item-avatar tile color="white"
                                     height="auto" width="300" size="80">
-                                        <v-img
+                                        <v-img alt="Logo Universo Dragon en Google Play"
                                         src="../assets/supervivencia2.webp">
                                         </v-img>
                                     </v-list-item-avatar>
@@ -102,7 +102,7 @@
                         </v-card-text>
                         <v-card-actions
                         class="d-flex justify-center justify-md-start ">
-                            <v-btn outlined rounded text
+                            <v-btn outlined rounded text title="https://play.google.com/store/apps/details?id=com.wUniversoDragon_13367844"
                             rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.wUniversoDragon_13367844" 
                             target="_blank">
                             visitar
@@ -117,7 +117,8 @@
     <div class="d-flex justify-center">    
         <v-card class="altura" 
         color="transparent" elevation="0" >
-            <v-img class="altura align-center"
+            <v-img alt="fondo logotipo de Github"
+            class="altura align-center"
             src="../assets/gitazul.webp">
                 <v-container>
                     <v-row class="d-flex justify-center text-center">
@@ -131,7 +132,7 @@
                         <v-col cols="12" 
                         class="d-flex justify-center">
                             <v-card-actions>
-                                <v-btn outlined rounded text dark
+                                <v-btn outlined rounded text dark title="https://github.com/AlbertoCF88"
                                 rel="noreferrer" href="https://github.com/AlbertoCF88" 
                                 target="_blank">
                                     visitar

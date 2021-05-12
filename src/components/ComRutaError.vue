@@ -2,7 +2,7 @@
 <div class="fondo">
     <v-container class="black">
       <v-card>
-        <v-img alt="gato durmiendo encima teclado" contain 
+        <v-img alt="Gato durmiendo encima del teclado" contain 
         src="../assets/gatopc.webp">
              <v-card-title class="d-flex justify-center text-center 
              color2--text font-weight-black 
