@@ -11,7 +11,7 @@
                 {{item.nombre}}
             </v-card-title> 
         
-            <v-card-subtitle class="d-flex justify-center mt-1 text-subtitle-2 text-md-subtitle-1">
+            <v-card-subtitle class="d-flex justify-center mt-1 text-subtitle-2 text-md-subtitle-1 text-center">
                 {{item.acre}} 
             </v-card-subtitle>
 
