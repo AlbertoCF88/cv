@@ -1,5 +1,2 @@
 User-agent: *
 Disallow:
-
-
-Hola Fran ☺
