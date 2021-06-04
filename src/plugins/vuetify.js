@@ -21,6 +21,9 @@ export default new Vuetify({
           ico4:'#fbff00',  
 
           dragon:'#ff6600',
+          //angular , vue, react
+          angular:'#c30030',
+          vue:'#33495e'
         },
       },
     },

@@ -114,6 +114,65 @@
         </v-row>
     </v-container>   
 
+    <!--otras WEBS-->
+    <v-container class="pt-10 contGoku"
+    v-for="item in webs" :key="item.id">
+        <v-img  width="100%" height="50px"
+        :src="item.marco" alt="marco decoracion">
+        </v-img>
+
+        <v-card  tile :color="item.color" dark
+        width="100%">
+            
+            <v-container>
+                <v-list-item three-line>
+                    <v-row>
+                        <v-col cols="12" sm="9">
+                            <v-list-item-content>
+                                <v-list-item-title class="text-h5 mb-3">
+                                    {{item.titulo}}
+                                </v-list-item-title>
+                                <v-list-item-subtitle class="mb-4">
+                                     {{item.subtitulo}}
+                                </v-list-item-subtitle>
+                                <v-list-item-content>
+                                    {{item.texto}}
+                                </v-list-item-content>
+                            </v-list-item-content>
+                        </v-col>
+
+                        <v-col cols="12" sm="3" class="d-flex justify-center">
+                            <v-list-item-avatar tile size="140">
+                                <v-img alt="Logo Angular"
+                                :src="item.icono">
+                                </v-img>
+                            </v-list-item-avatar>
+                        </v-col>
+                    </v-row>
+                </v-list-item>
+
+                <v-row>
+                    <v-col cols="12" class="d-flex justify-center justify-sm-start ">
+                        <v-card-actions>
+                            <v-btn outlined rounded text 
+                            title="https://angular-material.deysol.com/"
+                            rel="noreferrer" href="https://angular-material.deysol.com/" 
+                            target="_blank">
+                                visitar
+                            </v-btn>
+                        </v-card-actions>
+                    </v-col>
+                </v-row>
+            </v-container>
+        </v-card>
+
+        <v-img  width="100%" height="50px" 
+        style="transform: rotate(180deg);"
+        :src="item.marco" alt="marco decoracion">
+        </v-img>
+    </v-container>
+
+<!--Gato-->
     <div class="d-flex justify-center">    
         <v-card class="altura" 
         color="transparent" elevation="0" >
@@ -148,6 +207,7 @@
 
 </div>
 </template>
+
 
 <style scoped>
 .fondo{
@@ -304,5 +364,48 @@
             padding-top: 50px;
     }
 }
-
+#a1{
+    width: 100%;
+    height: 250px;
+}
+#a1::before{
+    content: '';
+    position: relative;
+    bottom: 81px;
+    width: 100%;
+    border-left: 1161px solid #b2ff0000;
+    border-bottom: 60px solid #555555;
+}
 </style>
+
+
+<script>
+export default {
+  name: 'comWEbs',
+  components: {
+  },
+    data: () => ({
+   
+        webs:[
+            {
+                titulo: 'Angular-material',
+                subtitulo:'Esta web contiene un login para iniciar sesion y unos usuarios registrados que puedes eliminar, editar,agregar, ordenar o inspeccionar.',
+                texto:'Web realizada con Angular, Material Design + Bootstrap para adaptarla a todos los dispositivos y PWA.',
+                color: 'angular',
+                icono: require('@/assets/angular.png'),
+                marco:require('@/assets/marcoA.svg')
+            },
+            // {
+            //     titulo: 'Vue',
+            //     subtitulo:'Esta web contiene un login para iniciar sesion y unos usuarios registrados que puedes eliminar, editar, agregar o eliminar',
+            //     texto:'Web realizada con Angular, Material Design + Bootstrap para diseñar la web adaptada a todos los dispositivos y PWA',
+            //     color: 'vue',
+            //     icono: require('@/assets/Vue.png'),
+            //     marco:require('@/assets/marcoV.svg')
+            // },
+    
+        ],
+    }),//data
+   
+}
+</script>
