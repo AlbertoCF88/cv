@@ -395,6 +395,14 @@ export default {
                 icono: require('@/assets/angular.png'),
                 marco:require('@/assets/marcoA.svg')
             },
+             {
+                titulo: 'Tienda-Angular',
+                subtitulo:'Tienda de compras online.',
+                texto:'Web realizada con Angular, multilenguaje (i18n), cambio de divisa con llamada a la API Open Exchange Rates para obtener el valor de la moneda actual, Flickity para los movimientos del carousel, servicio para unir la lógica, imágenes en formato WebP para reducir el tamaño de la web, Bootstrap, PWA y adaptativa para todos los dispositivos.',
+                color: 'angular',
+                icono: require('@/assets/angular.png'),
+                marco:require('@/assets/marcoA.svg')
+            },
             // {
             //     titulo: 'Vue',
             //     subtitulo:'Esta web contiene un login para iniciar sesion y unos usuarios registrados que puedes eliminar, editar, agregar o eliminar',
