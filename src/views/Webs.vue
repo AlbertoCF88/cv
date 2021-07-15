@@ -7,6 +7,65 @@
         </h1>
     </v-container>
 
+<!--Webs--->    
+    <v-container class="pt-10 contGoku"
+    v-for="item in webs" :key="item.id">
+        <v-img  width="100%" height="50px"
+        :src="item.marco" alt="marco decoracion">
+        </v-img>
+
+        <v-card  tile :color="item.color" dark
+        width="100%">
+            
+            <v-container>
+                <v-list-item three-line>
+                    <v-row>
+                        <v-col cols="12" sm="9">
+                            <v-list-item-content>
+                                <v-list-item-title class="text-h5 mb-3">
+                                    {{item.titulo}}
+                                </v-list-item-title>
+                                <v-list-item-subtitle class="mb-4">
+                                     {{item.subtitulo}}
+                                </v-list-item-subtitle>
+                                <v-list-item-content>
+                                    {{item.texto}}
+                                </v-list-item-content>
+                            </v-list-item-content>
+                        </v-col>
+
+                        <v-col cols="12" sm="3" class="d-flex justify-center">
+                            <v-list-item-avatar tile size="140">
+                                <v-img alt="Logo Angular"
+                                :src="item.icono">
+                                </v-img>
+                            </v-list-item-avatar>
+                        </v-col>
+                    </v-row>
+                </v-list-item>
+
+                <v-row>
+                    <v-col cols="12" class="d-flex justify-center justify-sm-start ">
+                        <v-card-actions>
+                            <v-btn outlined rounded text 
+                            :title="item.link"
+                            rel="noreferrer" :href="item.link" 
+                            target="_blank">
+                                visitar
+                            </v-btn>
+                        </v-card-actions>
+                    </v-col>
+                </v-row>
+            </v-container>
+        </v-card>
+
+        <v-img  width="100%" height="50px" 
+        style="transform: rotate(180deg);"
+        :src="item.marco" alt="marco decoracion">
+        </v-img>
+    </v-container>
+
+<!--Goku-->
     <v-container class="pt-10 contGoku">
         <v-row>
             <v-col cols="12" md="6">
@@ -45,7 +104,7 @@
                         <v-card-text
                         class="d-flex justify-center text-center 
                         justify-md-start text-md-start">
-                            Web realizada Con Vue CDN, Bootstrap y es progressive Web App.
+                            <p>Web realizada Con <span class="color1--text vueDragon">Vue</span> CDN, Bootstrap y es progressive Web App.</p>   
                         </v-card-text>
                         <v-card-actions
                         class="d-flex justify-center justify-md-start ">
@@ -113,64 +172,6 @@
             </v-col>
         </v-row>
     </v-container>   
-
-    <!--otras WEBS-->
-    <v-container class="pt-10 contGoku"
-    v-for="item in webs" :key="item.id">
-        <v-img  width="100%" height="50px"
-        :src="item.marco" alt="marco decoracion">
-        </v-img>
-
-        <v-card  tile :color="item.color" dark
-        width="100%">
-            
-            <v-container>
-                <v-list-item three-line>
-                    <v-row>
-                        <v-col cols="12" sm="9">
-                            <v-list-item-content>
-                                <v-list-item-title class="text-h5 mb-3">
-                                    {{item.titulo}}
-                                </v-list-item-title>
-                                <v-list-item-subtitle class="mb-4">
-                                     {{item.subtitulo}}
-                                </v-list-item-subtitle>
-                                <v-list-item-content>
-                                    {{item.texto}}
-                                </v-list-item-content>
-                            </v-list-item-content>
-                        </v-col>
-
-                        <v-col cols="12" sm="3" class="d-flex justify-center">
-                            <v-list-item-avatar tile size="140">
-                                <v-img alt="Logo Angular"
-                                :src="item.icono">
-                                </v-img>
-                            </v-list-item-avatar>
-                        </v-col>
-                    </v-row>
-                </v-list-item>
-
-                <v-row>
-                    <v-col cols="12" class="d-flex justify-center justify-sm-start ">
-                        <v-card-actions>
-                            <v-btn outlined rounded text 
-                            title="https://angular-material.deysol.com/"
-                            rel="noreferrer" href="https://angular-material.deysol.com/" 
-                            target="_blank">
-                                visitar
-                            </v-btn>
-                        </v-card-actions>
-                    </v-col>
-                </v-row>
-            </v-container>
-        </v-card>
-
-        <v-img  width="100%" height="50px" 
-        style="transform: rotate(180deg);"
-        :src="item.marco" alt="marco decoracion">
-        </v-img>
-    </v-container>
 
 <!--Gato-->
     <div class="d-flex justify-center">    
@@ -376,6 +377,10 @@
     border-left: 1161px solid #b2ff0000;
     border-bottom: 60px solid #555555;
 }
+.vueDragon{
+    text-shadow: 1px 1px 2px black;
+    font-size: 20px;
+}
 </style>
 
 
@@ -387,22 +392,25 @@ export default {
     data: () => ({
    
         webs:[
+               {
+                titulo: 'Tienda-Angular',
+                subtitulo:'Tienda de compras online.',
+                texto:'Web realizada con Angular, multilenguaje (i18n), cambio de divisa con llamada a la API Open Exchange Rates para obtener el valor de la moneda actual, Flickity para los movimientos del carousel, servicio para unir la lógica, imágenes en formato WebP para reducir el tamaño de la web, Bootstrap, PWA y adaptativa para todos los dispositivos.',
+                color: 'angular',
+                icono: require('@/assets/tienda-angular.png'),
+                marco: require('@/assets/marcoA.svg'),
+                link: 'http://tienda-angular.deysol.com/'
+            },
             {
                 titulo: 'Angular-material',
                 subtitulo:'Esta web contiene un login para iniciar sesion y unos usuarios registrados que puedes eliminar, editar,agregar, ordenar o inspeccionar.',
                 texto:'Web realizada con Angular, Material Design + Bootstrap para adaptarla a todos los dispositivos y PWA.',
                 color: 'angular',
                 icono: require('@/assets/angular.png'),
-                marco:require('@/assets/marcoA.svg')
+                marco:require('@/assets/marcoA.svg'),
+                link: 'https://angular-material.deysol.com/'
             },
-             {
-                titulo: 'Tienda-Angular',
-                subtitulo:'Tienda de compras online.',
-                texto:'Web realizada con Angular, multilenguaje (i18n), cambio de divisa con llamada a la API Open Exchange Rates para obtener el valor de la moneda actual, Flickity para los movimientos del carousel, servicio para unir la lógica, imágenes en formato WebP para reducir el tamaño de la web, Bootstrap, PWA y adaptativa para todos los dispositivos.',
-                color: 'angular',
-                icono: require('@/assets/angular.png'),
-                marco:require('@/assets/marcoA.svg')
-            },
+          
             // {
             //     titulo: 'Vue',
             //     subtitulo:'Esta web contiene un login para iniciar sesion y unos usuarios registrados que puedes eliminar, editar, agregar o eliminar',
