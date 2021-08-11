@@ -78,6 +78,26 @@
                 {{item.des}} 
             </v-card-subtitle>
 
+            <div v-if="item.javascript">
+                <v-card-subtitle 
+                class="salto d-md-flex justify-center mx-sm-11 text-justify"
+                :class="item.color">
+                    <p class="d-flex justify-center pe-md-2 black--text">
+                        ID de la credencial:
+                    </p> 
+                    <p class="text-center">{{item.credencial}}</p>
+                </v-card-subtitle>
+                
+                 <v-card-subtitle 
+                class="salto mx-sm-11 text-justify"
+                :class="item.color">
+                   <p class="d-flex justify-center black--text">
+                       URL de la credencial:
+                    </p> 
+                   <p class="text-center">{{item.url}} </p> 
+                </v-card-subtitle>
+            </div>
+            
             <v-card-subtitle 
             class="d-flex justify-center"
             :class="item.color">
@@ -224,6 +244,22 @@ export default {
             lista2:['Version Control','Package managers','JS Frameworks','JS Preprocessors','Back-End'],
             colorLista:['#737ec8','#448aff','#c5cae9','#009688','#b1dfdb'],
             colorLista2:['#607d8b','#e64a19','#ff9800','#d32f2f','#e38ad7']
+        },
+        {
+            logo:'Pixelpro',
+            img: require('@/assets/pixel.webp'),
+            colorImg:'pixel',
+            colorCard:'pixelCard',
+            color:'textBlanco',
+            colorAcre:'colorAcreditado',
+            nombre: 'JavaScript',
+            des:'Programar con JavaScript.',
+            credencial:'uJ3BqWHkWj',
+            url:'http://pixelprocursos.com/academi/mod/customcert/verify_certificate.php',
+            duracion:'20h',
+            acre:'Pixelpro y Microsoft',
+            año:'2020',
+            javascript:true,
         },
         {
             logo:'Pixelpro',

@@ -410,15 +410,15 @@ export default {
                 marco:require('@/assets/marcoA.svg'),
                 link: 'https://angular-material.deysol.com/'
             },
-          
-            // {
-            //     titulo: 'Vue',
-            //     subtitulo:'Esta web contiene un login para iniciar sesion y unos usuarios registrados que puedes eliminar, editar, agregar o eliminar',
-            //     texto:'Web realizada con Angular, Material Design + Bootstrap para diseñar la web adaptada a todos los dispositivos y PWA',
-            //     color: 'vue',
-            //     icono: require('@/assets/Vue.png'),
-            //     marco:require('@/assets/marcoV.svg')
-            // },
+            {
+                titulo: 'Post-it',
+                subtitulo:'Editor de tareas.',
+                texto:'Web realizada con Vue, Vuetify, adaptada a todos los dispositivos, localStorage para guardar las tareas y PWA.',
+                color: 'vue',
+                icono: require('@/assets/Vue.png'),
+                marco:require('@/assets/marcoV.svg'),
+                link: 'http://vuetify.deysol.com/'
+            },
     
         ],
     }),//data
