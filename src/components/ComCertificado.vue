@@ -258,8 +258,7 @@ export default {
             url:'http://pixelprocursos.com/academi/mod/customcert/verify_certificate.php',
             duracion:'20h',
             acre:'Pixelpro y Microsoft',
-            año:'2020',
-            verificar:true,
+            año:'2021',
         },
         {
             logo:'Pixelpro',
@@ -273,6 +272,8 @@ export default {
             duracion:'20h',
             acre:'Pixelpro y Microsoft',
             año:'2020',
+            credencial:'NefrwfgnmN',
+            url:'http://pixelprocursos.com/academi/mod/customcert/verify_certificate.php',
         },
          {
             logo:'Pixelpro',
@@ -288,7 +289,6 @@ export default {
             año:'2020',
             credencial:'iByyXH1jcu',
             url:'http://pixelprocursos.com/academi/mod/customcert/verify_certificate.php',
-            verificar:true,
         },
         {
             logo:'Ford Motor Company',
