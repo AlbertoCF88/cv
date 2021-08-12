@@ -78,7 +78,7 @@
                 {{item.des}} 
             </v-card-subtitle>
 
-            <div v-if="item.javascript">
+            <div v-if="item.verificar">
                 <v-card-subtitle 
                 class="salto d-md-flex justify-center mx-sm-11 text-justify"
                 :class="item.color">
@@ -259,7 +259,7 @@ export default {
             duracion:'20h',
             acre:'Pixelpro y Microsoft',
             año:'2020',
-            javascript:true,
+            verificar:true,
         },
         {
             logo:'Pixelpro',
@@ -273,6 +273,22 @@ export default {
             duracion:'20h',
             acre:'Pixelpro y Microsoft',
             año:'2020',
+        },
+         {
+            logo:'Pixelpro',
+            img: require('@/assets/pixel.webp'),
+            colorImg:'pixel',
+            colorCard:'pixelCard',
+            color:'textBlanco',
+            colorAcre:'colorAcreditado',
+            nombre: 'HTML5 - La web semántica',
+            des:'Diseño de páginas web con la especificación HTML5 de acuerdo al uso de etiquetas semánticas.',
+            duracion:'20h',
+            acre:'Pixelpro y Microsoft',
+            año:'2020',
+            credencial:'iByyXH1jcu',
+            url:'http://pixelprocursos.com/academi/mod/customcert/verify_certificate.php',
+            verificar:true,
         },
         {
             logo:'Ford Motor Company',
