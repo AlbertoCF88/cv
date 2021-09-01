@@ -78,7 +78,7 @@
                 {{item.des}} 
             </v-card-subtitle>
 
-            <div v-if="item.validar">
+            <div>
                 <v-card-subtitle 
                 class="salto d-md-flex justify-center mx-sm-11 text-justify pb-0"
                 :class="item.color">
@@ -244,6 +244,8 @@ export default {
             lista2:['Version Control','Package managers','JS Frameworks','JS Preprocessors','Back-End'],
             colorLista:['#737ec8','#448aff','#c5cae9','#009688','#b1dfdb'],
             colorLista2:['#607d8b','#e64a19','#ff9800','#d32f2f','#e38ad7'],
+            credencial:'VTzVXjppBG',
+            url:'http://pixelprocursos.com/academi/mod/customcert/verify_certificate.php',
         },
         {
             logo:'Pixelpro',
@@ -259,7 +261,6 @@ export default {
             duracion:'20h',
             acre:'Pixelpro y Microsoft',
             año:'2021',
-            validar:true,
         },
         {
             logo:'Pixelpro',
@@ -275,7 +276,6 @@ export default {
             año:'2020',
             credencial:'NefrwfgnmN',
             url:'http://pixelprocursos.com/academi/mod/customcert/verify_certificate.php',
-            validar:true,
         },
          {
             logo:'Pixelpro',
@@ -291,7 +291,6 @@ export default {
             año:'2020',
             credencial:'iByyXH1jcu',
             url:'http://pixelprocursos.com/academi/mod/customcert/verify_certificate.php',
-            validar:true,
         },
         {
             logo:'Ford Motor Company',
