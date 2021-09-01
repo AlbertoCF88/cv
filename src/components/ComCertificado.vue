@@ -78,7 +78,7 @@
                 {{item.des}} 
             </v-card-subtitle>
 
-            <div>
+            <div v-if="item.logo=='Pixelpro'">
                 <v-card-subtitle 
                 class="salto d-md-flex justify-center mx-sm-11 text-justify pb-0"
                 :class="item.color">
