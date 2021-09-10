@@ -23,7 +23,8 @@ export default new Vuetify({
           dragon:'#ff6600',
           //angular , vue, react
           angular:'#c30030',
-          vue:'#33495e'
+          vue:'#33495e',
+          ionicAngular:'#904393',
         },
       },
     },

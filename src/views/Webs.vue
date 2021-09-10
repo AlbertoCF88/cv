@@ -51,7 +51,8 @@
                             :title="item.link"
                             rel="noreferrer" :href="item.link" 
                             target="_blank">
-                                visitar
+                            <span v-if="!item.proximamente">visitar</span>  
+                            <span v-if="item.proximamente">En construcción</span> 
                             </v-btn>
                         </v-card-actions>
                     </v-col>
@@ -392,6 +393,16 @@ export default {
     data: () => ({
    
         webs:[
+             {
+                titulo: 'MiniGameCell',
+                subtitulo:'Minijuego',
+                texto:'Web realizada con Ionic y Angular, multilenguaje (i18n)',
+                color: 'ionicAngular',
+                icono: require('@/assets/ionicAngular.png'),
+                marco: require('@/assets/marcoIA.svg'),
+                link: '',
+                proximamente:true
+            },
                {
                 titulo: 'Tienda-Angular',
                 subtitulo:'Tienda de compras online.',
