@@ -68,6 +68,11 @@ export default {
     data: () => ({
  
     titulos:[
+          {
+            nombre: '*CURSANDO*\nF.P. Superior\nDesarrollo de Aplicaciones WEB',
+            acre:'Centro de Formación Profesional Solvam (semipresencial), Quart de Poblet',
+            año:'(2021)',
+        },
         {
             nombre: 'F.P. Superior\nInstalaciones Electrotécnicas',
             acre:'CIPFP Faitanar, Quart de Poblet',
