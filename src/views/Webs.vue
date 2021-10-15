@@ -10,7 +10,7 @@
 <!--Webs--->    
     <v-container class="pt-10 contGoku"
     v-for="item in webs" :key="item.id">
-        <v-img  width="100%" height="50px"
+        <v-img  width="100%" height="50px" class="decoracionArriba"
         :src="item.marco" alt="marco decoracion">
         </v-img>
 
@@ -248,6 +248,10 @@
         padding-left: 85px ;
     }
 /*fin goku */
+.decoracionArriba{
+    position: relative;
+    z-index: 1;
+}
 .v-list-item__subtitle {
     display: grid !important;
 }
@@ -396,11 +400,11 @@ export default {
              {
                 titulo: 'MiniGameCell',
                 subtitulo:'Minijuego',
-                texto:'Web realizada con Ionic y Angular, multilenguaje (i18n)',
+                texto:'Web realizada con Ionic y Angular',
                 color: 'ionicAngular',
                 icono: require('@/assets/ionicAngular.png'),
                 marco: require('@/assets/marcoIA.svg'),
-                link: '',
+                link: 'http://minigamecell.deysol.com/',
                 proximamente:true
             },
                {
