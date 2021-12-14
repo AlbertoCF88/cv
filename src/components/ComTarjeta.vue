@@ -31,7 +31,7 @@
       <strong>Front-End Developer</strong> 
     </v-card-subtitle>
 
-    <v-card-actions>
+    <v-card-actions class="margenAbajo">
       <v-btn @click="revelar = true; edad()"
       color="color4" text block >
         Saber más
@@ -82,7 +82,7 @@
           </p>
         </v-card-text>
 
-        <v-card-actions>
+        <v-card-actions style>
           <v-btn text block color="ico4" 
           @click="revelar = false">
             Cerrar
@@ -124,6 +124,9 @@
 .Zcard{
   z-index: 1;
   position: relative;
+}
+.margenAbajo{
+   margin-bottom: 16px;
 }
 /*triangulos avatar */
 .trianguloIz {
