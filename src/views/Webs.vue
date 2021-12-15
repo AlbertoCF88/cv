@@ -404,7 +404,7 @@ export default {
                 color: 'ionicAngular',
                 icono: require('@/assets/ionicAngular.png'),
                 marco: require('@/assets/marcoIA.svg'),
-                link: 'http://minigamecell.deysol.com/',
+                link: 'http://minigamecell.eclipseinformatica.com/',
                 proximamente:true
             },
                {
@@ -414,7 +414,7 @@ export default {
                 color: 'angular',
                 icono: require('@/assets/tienda-angular.png'),
                 marco: require('@/assets/marcoA.svg'),
-                link: 'http://tienda-angular.deysol.com/'
+                link: 'http://tienda-angular.eclipseinformatica.com/'
             },
             {
                 titulo: 'Angular-material',
@@ -423,7 +423,7 @@ export default {
                 color: 'angular',
                 icono: require('@/assets/angular.png'),
                 marco:require('@/assets/marcoA.svg'),
-                link: 'https://angular-material.deysol.com/'
+                link: 'https://angular-material.eclipseinformatica.com/'
             },
             {
                 titulo: 'Post-it',
@@ -432,7 +432,7 @@ export default {
                 color: 'vue',
                 icono: require('@/assets/Vue.png'),
                 marco:require('@/assets/marcoV.svg'),
-                link: 'http://vuetify.deysol.com/'
+                link: 'http://vuetify.eclipseinformatica.com/'
             },
     
         ],
