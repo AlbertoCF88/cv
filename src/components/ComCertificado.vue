@@ -16,7 +16,7 @@
             class="salto mt-1 d-flex justify-center text-center">
                 {{item.nombre}}
             </v-card-title> 
-   
+            <!--leyenda-->
             <v-container fluid v-if="item.salir">
                 <!--móvil-->   
                 <comLeye class="ocularLeyenda justify-center mt-0 mb-4"
@@ -30,7 +30,7 @@
                         <div class="d-flex"> 
                             <div class="cajaIcon">
                                 <v-icon 
-                                v-for="color in certificados[0].colorLista" 
+                                v-for="color in certificados[1].colorLista" 
                                 :key="color.id"  
                                 :color="color">
                                     mdi-square-rounded  
@@ -38,7 +38,7 @@
                             </div>
                             <ul class="cajaLista text-subtitle-2">
                                 <li 
-                                v-for="li in certificados[0].lista"
+                                v-for="li in certificados[1].lista"
                                 :key="li.id" >
                                     {{li}}
                                 </li>
@@ -48,7 +48,7 @@
                         <div class="d-flex">
                             <div class="cajaIcon">
                                 <v-icon 
-                                v-for="color2 in certificados[0].colorLista2" 
+                                v-for="color2 in certificados[1].colorLista2" 
                                 :key="color2.id"  
                                 :color="color2">
                                     mdi-square-rounded  
@@ -56,7 +56,7 @@
                             </div>
                             <ul class="cajaLista text-subtitle-2">
                                 <li 
-                                v-for="li2 in certificados[0].lista2" 
+                                v-for="li2 in certificados[1].lista2" 
                                 :key="li2.id">
                                     {{li2}}
                                 </li>
@@ -78,7 +78,7 @@
                 {{item.des}} 
             </v-card-subtitle>
 
-            <div v-if="item.logo=='Pixelpro'">
+            <div v-if="item.conAcreditacion">
                 <v-card-subtitle 
                 class="salto d-md-flex justify-center mx-sm-11 text-justify pb-0"
                 :class="item.color">
@@ -179,6 +179,17 @@ li{
     margin: 0px 12px;
     line-height:1rem;
 }
+/*labora */
+.labora{
+    background-color:white;
+}
+.laboraCard{
+    background-color:#e7263a;
+    color: whitesmoke !important;
+}
+.colorAcreditadoLabora{
+    color:#00000055;
+}
 /*Pixel */
 .pixel{
     background-color: #242524;
@@ -225,8 +236,28 @@ export default {
     },
     data: () => ({
  
+
     certificados:[
+        
         {
+            logo:'Labora',
+            img: require('@/assets/labora.png'),
+            colorImg:'labora',
+            colorCard:'laboraCard',
+            color:'textBlanco',
+            colorAcre:'colorAcreditadoLabora',
+            nombre:'IFCD0110 \n CONFECCIÓN Y PUBLICACIÓN DE PÁGINAS WEB',
+            des: 'HTML, CSS, JavaScript, wordpress y prácticas no laborales',
+            credencial:'DC131103',
+            url:'https://labora.gva.es/es/comprobacion-veracidad-certificados-de-formacion',
+            duracion:'570h',
+            acre:'LABORA SERVEI VALENCIÀ',
+            año: '2022',
+            conAcreditacion:true
+        },
+        {
+            // v-for="color in certificados[0].colorLista" cambiarlo por [1]..y 
+            //componente import comLeye from '@/components/ComLeyenda.vue' cambair [1];
             logo:'Pixelpro',
             img: require('@/assets/pixel.webp'),
             frontImg: require('@/assets/frontSin.webp'),
@@ -246,6 +277,7 @@ export default {
             colorLista2:['#607d8b','#e64a19','#ff9800','#d32f2f','#e38ad7'],
             credencial:'VTzVXjppBG',
             url:'http://pixelprocursos.com/academi/mod/customcert/verify_certificate.php',
+            conAcreditacion:true
         },
         {
             logo:'Pixelpro',
@@ -261,6 +293,7 @@ export default {
             duracion:'20h',
             acre:'Pixelpro y Microsoft',
             año:'2021',
+            conAcreditacion:true
         },
         {
             logo:'Pixelpro',
@@ -276,6 +309,7 @@ export default {
             año:'2020',
             credencial:'NefrwfgnmN',
             url:'http://pixelprocursos.com/academi/mod/customcert/verify_certificate.php',
+            conAcreditacion:true
         },
          {
             logo:'Pixelpro',
@@ -291,6 +325,7 @@ export default {
             año:'2020',
             credencial:'iByyXH1jcu',
             url:'http://pixelprocursos.com/academi/mod/customcert/verify_certificate.php',
+            conAcreditacion:true
         },
         {
             logo:'Ford Motor Company',

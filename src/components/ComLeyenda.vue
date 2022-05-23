@@ -21,7 +21,7 @@
             <div class="d-flex"> 
                 <div class="cajaIcon">
                     <v-icon 
-                    v-for="color in certificados[0].colorLista" 
+                    v-for="color in certificados[1].colorLista" 
                     :key="color.id"  
                     :color="color">
                         mdi-square-rounded  
@@ -29,7 +29,7 @@
                 </div>
                 <ul class="cajaLista text-subtitle-2">
                     <li 
-                    v-for="li in certificados[0].lista"
+                    v-for="li in certificados[1].lista"
                     :key="li.id" >
                         {{li}}
                     </li>
@@ -39,7 +39,7 @@
             <div class="d-flex">
                 <div class="cajaIcon">
                     <v-icon 
-                    v-for="color2 in certificados[0].colorLista2" 
+                    v-for="color2 in certificados[1].colorLista2" 
                     :key="color2.id"  
                     :color="color2">
                         mdi-square-rounded  
@@ -48,7 +48,7 @@
 
                 <ul class="cajaLista text-subtitle-2">
                     <li 
-                    v-for="li2 in certificados[0].lista2" 
+                    v-for="li2 in certificados[1].lista2" 
                     :key="li2.id">
                         {{li2}}
                     </li>

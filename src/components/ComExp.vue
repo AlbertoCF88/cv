@@ -51,6 +51,20 @@
     word-break: break-word;
     letter-spacing: 0.08em;
 }
+/*hort */
+.hort{
+    background-color:#f17618;
+}
+.hortCard{
+    background-color:#0eae58;
+    color: whitesmoke !important;
+    border:#f17618 solid 5px;
+}
+.colorAñoHort{
+    color:#00ff76;
+    font-weight: bold;
+    margin: 0px 12px;
+}
 /*bino */
 .bino{
     background-color:#0030c0;
@@ -159,6 +173,17 @@ export default {
     data: () => ({
  
     exp:[
+        {
+            img: require('@/assets/hort.png'),
+            colorImg:'hort',
+            colorCard:'hortCard',
+            colorTexto:'textBlanco',
+            colorAño:'colorAñoHort',
+            nombre: 'Hort Alba',
+            puesto:'Técnico programador en prácticas',
+            des:'Mejora de la web: https://www.naranjasalbagarces.com \n Tecnologías: PHP, SQL y Bootstrap.',
+            año:'Abril de 2022 – abril de 2022 (1 mes)',
+        },
         {
             img: require('@/assets/bino.webp'),
             colorImg:'bino',
