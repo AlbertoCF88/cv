@@ -1,7 +1,7 @@
 <template>
 <v-container mb-2 class="posicion ancho d-flex justify-center">
 
-  <v-card class="Zcard" hover 
+  <v-card class="Zcard"  
   @mouseover="hover=true; hover2=true"
   @mouseleave="hover=false; hover2=false">
 
@@ -28,7 +28,7 @@
 
     <v-card-subtitle class="d-flex justify-center color1--text 
     font-weight-black text-sm-subtitle-1 text-subtitle-2 ">
-      <strong>Front-End Developer</strong> 
+      <strong>Developer</strong> 
     </v-card-subtitle>
 
     <v-card-actions class="margenAbajo">
@@ -51,26 +51,29 @@
             SOBRE MÍ
           </p>
           <p class="texto text-justify mx-6">
-            ¡Hola!
+            ¡Hola! 
             <br>
-            Me llamo Alberto y tengo {{edadActual}} años.
-            <br>
-            Soy paciente, resolutivo, creativo y responsable. 
+            Soy Alerto Carrasco, programador.
+            Para mi programar es como jugar, me apasiona, ya que puedo poner en práctica mis habilidades creativas.
             <br><br>
-            En mi tiempo libre me gusta cultivar plantas, la pintura y programar. La programación es un campo que me apasiona ya que puedo poner en práctica mis habilidades creativas. 
+            Siempre tengo nuevas ideas o programas en mente y no me canso hasta que los hago realidad.
+            <br>
+            Nunca digo que esto no se puede hacer, siempre se me ocurre un plan B o investigo hasta finalizar mi proyecto.
+            <br><br>
+            El principal beneficio que obtienen conmigo las empresas es que las ideas o deseos que tengan puedan cumplirse, siempre que sean viables o realistas. Tengo capacidad para analizar las necesidades del cliente y traducirlas en un proyecto o programa. 
             <br>  <br>
-            Puedes descubrir alguno de mis proyectos en esta página web. Echa un vistazo a mis pinturas 
+            Puedes descubrir alguno de mis proyectos en esta página web 
+             <v-btn icon fab x-small title="Otras Webs"
+            :to="{name: 'Webs'}">
+            <v-icon color="ico3">mdi-remote-desktop</v-icon>
+            </v-btn> 
+            también puedes ver mis habilidades creativas con la pintura
             <v-btn icon fab x-small title="Arte"
             :to="{name: 'Arte'}">
               <v-icon color="ico2">mdi-lead-pencil</v-icon>
             </v-btn>
-            y a mis páginas webs
-            <v-btn icon fab x-small title="Otras Webs"
-            :to="{name: 'Webs'}">
-            <v-icon color="ico3">mdi-remote-desktop</v-icon>
-            </v-btn>
             <br><br>
-            No dude en ponerse en contacto conmigo:
+            Si necesita un empleado motivado, entusiasta y con ideas frescas llámame. 
             <br>
             Correo: <a href="mailto:alcafefront@gmail.com" target="_blank">alcafefront@gmail.com</a> 
             <br>

@@ -51,6 +51,34 @@
     word-break: break-word;
     letter-spacing: 0.08em;
 }
+/*pulsia*/
+.pulsia{
+    background-color:#dfcf26;
+}
+.pulsiaCard{
+    background-color:#4b4c38;
+    color: whitesmoke !important;
+    border:#dfcf26 solid 5px;
+}
+.colorAñoPulsia{
+    color:#8b8e4b;
+    font-weight: bold;
+    margin: 0px 12px;
+}
+/*viviendo cuento */
+.cuento{
+    background-color:#030303;
+}
+.cuentoCard{
+    background-color:#e8e6df;
+    color: black !important;
+    border:#030303 solid 5px;
+}
+.colorAñoCuento{
+    color:rgb(75, 75, 75);
+    font-weight: bold;
+    margin: 0px 12px;
+}
 /*hort */
 .hort{
     background-color:#f17618;
@@ -173,6 +201,28 @@ export default {
     data: () => ({
  
     exp:[
+        {
+            img: require('@/assets/pulsia.jpg'),
+            colorImg:'pulsia',
+            colorCard:'pulsiaCard',
+            colorTexto:'textBlanco',
+            colorAño:'colorAñoPulsia',
+            nombre: 'Pulsia \n IT Solutions S.L.',
+            puesto:'Técnico TI de la Universidad de Valencia',
+            des:'Servicio integral de atención al usuario en soporte, administración y diseño de telecomunicaciones y sistemas informáticos.',
+            año:'Puesto actual',
+        },
+        {
+            img: require('@/assets/cuento.png'),
+            colorImg:'cuento',
+            colorCard:'cuentoCard',
+            colorTexto:'',
+            colorAño:'colorAñoCuento',
+            nombre: 'Viviendo Cuento\n  Experiencias para empresas',
+            puesto:'Programador Freelance',
+            des:'Aplicación en C# para guardar facturas en una base de datos SQl\n(añadir, modificar, filtros de búsqueda e impreso resumen de la factura ) ',
+            año:'Agosto de 2022 – agosto de 2022 (1 mes)',
+        },
         {
             img: require('@/assets/hort.png'),
             colorImg:'hort',
