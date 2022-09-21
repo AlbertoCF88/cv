@@ -399,7 +399,7 @@ export default {
       let fechanacimiento = new Date('03/06/1988');
       let hoy = new Date();
       this.edadActual = hoy.getFullYear() - fechanacimiento.getFullYear();
-
+  // no utilizado , no muestro la edad aqui
       return this.edadActual
     },
   },//methods
